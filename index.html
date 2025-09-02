@@ -1,182 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet10 Uniforms - Professional Uniforms Supplier</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #111;
-            color: #eee;
-        }
-        .header {
-            background: #1b1e23;
-            text-align: center;
-            padding: 30px 0 10px 0;
-        }
-        .logo {
-            width: 150px;
-            height: auto;
-        }
-        .nav {
-            margin-top: 15px;
-        }
-        .nav a {
-            color: #d4af37;
-            text-decoration: none;
-            margin: 0 18px;
-            font-weight: bold;
-            font-size: 1.1em;
-            letter-spacing: 1px;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 15px 20px 15px;
-            background: #191d22;
-        }
-        .hero h1 {
-            color: #d4af37;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
-        .experience {
-            margin: 30px 0 40px 0;
-            font-size: 1.15em;
-            color: #fafafa;
-        }
-        .uniforms-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 40px;
-            background: #15181c;
-        }
-        .uniform-card {
-            background: #21242a;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px 0 #0006;
-            padding: 24px 14px 20px 14px;
-            text-align: center;
-            transition: transform 0.18s;
-        }
-        .uniform-card:hover {
-            transform: translateY(-10px) scale(1.04);
-            box-shadow: 0 8px 32px 0 #000a;
-        }
-        .uniform-card img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 12px;
-        }
-        .uniform-card h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: #d4af37;
-        }
-        .about, .contact {
-            max-width: 950px;
-            margin: 40px auto 0 auto;
-            padding: 40px 24px;
-            background: #1e1e23;
-            border-radius: 18px;
-            color: #eee;
-        }
-        .about h2, .contact h2 {
-            color: #d4af37;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .footer {
-            text-align: center;
-            color: #aaa;
-            padding: 24px;
-        }
-        @media (max-width: 700px){
-            .uniforms-section{
-                grid-template-columns: 1fr;
-                padding: 12px;
-            }
-            .about, .contact {
-                padding: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planet10 Uniforms - Professional Uniforms Supplier</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #111;
+      color: #eee;
+    }
+    .header {
+      background: #1b1e23;
+      text-align: center;
+      padding: 30px 0 10px 0;
+    }
+    .logo {
+      width: 150px;
+      height: auto;
+    }
+    .nav {
+      margin-top: 15px;
+    }
+    .nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 15px 20px 15px;
+      background: #191d22;
+    }
+    .hero h1 {
+      color: #d4af37;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .experience {
+      margin: 30px 0 40px 0;
+      font-size: 1.15em;
+      color: #fafafa;
+    }
+    .accordion {
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      background: #15181c;
+      border-radius: 18px;
+      box-shadow: 0 6px 40px #0006;
+      padding: 0;
+      color: #eee;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #2d2f33;
+    }
+    .accordion-title {
+      cursor: pointer;
+      padding: 20px 40px;
+      position: relative;
+      font-weight: 600;
+      font-size: 1.25em;
+      color: #d4af37;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.3s;
+    }
+    .accordion-title:hover {
+      background-color: #282c34;
+    }
+    .accordion-title .icon {
+      transition: transform 0.3s ease;
+      font-size: 1.6em;
+      line-height: 1;
+    }
+    .accordion-title.active .icon {
+      transform: rotate(45deg);
+    }
+    .accordion-content {
+      display: none;
+      padding: 20px 40px 30px 40px;
+      font-size: 1em;
+      line-height: 1.5;
+      background: #1e2126;
+      color: #ddd;
+    }
+    .order-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 28px;
+      background: #d4af37;
+      color: #171717;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .order-btn:hover {
+      background-color: #edbf3f;
+    }
+    .about-contact {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: #1e1e23;
+      border-radius: 18px;
+      padding: 30px 40px;
+      color: #eee;
+      line-height: 1.6;
+    }
+    .about-contact h2 {
+      color: #d4af37;
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.8em;
+    }
+    .footer {
+      text-align: center;
+      color: #aaa;
+      padding: 24px;
+      font-size: 0.9em;
+    }
+    @media (max-width: 700px) {
+      .accordion-title {
+        padding: 18px 25px;
+        font-size: 1.1em;
+      }
+      .accordion-content {
+        padding: 15px 25px 25px 25px;
+        font-size: 0.95em;
+      }
+      .order-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
+      .about-contact {
+        padding: 20px 25px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <!-- Save your logo as logo.png and upload to repo -->
-        <img class="logo" src="logo.png" alt="Planet10 Logo"/>
-        <div class="nav">
-            <a href="#uniforms">Uniforms</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <div class="header">
+    <img class="logo" src="logo.png" alt="Planet10 Logo" />
+    <div class="nav">
+      <a href="#accordion">Uniforms</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="hero">
-        <h1>Professional Uniform Solutions by Planet10</h1>
-        <div class="experience">
-            <strong>10+ Years Experience • Trusted by Aviation Academies • Preferred Partner for Large Institutions</strong>
-        </div>
-        <p>Delivering comfort, durability, and elite craftsmanship across all industries—schools, aviation, healthcare, security, hospitality, and corporates.</p>
+  </div>
+  <div class="hero">
+    <h1>Professional Uniform Solutions by Planet10</h1>
+    <div class="experience">
+      <strong>
+        10+ Years Experience • Trusted by Aviation Academies • Preferred
+        Partner for Large Institutions
+      </strong>
     </div>
+    <p>
+      Delivering comfort, durability, and elite craftsmanship across all
+      industries—schools, aviation, healthcare, security, hospitality, and
+      corporates.
+    </p>
+  </div>
 
-    <div class="uniforms-section" id="uniforms">
-        <!-- Replace sample images with your real ones! -->
-        <div class="uniform-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=128&q=80" alt="School Uniform"/>
-            <h3>School Uniforms</h3>
-            <p>Elegant, robust, and comfortable uniforms for every grade, ensuring both discipline and pride.</p>
-        </div>
-        <div class="uniform-card">
-            <img src="https://media.istockphoto.com/id/157482029/photo/flight-attendant.jpg?b=1&s=612x612&w=0&k=20&c=ZGqzIUgR6uXHZCUw5wdSdASN5CK3n3ox6tH1chSM5UI=" alt="Aviation Uniform"/>
-            <h3>Aviation Uniforms</h3>
-            <p>Tailored for cabin crew and aviation academies, delivering style, comfort, and international standards.</p>
-        </div>
-        <div class="uniform-card">
-            <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=facearea&w=128&q=80" alt="Nursing Uniform"/>
-            <h3>Nursing & Paramedical</h3>
-            <p>Healthcare uniforms designed for hygiene, mobility, and round-the-clock comfort.</p>
-        </div>
-        <div class="uniform-card">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=128&q=80" alt="Security Uniform"/>
-            <h3>Security Guards</h3>
-            <p>Rugged uniforms with sharp styling, for a professional and commanding presence.</p>
-        </div>
-        <div class="uniform-card">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=128&q=80" alt="Hotel Staff Uniform"/>
-            <h3>Hotel & Hospital Staff</h3>
-            <p>Smart, crisp, and pleasant uniforms to represent your brand's highest standards.</p>
-        </div>
-        <div class="uniform-card">
-            <img src="https://images.unsplash.com/photo-1519340333755-c2f6e94cdccc?auto=format&fit=facearea&w=128&q=80" alt="Corporate T-Shirts"/>
-            <h3>Corporate & Custom T-Shirts</h3>
-            <p>Customized for events or branding campaigns, crafted for comfort and long-lasting quality.</p>
-        </div>
+  <section class="accordion" id="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        School Uniforms
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> We offer a complete line of boy’s and girl’s uniforms
+        from pre-primary to 12th, with all branding, logos, ties, belts, and socks.
+        <br /><br />
+        <b>How We Work:</b> Sample packs, customized fabric, fast bulk supply,
+        on-time delivery, and after-sales support to schools and vendors.
+        <br /><br />
+        <b>Delivery:</b> Usually 10–20 business days after order confirmation.
+        <br />
+        <b>Exchange Policy:</b> Free exchange for sizing within 7 days of delivery.
+        <br />
+        <b>Payment Policy:</b> 50% advance, 50% on dispatch. GST Invoice provided.
+        <br />
+        <b>GST:</b> All uniforms billed with 5% GST as per Indian regulations.
+        <br />
+        <b>Contact for tailored solutions or bulk pricing!</b>
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20School%20Uniforms%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
     </div>
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        Aviation Uniforms
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> Custom stitched pilot, cabin crew, and aviation academy uniforms.
+        <br /><br />
+        <b>How We Work:</b> International patterns, logo embroidery, fitting camps, fast sample turnaround.
+        <br /><br />
+        <b>Delivery:</b> 15 days for first order, 7–10 days on repeats.
+        <br />
+        <b>Exchange Policy:</b> Size change supported for students.
+        <br />
+        <b>Payment Policy:</b> Flexible on repeat clients.
+        <br />
+        <b>GST:</b> 5% GST included.
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Aviation%20Uniforms%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        Nursing &amp; Paramedical
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> Top-grade scrub sets, aprons, and lab coats for every budget.
+        <br /><br />
+        <b>How We Work:</b> Hygienic, standardized fabrics, hospital/college logos.
+        <br /><br />
+        <b>Delivery:</b> 10–15 days.
+        <br />
+        <b>Exchange Policy:</b> Within 5 days.
+        <br />
+        <b>Payment/GST:</b> As above.
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Nursing%20and%20Paramedical%20Uniforms%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        Security Guards
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> Sturdy uniforms and accessories for professional use.
+        <br /><br />
+        <b>Delivery:</b> 7–12 business days.
+        <br />
+        <b>Exchange/Payment/GST:</b> Standard company policy.
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        Hotel &amp; Hospital Staff
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> Executive chef coats, bellboy suits, maintenance and nurse dresses.
+        <br /><br />
+        <b>Specialization:</b> Fabric matched to theme, custom logo embroidery.
+        <br /><br />
+        <b>Delivery/Exchange/Policy:</b> As above.
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Hotel%20and%20Hospital%20Staff%20Uniforms%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-title" tabindex="0">
+        Corporate &amp; Custom T-Shirts
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <b>What We Do:</b> Custom tees, sweatshirts, and jackets for events, branding, and staff.
+        <br /><br />
+        <b>How We Work:</b> Quick design mockups, multiple sizes.
+        <br /><br />
+        <b>Delivery/GST/Exchange:</b> Standard.
+        <br /><br />
+        <a
+          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Corporate%20and%20Custom%20T-Shirts%20-%20Planet10"
+          class="order-btn"
+          target="_blank"
+          >Order on WhatsApp</a
+        >
+      </div>
+    </div>
+  </section>
 
-    <div class="about" id="about">
-        <h2>About Planet10</h2>
-        <p>
-            Planet10 specializes in delivering premium, tailor-made uniforms for a variety of sectors. With over a decade of industry experience and a track record of multiple large-scale orders—including for leading aviation academies—we understand the importance of quality and timely delivery.<br>
-            <br>
-            Our extensive catalogue, attention to detail, and in-house production ensure every client receives apparel that reflects their prestige. Join top schools, airlines, healthcare institutions, and corporations who trust Planet10 for their uniform needs!
-        </p>
-    </div>
+  <section class="about-contact" id="about">
+    <h2>About Planet10</h2>
+    <p>
+      Planet10 specializes in delivering premium, tailor-made uniforms for a variety of
+      sectors. With over a decade of industry experience and a track record of
+      multiple large-scale orders—including for leading aviation academies—we understand
+      the importance of quality and timely delivery.
+    </p>
+    <p>
+      Our extensive catalogue, attention to detail, and in-house production ensure
+      every client receives apparel that reflects their prestige. Join top schools,
+      airlines, healthcare institutions, and corporations who trust Planet10 for their
+      uniform needs!
+    </p>
+  </section>
+  <section class="about-contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@planet10.com<br />
+      Phone: +91 98765 43210<br />
+      Address: 123 Elite Street, Bengaluru, Karnataka, India
+    </p>
+  </section>
 
-    <div class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: contact@planet10.com<br>
-           Phone: +91 98765 43210<br>
-           Address: 123 Elite Street, Bengaluru, Karnataka, India
-        </p>
-    </div>
+  <div class="footer">© 2015-2025 Planet10 Uniforms. Excellence in Every Stitch.</div>
 
-    <div class="footer">
-        © 2015-2025 Planet10 Uniforms. Excellence in Every Stitch.
-    </div>
+  <script>
+    // Accordion logic with icon rotation
+    const accordionTitles = document.querySelectorAll('.accordion-title');
+    accordionTitles.forEach((title) => {
+      title.addEventListener('click', () => {
+        const currentlyActive = document.querySelector('.accordion-title.active');
+        if (currentlyActive && currentlyActive !== title) {
+          currentlyActive.classList.remove('active');
+          currentlyActive.nextElementSibling.style.display = 'none';
+        }
+        title.classList.toggle('active');
+        const content = title.nextElementSibling;
+        if (title.classList.contains('active')) {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+
+      // Support keyboard toggle (Enter and Space)
+      title.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          title.click();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
