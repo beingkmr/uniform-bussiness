@@ -42,12 +42,12 @@
   
   <style>
     :root {
-      --primary-teal: #0D9488;
-      --primary-teal-light: #14B8A6;
-      --primary-teal-dark: #0F766E;
-      --accent-coral: #F97316;
-      --accent-coral-light: #FB923C;
-      --accent-coral-dark: #EA580C;
+      --primary-blue: #1E40AF;
+      --primary-blue-light: #3B82F6;
+      --primary-blue-dark: #1E3A8A;
+      --accent-gold: #F59E0B;
+      --accent-gold-light: #FCD34D;
+      --accent-gold-dark: #D97706;
       --premium-white: #FFFFFF;
       --premium-gray: #F8FAFC;
       --premium-dark: #0F172A;
@@ -56,16 +56,17 @@
       --text-primary: #0F172A;
       --text-secondary: #475569;
       --text-muted: #64748B;
-      --accent-blue: #0EA5E9;
-      --success-green: #10B981;
-      --warning-orange: #F59E0B;
+      --accent-green: #059669;
+      --accent-red: #DC2626;
+      --accent-purple: #7C3AED;
       --border-color: #E2E8F0;
       --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
       --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      --gradient-primary: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
-      --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+      --gradient-primary: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+      --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
       --gradient-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+      --gradient-discount: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
     }
 
     * {
@@ -117,9 +118,9 @@
       align-items: center;
       gap: 12px;
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--primary-teal);
+      color: var(--primary-blue);
       text-decoration: none;
     }
 
@@ -144,7 +145,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--primary-teal);
+      color: var(--primary-blue);
     }
 
     .nav-links a::after {
@@ -154,7 +155,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--primary-teal);
+      background: var(--primary-blue);
       transition: width 0.3s ease;
     }
 
@@ -196,24 +197,26 @@
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, var(--primary-teal), var(--accent-coral));
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-shadow: none;
+      line-height: 1.2;
     }
 
     .hero-subtitle {
-      font-size: 1.5rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 3rem;
-      font-weight: 300;
-      max-width: 600px;
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
 
     .hero-stats {
@@ -283,9 +286,57 @@
     }
 
     .btn-secondary:hover {
-      background: var(--primary-teal);
+      background: var(--primary-blue);
       color: var(--premium-white);
-      border-color: var(--primary-teal);
+      border-color: var(--primary-blue);
+    }
+
+    /* Discount Banner */
+    .discount-banner {
+      background: var(--gradient-discount);
+      color: var(--premium-white);
+      text-align: center;
+      padding: 0.75rem 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 2s infinite;
+    }
+
+    .discount-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .discount-banner .discount-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .discount-banner .discount-highlight {
+      background: var(--accent-gold);
+      color: var(--premium-dark);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      margin: 0 0.5rem;
     }
 
     /* Trust Indicators */
@@ -301,9 +352,9 @@
 
     .trust-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--primary-teal);
-      margin-bottom: 3rem;
+      font-size: 2.2rem;
+      color: var(--primary-blue);
+      margin-bottom: 2.5rem;
     }
 
     .trust-badges {
@@ -356,17 +407,18 @@
 
     .section-title h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--primary-teal);
+      font-size: 2.5rem;
+      color: var(--primary-blue);
       margin-bottom: 1rem;
     }
 
     .section-title p {
       color: var(--text-secondary);
-      font-size: 1.3rem;
-      max-width: 700px;
+      font-size: 1.1rem;
+      max-width: 600px;
       margin: 0 auto;
-      font-weight: 300;
+      font-weight: 400;
+      line-height: 1.6;
     }
 
     .services-grid {
@@ -378,10 +430,10 @@
 
     .service-card {
       background: var(--premium-white);
-      border-radius: 20px;
-      padding: 2.5rem;
-      border: 2px solid var(--border-color);
-      transition: all 0.4s ease;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow-light);
@@ -399,21 +451,21 @@
     }
 
     .service-card:hover {
-      transform: translateY(-12px) scale(1.02);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-heavy);
-      border-color: var(--primary-teal);
+      border-color: var(--primary-blue);
       cursor: pointer;
     }
 
     .service-icon {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       background: var(--gradient-primary);
-      border-radius: 20px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 1.5rem auto;
       box-shadow: var(--shadow-medium);
     }
 
@@ -428,12 +480,12 @@
     .service-icon .icon-calendar,
     .service-icon .icon-hotel,
     .service-icon .icon-bed {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: var(--premium-white);
     }
 
     .service-card h3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
       color: var(--text-primary);
@@ -442,9 +494,9 @@
 
     .service-card p {
       color: var(--text-secondary);
-      margin-bottom: 2rem;
-      line-height: 1.7;
-      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-size: 1rem;
     }
 
     /* Service Images */
@@ -541,13 +593,13 @@
 
     .service-details li::before {
       content: '•';
-      color: var(--primary-navy);
+      color: var(--primary-blue);
       font-weight: bold;
       margin-top: 0.1rem;
     }
 
     .service-details .highlight {
-      color: var(--primary-navy);
+      color: var(--primary-blue);
       font-weight: 600;
     }
 
@@ -574,8 +626,8 @@
 
     .about-text h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--primary-navy);
+      font-size: 2.2rem;
+      color: var(--primary-blue);
       margin-bottom: 1.5rem;
     }
 
@@ -629,8 +681,8 @@
 
     .contact-info h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--primary-navy);
+      font-size: 2.2rem;
+      color: var(--primary-blue);
       margin-bottom: 2rem;
     }
 
@@ -649,7 +701,7 @@
 
     .contact-item:hover {
       transform: translateX(10px);
-      border-color: var(--primary-navy);
+      border-color: var(--primary-blue);
     }
 
     .contact-item .contact-icon {
@@ -668,7 +720,7 @@
     }
 
     .contact-item a {
-      color: var(--primary-navy);
+      color: var(--primary-blue);
       text-decoration: none;
     }
 
@@ -712,7 +764,7 @@
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
-      border-color: var(--primary-navy);
+      border-color: var(--primary-blue);
     }
 
     .form-group textarea {
@@ -907,7 +959,7 @@
       background: var(--gradient-primary);
       color: var(--premium-white);
       padding: 2rem;
-      border-radius: 20px 20px 0 0;
+      border-radius: 16px 16px 0 0;
       position: relative;
     }
 
@@ -1003,7 +1055,7 @@
     }
 
     .detail-section h3 {
-      color: var(--primary-navy);
+      color: var(--primary-blue);
       font-size: 1.3rem;
       margin-bottom: 1rem;
       display: flex;
@@ -1135,6 +1187,15 @@
   </style>
 </head>
 <body>
+  <!-- Discount Banner -->
+  <div class="discount-banner">
+    <div class="discount-text">
+      🎉 <span class="discount-highlight">FLASH SALE</span> - Up to 30% OFF on Bulk Orders! 
+      <span class="discount-highlight">FREE SAMPLES</span> for Orders Above 100 Pieces! 
+      Limited Time Offer - <span class="discount-highlight">Book Now!</span>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -1162,13 +1223,14 @@
     </div>
     <div class="container">
       <div class="hero-content loading">
-        <h1>Planet10 Uniforms</h1>
+        <h1>India's Leading Uniform Manufacturer</h1>
         <p class="hero-subtitle">
-          Discover our world of professional uniforms. Click to explore each service and see what we can create for you.
+          Premium quality uniforms for schools, aviation, healthcare, and corporate sectors. 
+          Trusted by 500+ institutions across India with 10+ years of excellence.
         </p>
         <div class="hero-buttons">
-          <a href="#services" class="btn-primary">Explore Our Services</a>
-          <a href="#contact" class="btn-secondary">Get In Touch</a>
+          <a href="#services" class="btn-primary">Explore Services</a>
+          <a href="#contact" class="btn-secondary">Get Quote</a>
         </div>
       </div>
     </div>
@@ -1178,23 +1240,23 @@
   <section class="trust-section">
     <div class="container">
             <div class="trust-content loading">
-        <h2 class="trust-title">Trusted Excellence</h2>
+        <h2 class="trust-title">Why Choose Planet10?</h2>
         <div class="trust-badges">
           <div class="trust-badge">
             <div class="icon-award">🏆</div>
-            <span>10+ Years Experience</span>
+            <span>ISO Certified Quality</span>
       </div>
           <div class="trust-badge">
             <div class="icon-shipping">🚚</div>
-            <span>500+ Happy Clients</span>
+            <span>Fast Delivery</span>
       </div>
           <div class="trust-badge">
             <div class="icon-shield">🛡️</div>
-            <span>50K+ Uniforms Delivered</span>
+            <span>GST Compliant</span>
       </div>
           <div class="trust-badge">
             <div class="icon-users">👥</div>
-            <span>Pan India Service</span>
+            <span>Expert Team</span>
       </div>
       </div>
       </div>
@@ -1205,8 +1267,8 @@
   <section class="services-section" id="services">
     <div class="container">
       <div class="section-title loading">
-        <h2>Explore Our Services</h2>
-        <p>Click on any service below to discover our capabilities, view sample photos, and get detailed information</p>
+        <h2>Our Premium Services</h2>
+        <p>Comprehensive uniform solutions for every industry. Click to explore our capabilities, view samples, and get detailed pricing information.</p>
       </div>
       
       <div class="services-grid">
