@@ -1296,6 +1296,51 @@
       background: linear-gradient(135deg, #4b0082 0%, #8a2be2 30%, #da70d6 70%, #ff69b4 100%);
     }
 
+    /* Section-specific background themes */
+    .planet-background.school {
+      background: linear-gradient(135deg, #2e8b57 0%, #3cb371 30%, #90ee90 70%, #f0fff0 100%);
+    }
+
+    .planet-background.aviation {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #60a5fa 70%, #dbeafe 100%);
+    }
+
+    .planet-background.medical {
+      background: linear-gradient(135deg, #dc2626 0%, #ef4444 30%, #f87171 70%, #fef2f2 100%);
+    }
+
+    .planet-background.paramedical {
+      background: linear-gradient(135deg, #059669 0%, #10b981 30%, #34d399 70%, #ecfdf5 100%);
+    }
+
+    .planet-background.college {
+      background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 30%, #a78bfa 70%, #f3e8ff 100%);
+    }
+
+    .planet-background.security {
+      background: linear-gradient(135deg, #374151 0%, #4b5563 30%, #6b7280 70%, #f9fafb 100%);
+    }
+
+    .planet-background.hotel {
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 30%, #fbbf24 70%, #fffbeb 100%);
+    }
+
+    .planet-background.custom-tshirts {
+      background: linear-gradient(135deg, #be185d 0%, #ec4899 30%, #f472b6 70%, #fdf2f8 100%);
+    }
+
+    .planet-background.corporate-tshirts {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 30%, #6b7280 70%, #f9fafb 100%);
+    }
+
+    .planet-background.event-tshirts {
+      background: linear-gradient(135deg, #7c2d12 0%, #ea580c 30%, #fb923c 70%, #fff7ed 100%);
+    }
+
+    .planet-background.bedsheets {
+      background: linear-gradient(135deg, #581c87 0%, #7c3aed 30%, #a855f7 70%, #faf5ff 100%);
+    }
+
     .planet-orbit {
       position: absolute;
       top: 50%;
@@ -1452,6 +1497,62 @@
     .planet-background.dusk .star {
       background: rgba(138, 43, 226, 0.8);
       box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    }
+
+    /* Section-specific star colors */
+    .planet-background.school .star {
+      background: rgba(46, 139, 87, 0.8);
+      box-shadow: 0 0 8px rgba(46, 139, 87, 0.6);
+    }
+
+    .planet-background.aviation .star {
+      background: rgba(30, 58, 138, 0.8);
+      box-shadow: 0 0 8px rgba(30, 58, 138, 0.6);
+    }
+
+    .planet-background.medical .star {
+      background: rgba(220, 38, 38, 0.8);
+      box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+    }
+
+    .planet-background.paramedical .star {
+      background: rgba(5, 150, 105, 0.8);
+      box-shadow: 0 0 8px rgba(5, 150, 105, 0.6);
+    }
+
+    .planet-background.college .star {
+      background: rgba(124, 58, 237, 0.8);
+      box-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
+    }
+
+    .planet-background.security .star {
+      background: rgba(55, 65, 81, 0.8);
+      box-shadow: 0 0 8px rgba(55, 65, 81, 0.6);
+    }
+
+    .planet-background.hotel .star {
+      background: rgba(217, 119, 6, 0.8);
+      box-shadow: 0 0 8px rgba(217, 119, 6, 0.6);
+    }
+
+    .planet-background.custom-tshirts .star {
+      background: rgba(190, 24, 93, 0.8);
+      box-shadow: 0 0 8px rgba(190, 24, 93, 0.6);
+    }
+
+    .planet-background.corporate-tshirts .star {
+      background: rgba(31, 41, 55, 0.8);
+      box-shadow: 0 0 8px rgba(31, 41, 55, 0.6);
+    }
+
+    .planet-background.event-tshirts .star {
+      background: rgba(124, 45, 18, 0.8);
+      box-shadow: 0 0 8px rgba(124, 45, 18, 0.6);
+    }
+
+    .planet-background.bedsheets .star {
+      background: rgba(88, 28, 135, 0.8);
+      box-shadow: 0 0 8px rgba(88, 28, 135, 0.6);
     }
 
     .star:nth-child(1) { top: 8%; left: 15%; animation-delay: 0s; }
@@ -2607,7 +2708,7 @@
     // Initialize lively animations
     addLivelyAnimations();
 
-    // Time-based background system
+    // Background system - time-based and section-specific
     function initTimeBasedBackground() {
       const background = document.querySelector('.planet-background');
       const currentHour = new Date().getHours();
@@ -2631,6 +2732,23 @@
       }
       
       console.log(`Applied ${background.classList[1]} theme for hour ${currentHour}`);
+    }
+
+    // Section-specific background system
+    function setSectionBackground(sectionKey) {
+      const background = document.querySelector('.planet-background');
+      
+      // Remove all existing section classes
+      background.classList.remove('school', 'aviation', 'medical', 'paramedical', 'college', 'security', 'hotel', 'custom-tshirts', 'corporate-tshirts', 'event-tshirts', 'bedsheets');
+      
+      // Apply section-specific theme
+      if (sectionKey) {
+        background.classList.add(sectionKey);
+        console.log(`Applied ${sectionKey} section theme`);
+      } else {
+        // Return to time-based theme
+        initTimeBasedBackground();
+      }
     }
 
     // Initialize time-based background
@@ -3342,6 +3460,9 @@ Please provide me with pricing and delivery details.`;
       document.querySelector('.contact-section').style.display = 'none';
       document.querySelector('.footer').style.display = 'none';
       
+      // Apply section-specific background
+      setSectionBackground(serviceKey);
+      
       // Show service page
       const servicePage = document.getElementById(`${serviceKey}-page`);
       if (servicePage) {
@@ -3370,6 +3491,9 @@ Please provide me with pricing and delivery details.`;
       document.querySelectorAll('.service-page').forEach(page => {
         page.classList.remove('active');
       });
+      
+      // Return to time-based background
+      setSectionBackground(null);
       
       // Scroll to top of the page
       window.scrollTo({
