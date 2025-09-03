@@ -42,26 +42,26 @@
   
   <style>
     :root {
-      /* Modern Attractive Color Palette */
-      --primary-navy: #1e3a8a;
-      --primary-blue: #3b82f6;
-      --primary-blue-light: #60a5fa;
-      --accent-gold: #f59e0b;
-      --accent-coral: #f97316;
-      --accent-purple: #8b5cf6;
+      /* Elegant Sophisticated Color Palette */
+      --primary-navy: #0f172a;
+      --primary-blue: #1e293b;
+      --primary-blue-light: #334155;
+      --accent-gold: #d4af37;
+      --accent-bronze: #cd7f32;
+      --accent-silver: #c0c0c0;
       --premium-white: #ffffff;
       --premium-gray: #f8fafc;
-      --premium-dark: #1e293b;
+      --premium-dark: #0f172a;
       --text-primary: #1e293b;
       --text-secondary: #64748b;
       --text-muted: #94a3b8;
       --border-color: #e2e8f0;
-      --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
-      --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
-      --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2);
-      --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
-      --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.15);
+      --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --gradient-accent: linear-gradient(135deg, #d4af37 0%, #cd7f32 100%);
+      --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
       
       /* Section Specific Colors */
       --school-color: #059669;
@@ -136,7 +136,7 @@
 
     .logo:hover {
       transform: scale(1.05);
-      color: var(--accent-coral);
+      color: var(--accent-gold);
     }
 
     .logo img {
@@ -150,7 +150,7 @@
 
     .logo img:hover {
       box-shadow: var(--shadow-heavy);
-      border-color: var(--accent-coral);
+      border-color: var(--accent-gold);
       transform: scale(1.1);
     }
 
@@ -225,7 +225,7 @@
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, var(--primary-navy), var(--accent-coral));
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-gold));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -246,7 +246,7 @@
 
     .hero-tagline {
       font-size: 1.1rem;
-      color: var(--accent-coral);
+      color: var(--accent-gold);
       font-weight: 600;
       margin-bottom: 3rem;
       text-transform: uppercase;
@@ -1288,10 +1288,10 @@
       left: 50%;
       width: 50px;
       height: 50px;
-      background: linear-gradient(135deg, #f59e0b, #f97316);
+      background: linear-gradient(135deg, #d4af37, #cd7f32);
       border-radius: 50%;
       transform: translateX(-50%);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
       animation: planet-rotate 10s linear infinite;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -1300,7 +1300,7 @@
 
     .planet:hover {
       transform: translateX(-50%) scale(1.2);
-      box-shadow: 0 0 30px rgba(245, 158, 11, 0.8);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
     }
 
     .planet.clicked {
@@ -1340,7 +1340,7 @@
       position: absolute;
       width: 2px;
       height: 2px;
-      background: rgba(245, 158, 11, 0.6);
+      background: rgba(212, 175, 55, 0.6);
       border-radius: 50%;
       animation: twinkle 3s ease-in-out infinite;
     }
@@ -1533,32 +1533,20 @@
       visibility: visible;
     }
 
-    /* Urgency and Sales Elements */
-    .urgency-banner {
-      background: linear-gradient(135deg, #dc2626, #ef4444);
-      color: white;
-      padding: 0.5rem 0;
+    /* Elegant Banner */
+    .elegant-banner {
+      background: var(--gradient-primary);
+      color: var(--premium-white);
+      padding: 0.8rem 0;
       text-align: center;
-      font-weight: 600;
-      font-size: 0.9rem;
-      position: relative;
-      overflow: hidden;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
     }
 
-    .urgency-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      animation: shimmer 3s infinite;
-    }
-
-    @keyframes shimmer {
-      0% { left: -100%; }
-      100% { left: 100%; }
+    .elegant-banner p {
+      margin: 0;
+      opacity: 0.9;
     }
 
     .hot-deal {
@@ -1645,7 +1633,7 @@
       bottom: 20px;
       right: 20px;
       z-index: 1000;
-      animation: bounce 2s infinite;
+      animation: pulse 3s infinite;
     }
 
     .social-proof {
@@ -1667,6 +1655,48 @@
       color: var(--text-primary);
       font-size: 0.9rem;
       margin: 0;
+    }
+
+    /* Elegant Service Features */
+    .service-features {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-tag {
+      background: var(--gradient-accent);
+      color: var(--premium-white);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Elegant CTA Button */
+    .elegant-cta {
+      background: var(--gradient-accent);
+      color: var(--premium-white);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-medium);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .elegant-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-heavy);
     }
   </style>
 </head>
@@ -1708,9 +1738,11 @@
     <button class="close-popup" onclick="closeLocationPopup()">Explore More</button>
   </div>
 
-  <!-- Urgency Banner -->
-  <div class="urgency-banner">
-    🚨 LIMITED TIME OFFER: Get 25% OFF on Bulk Orders + FREE Samples! Only 48 Hours Left! 🚨
+  <!-- Elegant Announcement Banner -->
+  <div class="elegant-banner">
+    <div class="container">
+      <p>✨ Premium Quality • Custom Solutions • Nationwide Delivery</p>
+    </div>
   </div>
 
   <!-- Header -->
@@ -1736,22 +1768,22 @@
 
     <div class="container">
       <div class="hero-content loading">
-        <div class="hero-tagline">Your Search Ends Here</div>
+        <div class="hero-tagline">Excellence in Every Stitch</div>
         <h1>Professional Uniform Solutions</h1>
         <p class="hero-subtitle">
-          You've found the perfect destination for all your uniform needs. 
-          From schools to aviation, healthcare to corporate - we're your one-stop solution for premium quality and unmatched service.
+          Crafting sophisticated uniforms for discerning clients across industries. 
+          From educational institutions to corporate enterprises, we deliver unparalleled quality and timeless elegance.
         </p>
         
-        <!-- Social Proof -->
+        <!-- Elegant Social Proof -->
         <div class="social-proof">
-          <h4>⭐ Trusted by 50+ Companies</h4>
-          <p>Join thousands of satisfied customers who chose Planet10 for their uniform needs</p>
+          <h4>Trusted by Leading Organizations</h4>
+          <p>Over 50 prestigious institutions rely on our expertise for their uniform requirements</p>
         </div>
 
         <div class="hero-buttons">
-          <a href="#services" class="btn-primary pulse-animation">Discover Our Services</a>
-          <a href="https://wa.me/919876543210?text=Hi, I want to get a quote for uniforms" class="btn-secondary glow-animation">Get Instant Quote</a>
+          <a href="#services" class="elegant-cta">Explore Our Collection</a>
+          <a href="https://wa.me/919876543210?text=Hi, I would like to discuss uniform requirements" class="btn-secondary">Request Consultation</a>
         </div>
       </div>
     </div>
@@ -1794,27 +1826,29 @@
       
       <div class="services-grid">
         <!-- School Uniforms -->
-        <div class="service-card loading slide-in-left" data-service="school" data-icon="🎓">
+        <div class="service-card loading" data-service="school" data-icon="🎓">
           <div class="service-icon">
             <div class="icon-graduation">🎓</div>
           </div>
-          <div class="hot-deal">Hot Deal</div>
           <h3>School Uniforms</h3>
-          <p>Professional uniforms for educational institutions. Click to see our complete range and customization options.</p>
-          <div class="price-highlight">Starting from ₹299</div>
-          <div class="limited-time">Limited Time</div>
+          <p>Elegant and durable uniforms for educational institutions. Premium fabrics with modern designs that inspire confidence and professionalism.</p>
+          <div class="service-features">
+            <span class="feature-tag">Premium Quality</span>
+            <span class="feature-tag">Custom Sizing</span>
+          </div>
         </div>
 
         <!-- Aviation Uniforms -->
-        <div class="service-card loading slide-in-right" data-service="aviation" data-icon="✈️">
+        <div class="service-card loading" data-service="aviation" data-icon="✈️">
           <div class="service-icon">
             <div class="icon-plane">✈️</div>
           </div>
-          <div class="hot-deal">Premium</div>
           <h3>Aviation Uniforms</h3>
-          <p>Premium uniforms for aviation professionals. Discover our international standards and quality craftsmanship.</p>
-          <div class="price-highlight">Starting from ₹899</div>
-          <div class="limited-time">Best Quality</div>
+          <p>Sophisticated uniforms for aviation professionals. International standards with impeccable attention to detail and comfort.</p>
+          <div class="service-features">
+            <span class="feature-tag">International Standards</span>
+            <span class="feature-tag">Comfort Focused</span>
+          </div>
         </div>
 
         <!-- Medical Uniforms -->
@@ -2056,10 +2090,10 @@
     </div>
   </footer>
 
-  <!-- Floating CTA Button -->
+  <!-- Elegant Floating CTA -->
   <div class="floating-cta">
-    <a href="https://wa.me/919876543210?text=Hi, I want to place an order for uniforms" class="cta-button">
-      🛒 Order Now
+    <a href="https://wa.me/919876543210?text=Hi, I would like to discuss uniform requirements" class="elegant-cta">
+      Get Quote
     </a>
   </div>
 
