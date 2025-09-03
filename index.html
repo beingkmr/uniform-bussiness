@@ -42,26 +42,25 @@
   
   <style>
     :root {
-      /* Schools365 Style Colors */
-      --primary-navy: #1B365D;
-      --primary-blue: #2563EB;
-      --primary-blue-light: #3B82F6;
-      --accent-orange: #F97316;
-      --accent-orange-light: #FB923C;
-      --premium-white: #FFFFFF;
-      --premium-gray: #F8FAFC;
-      --premium-dark: #1F2937;
-      --text-primary: #111827;
-      --text-secondary: #6B7280;
-      --text-muted: #9CA3AF;
-      --border-color: #E5E7EB;
-      --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-      --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      --gradient-primary: linear-gradient(135deg, #1B365D 0%, #2563EB 100%);
-      --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
-      --gradient-hero: linear-gradient(135deg, #1B365D 0%, #2563EB 100%);
-      --gradient-discount: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+      /* Luxury Premium Color Palette */
+      --primary-navy: #1a1a2e;
+      --primary-blue: #16213e;
+      --primary-blue-light: #0f3460;
+      --accent-gold: #d4af37;
+      --accent-silver: #c0c0c0;
+      --premium-white: #ffffff;
+      --premium-gray: #f5f5f5;
+      --premium-dark: #0f0f23;
+      --text-primary: #2c3e50;
+      --text-secondary: #7f8c8d;
+      --text-muted: #bdc3c7;
+      --border-color: #ecf0f1;
+      --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+      --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+      --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2);
+      --gradient-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      --gradient-accent: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+      --gradient-hero: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       
       /* Section Specific Colors */
       --school-color: #059669;
@@ -85,7 +84,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--premium-gray);
+      background: var(--premium-white);
       color: var(--text-primary);
       line-height: 1.6;
       overflow-x: hidden;
@@ -136,7 +135,7 @@
 
     .logo:hover {
       transform: scale(1.05);
-      color: var(--accent-orange);
+      color: var(--accent-gold);
     }
 
     .logo img {
@@ -150,7 +149,7 @@
 
     .logo img:hover {
       box-shadow: var(--shadow-heavy);
-      border-color: var(--accent-orange);
+      border-color: var(--accent-gold);
       transform: scale(1.1);
     }
 
@@ -205,7 +204,7 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       min-height: 70vh;
       display: flex;
       align-items: center;
@@ -225,7 +224,10 @@
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: var(--primary-navy);
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       text-shadow: none;
       line-height: 1.2;
     }
@@ -243,7 +245,7 @@
 
     .hero-tagline {
       font-size: 1.1rem;
-      color: var(--accent-orange);
+      color: var(--accent-gold);
       font-weight: 600;
       margin-bottom: 3rem;
       text-transform: uppercase;
@@ -322,46 +324,11 @@
       border-color: var(--primary-navy);
     }
 
-    /* Discount Banner */
-    .discount-banner {
-      background: var(--gradient-discount);
-      color: var(--premium-white);
-      padding: 0.75rem 0;
-      font-weight: 600;
-      font-size: 0.9rem;
-      position: relative;
-      overflow: hidden;
-      white-space: nowrap;
-    }
 
-    .discount-banner .discount-text {
-      display: inline-block;
-      animation: scroll-left 15s linear infinite;
-      padding-left: 100%;
-    }
-
-    @keyframes scroll-left {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .discount-banner .discount-text {
-      position: relative;
-      z-index: 1;
-    }
-
-    .discount-banner .discount-highlight {
-      background: var(--accent-gold);
-      color: var(--premium-dark);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-weight: 700;
-      margin: 0 0.5rem;
-    }
 
     /* Trust Indicators */
     .trust-section {
-      background: var(--premium-white);
+      background: var(--premium-gray);
       padding: 3rem 0;
       border-bottom: 1px solid var(--border-color);
     }
@@ -417,6 +384,7 @@
 
     /* Services Grid */
     .services-section {
+      background: var(--premium-white);
       padding: 4rem 0;
     }
 
@@ -678,7 +646,7 @@
 
     /* About Section */
     .about-section {
-      background: var(--premium-white);
+      background: var(--premium-gray);
       padding: 4rem 0;
     }
 
@@ -735,7 +703,7 @@
     /* Contact Section */
     .contact-section {
       padding: 4rem 0;
-      background: var(--premium-gray);
+      background: var(--premium-white);
     }
 
     .contact-content {
@@ -839,7 +807,7 @@
 
     /* Footer */
     .footer {
-      background: var(--premium-dark);
+      background: var(--primary-navy);
       border-top: 1px solid var(--border-color);
       padding: 3rem 0 2rem;
     }
@@ -1340,16 +1308,7 @@
   </style>
 </head>
 <body>
-  <!-- Discount Banner -->
-  <div class="discount-banner">
-    <div class="discount-text">
-      🎉 <span class="discount-highlight">FLASH SALE</span> - Up to 30% OFF on Bulk Orders! 
-      <span class="discount-highlight">FREE SAMPLES</span> for Orders Above 100 Pieces! 
-      Limited Time Offer - <span class="discount-highlight">Book Now!</span> 
-      🚚 <span class="discount-highlight">FREE DELIVERY</span> Pan India! 
-      ⭐ <span class="discount-highlight">ISO CERTIFIED</span> Quality Guaranteed!
-    </div>
-  </div>
+
 
   <!-- Header -->
   <header class="header" id="header">
@@ -1357,7 +1316,6 @@
       <nav class="nav">
         <a href="#" class="logo" onclick="showMainPage()">
           <img src="logo.png" alt="Planet10 Logo" />
-          Planet10
         </a>
         <ul class="nav-links">
           <li><a href="#" onclick="showMainPage()">Home</a></li>
@@ -1379,11 +1337,11 @@
     </div>
     <div class="container">
       <div class="hero-content loading">
-        <div class="hero-tagline">Premium Uniform Solutions</div>
-        <h1>Planet10 Uniforms</h1>
+        <div class="hero-tagline">Excellence in Every Stitch</div>
+        <h1>Professional Uniform Solutions</h1>
         <p class="hero-subtitle">
-          Your trusted partner for professional uniforms across all industries. 
-          From schools to aviation, healthcare to corporate - we deliver excellence in every stitch.
+          Your trusted partner for premium uniforms across all industries. 
+          From schools to aviation, healthcare to corporate - we deliver unmatched quality and style.
         </p>
         <div class="hero-buttons">
           <a href="#services" class="btn-primary">Explore Our Services</a>
@@ -2771,11 +2729,14 @@ Please provide me with pricing and delivery details.`;
       
       gallery.innerHTML = '';
       
-      // Try to load photos from the service folder
+      // Try to load photos from the service folder with common naming patterns
       const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
       const commonNames = [
-        `${serviceKey}-1`, `${serviceKey}-uniform`, 
-        `${serviceKey}`, `1`, `image1`, `sample1`, `sample2`, `sample3`
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+        'image1', 'image2', 'image3', 'image4', 'image5', 'image6',
+        'sample1', 'sample2', 'sample3', 'sample4', 'sample5', 'sample6',
+        'uniform1', 'uniform2', 'uniform3', 'uniform4', 'uniform5', 'uniform6',
+        'photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6'
       ];
 
       let photosLoaded = 0;
@@ -2816,9 +2777,13 @@ Please provide me with pricing and delivery details.`;
           placeholder.style.background = 'var(--premium-gray)';
           placeholder.style.borderRadius = '8px';
           placeholder.innerHTML = `
-            <h3>📸 Upload Photos</h3>
-            <p>Upload photos to the <strong>images/${serviceKey}/</strong> folder to see them here</p>
-            <p>Supported formats: JPG, PNG, WebP</p>
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-gold);">📸</div>
+            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">Sample Photos Available</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Contact us to view our extensive collection of ${serviceKey} uniforms</p>
+            <a href="https://wa.me/919876543210?text=Hi, I'd like to see sample photos for ${serviceKey} uniforms" 
+               class="btn-primary" style="display: inline-block; text-decoration: none;">
+              View Samples on WhatsApp
+            </a>
           `;
           gallery.appendChild(placeholder);
         }
