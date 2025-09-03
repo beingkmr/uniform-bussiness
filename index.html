@@ -3221,86 +3221,132 @@ Please provide me with pricing and delivery details.`;
     // Load service page content
     function loadServicePageContent(serviceKey) {
       const service = serviceData[serviceKey];
-      if (!service) return;
+      if (!service) {
+        console.error(`Service data not found for: ${serviceKey}`);
+        return;
+      }
 
+      console.log(`Loading content for service: ${serviceKey}`);
+      
       // Load photos
       loadServicePagePhotos(serviceKey);
 
       // Load details
       loadServicePageDetails(serviceKey, service);
+      
+      // Debug photo loading
+      setTimeout(() => {
+        debugPhotoLoading(serviceKey);
+      }, 1000);
     }
 
-    // Load photos for service page
+    // Load photos for service page - Improved Version
     function loadServicePagePhotos(serviceKey) {
       const gallery = document.getElementById(`${serviceKey}-gallery`);
       if (!gallery) return;
       
-      gallery.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">🔍 Searching for photos...</div>';
+      // Show loading message
+      gallery.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">🔍 Loading photos...</div>';
       
-      // Try to load photos from the service folder with common naming patterns
+      // More comprehensive naming patterns
       const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG', 'WEBP'];
       const commonNames = [
-        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
-        'image1', 'image2', 'image3', 'image4', 'image5', 'image6',
-        'sample1', 'sample2', 'sample3', 'sample4', 'sample5', 'sample6',
-        'uniform1', 'uniform2', 'uniform3', 'uniform4', 'uniform5', 'uniform6',
-        'photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6',
-        'img1', 'img2', 'img3', 'img4', 'img5', 'img6',
-        'pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6'
+        // Simple numbers
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+        // Image prefixes
+        'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10',
+        'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10',
+        // Sample prefixes
+        'sample1', 'sample2', 'sample3', 'sample4', 'sample5', 'sample6', 'sample7', 'sample8', 'sample9', 'sample10',
+        // Uniform prefixes
+        'uniform1', 'uniform2', 'uniform3', 'uniform4', 'uniform5', 'uniform6', 'uniform7', 'uniform8', 'uniform9', 'uniform10',
+        // Photo prefixes
+        'photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6', 'photo7', 'photo8', 'photo9', 'photo10',
+        'pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6', 'pic7', 'pic8', 'pic9', 'pic10',
+        // Service specific names
+        `${serviceKey}1`, `${serviceKey}2`, `${serviceKey}3`, `${serviceKey}4`, `${serviceKey}5`,
+        `${serviceKey}-1`, `${serviceKey}-2`, `${serviceKey}-3`, `${serviceKey}-4`, `${serviceKey}-5`,
+        // Common file names
+        'main', 'primary', 'hero', 'featured', 'cover', 'thumbnail'
       ];
 
       let photosLoaded = 0;
-      const maxPhotos = 20; // Increased to show more photos
-      let attempts = 0;
-      const maxAttempts = 100; // Increased attempts
-
-      // Clear loading message after a short delay
-      setTimeout(() => {
-        gallery.innerHTML = '';
-      }, 1000);
-
-      // Try to load images with Promise-based approach
-      const loadPromises = [];
+      const maxPhotos = 24;
+      const loadedImages = new Set(); // Prevent duplicates
       
-      imageExtensions.forEach(ext => {
-        commonNames.forEach(name => {
-          if (attempts >= maxAttempts) return;
-          attempts++;
+      // Function to try loading a specific image
+      function tryLoadImage(name, ext) {
+        return new Promise((resolve) => {
+          const img = new Image();
+          const imagePath = `images/${serviceKey}/${name}.${ext}`;
           
-          const promise = new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => {
-              if (photosLoaded < maxPhotos) {
-                const photoItem = document.createElement('div');
-                photoItem.className = 'photo-item';
-                photoItem.innerHTML = `
-                  <img src="images/${serviceKey}/${name}.${ext}" alt="${serviceKey} uniform" loading="lazy">
-                  <div class="photo-overlay">
-                    <h4>${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)} Uniform</h4>
-                    <p>Professional Quality</p>
-                  </div>
-                `;
-                gallery.appendChild(photoItem);
-                photosLoaded++;
-                resolve(true);
-              } else {
-                resolve(false);
-              }
-            };
-            img.onerror = () => {
-              resolve(false);
-            };
-            img.src = `images/${serviceKey}/${name}.${ext}`;
-          });
+          img.onload = () => {
+            if (photosLoaded < maxPhotos && !loadedImages.has(imagePath)) {
+              loadedImages.add(imagePath);
+              photosLoaded++;
+              resolve({ success: true, path: imagePath, name: name, ext: ext });
+            } else {
+              resolve({ success: false });
+            }
+          };
           
-          loadPromises.push(promise);
+          img.onerror = () => {
+            resolve({ success: false });
+          };
+          
+          img.src = imagePath;
         });
-      });
+      }
 
-      // Wait for all attempts to complete
-      Promise.all(loadPromises).then(() => {
-        // Add placeholder if no photos loaded
-        if (photosLoaded === 0) {
+      // Try to load images with a more systematic approach
+      async function loadImages() {
+        const loadPromises = [];
+        
+        // Try each extension with each name
+        for (const ext of imageExtensions) {
+          for (const name of commonNames) {
+            if (photosLoaded >= maxPhotos) break;
+            loadPromises.push(tryLoadImage(name, ext));
+          }
+          if (photosLoaded >= maxPhotos) break;
+        }
+        
+        // Wait for all attempts
+        const results = await Promise.all(loadPromises);
+        
+        // Clear loading message
+        gallery.innerHTML = '';
+        
+        // Add successful images
+        results.forEach(result => {
+          if (result.success) {
+            const photoItem = document.createElement('div');
+            photoItem.className = 'photo-item';
+            photoItem.innerHTML = `
+              <img src="${result.path}" alt="${serviceKey} uniform" loading="lazy" onerror="this.style.display='none'">
+              <div class="photo-overlay">
+                <h4>${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)} Uniform</h4>
+                <p>Professional Quality</p>
+              </div>
+            `;
+            gallery.appendChild(photoItem);
+          }
+        });
+        
+        // Show result message
+        if (photosLoaded > 0) {
+          const successMsg = document.createElement('div');
+          successMsg.style.gridColumn = '1 / -1';
+          successMsg.style.textAlign = 'center';
+          successMsg.style.padding = '1rem';
+          successMsg.style.background = 'var(--gradient-accent)';
+          successMsg.style.color = 'var(--premium-white)';
+          successMsg.style.borderRadius = '8px';
+          successMsg.style.marginBottom = '1rem';
+          successMsg.innerHTML = `✅ Displaying ${photosLoaded} photos for ${serviceKey} uniforms`;
+          gallery.insertBefore(successMsg, gallery.firstChild);
+        } else {
+          // Show placeholder if no photos found
           const placeholder = document.createElement('div');
           placeholder.className = 'photo-item';
           placeholder.style.gridColumn = '1 / -1';
@@ -3311,27 +3357,47 @@ Please provide me with pricing and delivery details.`;
           placeholder.style.border = '2px dashed var(--border-color)';
           placeholder.innerHTML = `
             <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-gold);">📸</div>
-            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">Sample Photos Available</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Contact us to view our extensive collection of ${serviceKey} uniforms</p>
+            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">Photos Coming Soon</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Upload photos to the <strong>images/${serviceKey}/</strong> folder to see them here.<br>
+              Supported formats: JPG, PNG, WebP
+            </p>
             <a href="https://wa.me/919876543210?text=Hi, I'd like to see sample photos for ${serviceKey} uniforms" 
-               class="btn-primary" style="display: inline-block; text-decoration: none;">
+               class="elegant-cta" style="display: inline-block; text-decoration: none;">
               View Samples on WhatsApp
             </a>
           `;
           gallery.appendChild(placeholder);
-        } else {
-          // Show success message
-          const successMsg = document.createElement('div');
-          successMsg.style.gridColumn = '1 / -1';
-          successMsg.style.textAlign = 'center';
-          successMsg.style.padding = '1rem';
-          successMsg.style.background = 'var(--accent-gold)';
-          successMsg.style.color = 'var(--premium-white)';
-          successMsg.style.borderRadius = '8px';
-          successMsg.style.marginBottom = '1rem';
-          successMsg.innerHTML = `✅ Found ${photosLoaded} sample photos for ${serviceKey} uniforms`;
-          gallery.insertBefore(successMsg, gallery.firstChild);
         }
+      }
+      
+      // Start loading
+      loadImages();
+    }
+
+    // Debug function to check photo loading
+    function debugPhotoLoading(serviceKey) {
+      console.log(`Debugging photo loading for: ${serviceKey}`);
+      const gallery = document.getElementById(`${serviceKey}-gallery`);
+      if (!gallery) {
+        console.error(`Gallery element not found: ${serviceKey}-gallery`);
+        return;
+      }
+      console.log(`Gallery element found: ${gallery}`);
+      
+      // Test a few common paths
+      const testPaths = [
+        `images/${serviceKey}/1.jpg`,
+        `images/${serviceKey}/image1.jpg`,
+        `images/${serviceKey}/sample1.jpg`,
+        `images/${serviceKey}/uniform1.jpg`
+      ];
+      
+      testPaths.forEach(path => {
+        const img = new Image();
+        img.onload = () => console.log(`✅ Image loaded: ${path}`);
+        img.onerror = () => console.log(`❌ Image failed: ${path}`);
+        img.src = path;
       });
     }
 
