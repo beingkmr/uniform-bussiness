@@ -2,399 +2,1941 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planet10 Uniforms - Elite Professional Uniforms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planet10 Uniforms - Premium Professional Uniform Solutions</title>
+  <meta name="description" content="Leading uniform manufacturer with 10+ years experience. School, aviation, medical, corporate uniforms & custom apparel. Trusted by top institutions." />
+  <meta name="keywords" content="uniforms, school uniforms, aviation uniforms, medical uniforms, corporate uniforms, custom tshirts, hotel uniforms, security uniforms" />
+  
+  <!-- Fonts - Optimized loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Critical CSS inlined for faster loading -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap');
-    /* Reset & base */
-    body {
+    /* Critical CSS - Above the fold styles */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#0A0A0A;color:#FFFFFF;line-height:1.6;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .header{background:linear-gradient(135deg,#1A1A1A 0%,#0A0A0A 100%);backdrop-filter:blur(10px);border-bottom:1px solid #333333;position:sticky;top:0;z-index:1000;transition:all 0.3s ease}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+    .logo{display:flex;align-items:center;gap:12px;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700;color:#D4AF37;text-decoration:none}
+    .logo img{width:50px;height:50px;border-radius:8px}
+    .nav-links{display:flex;list-style:none;gap:2rem}
+    .nav-links a{color:#B8B8B8;text-decoration:none;font-weight:500;transition:color 0.3s ease;position:relative}
+    .nav-links a:hover{color:#D4AF37}
+    .cta-button{background:linear-gradient(135deg,#D4AF37,#B8941F);color:#0A0A0A;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+    .hero{background:linear-gradient(135deg,rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('images/hero/hero-background-1.jpg');background-size:cover;background-position:center;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative}
+    .hero-content{max-width:800px;margin:0 auto}
+    .hero h1{font-family:Playfair Display,serif;font-size:3.5rem;font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#FFFFFF,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-subtitle{font-size:1.25rem;color:#B8B8B8;margin-bottom:2rem;font-weight:400}
+    .hero-stats{display:flex;justify-content:center;gap:3rem;margin:3rem 0;flex-wrap:wrap}
+    .stat-item{text-align:center}
+    .stat-number{font-size:2.5rem;font-weight:800;color:#D4AF37;display:block}
+    .stat-label{color:#B8B8B8;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
+    .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(135deg,#D4AF37,#B8941F);color:#0A0A0A;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+    .btn-secondary{background:transparent;color:#FFFFFF;padding:16px 32px;border:2px solid #D4AF37;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease}
+    @media (max-width:768px){.nav{flex-direction:column;gap:1rem}.nav-links{gap:1rem}.hero h1{font-size:2.5rem}.hero-stats{gap:2rem}.hero-buttons{flex-direction:column;align-items:center}}
+  </style>
+  
+  <style>
+    :root {
+      --primary-gold: #D4AF37;
+      --primary-gold-light: #F4E4A6;
+      --primary-gold-dark: #B8941F;
+      --dark-bg: #0A0A0A;
+      --dark-card: #1A1A1A;
+      --dark-card-hover: #2A2A2A;
+      --text-primary: #FFFFFF;
+      --text-secondary: #B8B8B8;
+      --text-muted: #888888;
+      --accent-blue: #3B82F6;
+      --success-green: #10B981;
+      --warning-orange: #F59E0B;
+      --border-color: #333333;
+      --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
       margin: 0;
-      font-family: 'Open Sans', Arial, sans-serif;
-      background: #0c0c0c;
-      color: #f3f2f1;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
       line-height: 1.6;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
+      overflow-x: hidden;
     }
-    @keyframes fadeIn {
-      to {opacity: 1;}
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    /* Container */
-    .header, .footer, .about-contact, .accordion {
-      max-width: 960px;
+
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
+
     /* Header */
     .header {
-      background: linear-gradient(90deg, #1f1f1f, #121212);
-      padding: 28px 24px 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-bg) 100%);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
       position: sticky;
       top: 0;
-      z-index: 100;
-      animation: fadeIn 1.5s ease forwards 0.2s;
-      opacity: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
     }
-    .logo {
-      width: 160px;
-      height: auto;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 0 6px #d4af37aa);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+
+    .header.scrolled {
+      background: rgba(26, 26, 26, 0.95);
+      box-shadow: var(--shadow-medium);
     }
-    .logo:hover {
-      transform: scale(1.08);
-    }
+
     .nav {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      font-size: 1.1rem;
-      color: #d4af37;
-      text-transform: uppercase;
-    }
-    .nav a:hover {
-      color: #f7d37b;
-      border-bottom: 2px solid #f7d37b;
-      padding-bottom: 3px;
-    }
-    /* Hero */
-    .hero {
-      text-align: center;
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
-      color: #fff8e7;
-      padding: 90px 30px 70px;
-      position: relative;
-      z-index: 0;
-      box-shadow: inset 0 0 90px 40px #000a;
-      font-family: 'Playfair Display', serif;
-      animation: fadeIn 1.5s ease forwards 0.4s;
-      opacity: 0;
-    }
-    .hero h1 {
-      font-size: 3.3rem;
-      margin-bottom: 16px;
-      letter-spacing: 3px;
-      text-shadow: 2px 2px 12px #000;
-      font-weight: 700;
-    }
-    .experience {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      margin-bottom: 25px;
-      background: #d4af37;
-      color: #1a1200;
-      display: inline-block;
-      padding: 15px 28px;
-      border-radius: 30px;
-      box-shadow: 0 6px 15px #d4af3744;
-      letter-spacing: 1.2px;
-      user-select: none;
-    }
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.15rem;
-      text-shadow: 1px 1px 5px #000a;
-      line-height: 1.55;
-      font-weight: 400;
-    }
-    /* Accordion */
-    .accordion {
-      background: #121212cc;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px #000f;
-      padding: 10px 0;
-      margin: 50px auto 70px;
-      overflow: hidden;
-      animation: fadeIn 1.5s ease forwards 0.6s;
-      opacity: 0;
-    }
-    .accordion-item {
-      border-bottom: 1.5px solid #2e2e2e;
-    }
-    .accordion-title {
-      cursor: pointer;
-      padding: 22px 45px 22px 40px;
-      font-weight: 700;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: #d4af37;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
-      user-select: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      background: linear-gradient(90deg, #191919, #141414);
+      padding: 1rem 0;
     }
-    .accordion-title:hover, .accordion-title.active {
-      background: linear-gradient(90deg, #3f2c00, #a47416);
-      color: #fff7d2;
-    }
-    .accordion-title .icon {
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      font-weight: 900;
-      color: #d4af37dd;
-      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      user-select: none;
-    }
-    .accordion-title.active .icon {
-      transform: rotate(45deg);
-      color: #fffcdc;
-    }
-    .accordion-content {
-      padding: 25px 45px 35px 45px;
-      background: #1f1b0d;
-      font-size: 1.05rem;
-      font-family: 'Open Sans', sans-serif;
-      color: #f0e9d2;
-      display: none;
-      line-height: 1.75;
-      box-shadow: inset 0 10px 25px #0007;
-      border-radius: 0 0 20px 20px;
-    }
-    .order-btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 36px;
-      background: linear-gradient(45deg, #bb9818, #f7d355);
-      color: #422900;
       font-weight: 700;
-      font-size: 1.15rem;
-      border-radius: 9999px;
-      box-shadow: 0 4px 15px #ceb857cc;
-      transition: background 0.4s ease;
-      cursor: pointer;
-      user-select: none;
-      border: none;
-      text-align: center;
+      color: var(--primary-gold);
       text-decoration: none;
     }
-    .order-btn:hover {
-      background: linear-gradient(45deg, #f7d355, #bb9818);
-      color: #291900;
-      box-shadow: 0 6px 18px #f7d355cc;
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
     }
-    /* About & Contact */
-    .about-contact {
-      background: #1e1b0d;
-      color: #e6db9c;
-      border-radius: 20px;
-      padding: 45px 50px;
-      margin-bottom: 75px;
-      box-shadow: 0 15px 55px #000e;
-      font-size: 1.15rem;
-      font-family: 'Open Sans', sans-serif;
-      animation: fadeIn 1.5s ease forwards 0.8s;
-      opacity: 0;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
     }
-    .about-contact h2 {
-      font-family: 'Playfair Display', serif;
-      color: #d4af37;
-      font-size: 2.6rem;
-      margin-top: 0;
-      margin-bottom: 25px;
-      letter-spacing: 1.3px;
-      font-weight: 700;
-      text-shadow: 1px 1px 7px #000a;
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
     }
-    .footer {
+
+    .nav-links a:hover {
+      color: var(--primary-gold);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+      color: var(--dark-bg);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-light);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                  url('images/hero/hero-background-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       text-align: center;
-      color: #86857a;
-      letter-spacing: 0.08em;
-      padding: 35px 15px 20px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 0.925rem;
-      background: #070703;
-      box-shadow: inset 0 10px 25px #0003;
-      user-select: none;
-      animation: fadeIn 1.5s ease forwards 1s;
-      opacity: 0;
+      position: relative;
     }
-    /* Responsive */
-    @media (max-width: 700px) {
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text-primary), var(--primary-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary-gold);
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+      color: var(--dark-bg);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-light);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      padding: 16px 32px;
+      border: 2px solid var(--primary-gold);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+    }
+
+    /* Trust Indicators */
+    .trust-section {
+      background: var(--dark-card);
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .trust-content {
+      text-align: center;
+    }
+
+    .trust-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      background: var(--dark-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .trust-badge:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .trust-badge .icon-award,
+    .trust-badge .icon-shipping,
+    .trust-badge .icon-shield,
+    .trust-badge .icon-users {
+      font-size: 2rem;
+      filter: grayscale(0.3) brightness(1.2);
+    }
+
+    .trust-badge span {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* Services Grid */
+    .services-section {
+      padding: 6rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--dark-card);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-gold), var(--primary-gold-light));
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-heavy);
+      border-color: var(--primary-gold);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon .icon-graduation,
+    .service-icon .icon-plane,
+    .service-icon .icon-medical,
+    .service-icon .icon-ambulance,
+    .service-icon .icon-university,
+    .service-icon .icon-security,
+    .service-icon .icon-tshirt,
+    .service-icon .icon-briefcase,
+    .service-icon .icon-calendar,
+    .service-icon .icon-hotel,
+    .service-icon .icon-bed {
+      font-size: 1.5rem;
+      filter: grayscale(0.2) brightness(0.9);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .service-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* Service Images */
+    .service-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    .service-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s ease;
+    }
+
+    .service-image:hover {
+      transform: scale(1.05);
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-features li {
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--success-green);
+      font-weight: bold;
+    }
+
+    .service-button {
+      background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+      color: var(--dark-bg);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .service-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    /* Service Details */
+    .service-details {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: var(--dark-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .service-details h4 {
+      color: var(--primary-gold);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .service-details ul {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .service-details li {
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .service-details li::before {
+      content: '•';
+      color: var(--primary-gold);
+      font-weight: bold;
+      margin-top: 0.1rem;
+    }
+
+    .service-details .highlight {
+      color: var(--primary-gold);
+      font-weight: 600;
+    }
+
+    .service-details .policy-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-details .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    /* About Section */
+    .about-section {
+      background: var(--dark-card);
+      padding: 6rem 0;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .about-feature .feature-icon {
+      font-size: 1.2rem;
+      filter: grayscale(0.3) brightness(1.1);
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow-heavy);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 6rem 0;
+      background: var(--dark-bg);
+    }
+
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: var(--dark-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateX(10px);
+      border-color: var(--primary-gold);
+    }
+
+    .contact-item .contact-icon {
+      font-size: 1.5rem;
+      width: 30px;
+      filter: grayscale(0.3) brightness(1.1);
+    }
+
+    .contact-item div h3 {
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item div p {
+      color: var(--text-secondary);
+    }
+
+    .contact-item a {
+      color: var(--primary-gold);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      background: var(--dark-card);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--dark-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary-gold);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-card);
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0 2rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
       .hero h1 {
-        font-size: 2.3rem;
-        padding: 0 10px;
+        font-size: 2.5rem;
       }
-      .experience {
-        font-size: 1rem;
-        padding: 0 10px;
+
+      .hero-stats {
+        gap: 2rem;
       }
-      .accordion-title {
-        font-size: 1.15rem;
-        padding: 20px 25px 20px 25px;
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
       }
-      .accordion-content {
-        padding: 20px 25px 25px 25px;
-        font-size: 1rem;
+
+      .trust-badges {
+        gap: 1.5rem;
       }
-      .about-contact {
-        font-size: 1rem;
-        padding: 30px 20px;
-        margin-bottom: 40px;
+
+      .services-grid {
+        grid-template-columns: 1fr;
       }
-      .order-btn {
-        padding: 12px 24px;
-        font-size: 1rem;
+
+      .about-content,
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Performance optimizations */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .service-card,
+    .trust-badge,
+    .contact-item {
+      will-change: transform;
+    }
+
+    /* Optimize animations */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Image optimization */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Preload critical resources */
+    .hero {
+      background-attachment: scroll; /* Better for mobile performance */
+    }
+
+    /* Loading animation */
+    .loading {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .loading.loaded {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <header class="header" role="banner">
-    <img class="logo" src="logo.png" alt="Planet10 Logo" />
-    <nav class="nav" role="navigation" aria-label="Primary navigation">
-      <a href="#accordion">Uniforms</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Planet10 Logo" />
+          Planet10
+        </a>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="cta-button">Get Quote</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero" role="region" aria-labelledby="hero-title">
-    <h1 id="hero-title">Elite Uniform Solutions by Planet10</h1>
-    <div class="experience" aria-label="Company experience and trust indicators">
-      10+ Years Experience &bull; Trusted by Aviation Academies &bull; Preferred Partner for Large Institutions
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content loading">
+        <h1>Premium Uniform Solutions</h1>
+        <p class="hero-subtitle">
+          Trusted by top institutions across India. 10+ years of excellence in crafting professional uniforms for every industry.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">Uniforms Delivered</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#services" class="btn-primary">Explore Services</a>
+          <a href="#contact" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
     </div>
-    <p>
-      Delivering unmatched comfort, durability, and premium craftsmanship across all sectors — schools, aviation, healthcare, security, hospitality, and corporate uniforms.
-    </p>
   </section>
 
-  <section class="accordion" id="accordion" role="main" aria-label="Uniform product categories">
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="school-content" id="school-title" role="button">
-        School Uniforms<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="school-content" role="region" aria-labelledby="school-title" hidden>
-        <p><strong>What We Do:</strong> Complete lines of boys’ and girls’ uniforms from pre-primary to 12th grade, including branding, logos, ties, belts, and socks.</p>
-        <p><strong>How We Work:</strong> Sample packs, customized fabrics, fast bulk supplies, on-time delivery, and excellent after-sales support.</p>
-        <p><strong>Delivery:</strong> Typically 10–20 business days after order confirmation.</p>
-        <p><strong>Exchange Policy:</strong> Free size exchange within 7 days of delivery.</p>
-        <p><strong>Payment Policy:</strong> 50% advance, balance on dispatch. GST invoice included.</p>
-        <p><strong>GST:</strong> All uniforms billed with 5% GST in compliance with regulations.</p>
-        <p><strong>Contact for tailored solutions or bulk pricing!</strong></p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+  <!-- Trust Section -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-content loading">
+        <h2 class="trust-title">Why Choose Planet10?</h2>
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <div class="icon-award">🏆</div>
+            <span>Quality Assured</span>
+          </div>
+          <div class="trust-badge">
+            <div class="icon-shipping">🚚</div>
+            <span>Fast Delivery</span>
+          </div>
+          <div class="trust-badge">
+            <div class="icon-shield">🛡️</div>
+            <span>GST Compliant</span>
+          </div>
+          <div class="trust-badge">
+            <div class="icon-users">👥</div>
+            <span>Expert Team</span>
+          </div>
+        </div>
       </div>
-    </article>
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="aviation-content" id="aviation-title" role="button">
-        Aviation Uniforms<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="aviation-content" role="region" aria-labelledby="aviation-title" hidden>
-        <p><strong>What We Do:</strong> Custom-stitched uniforms for pilots, cabin crew, and aviation academies with international standards.</p>
-        <p><strong>How We Work:</strong> International patterns, logo embroidery, fitting camps, and fast sample turnaround.</p>
-        <p><strong>Delivery:</strong> About 15 days for first orders; 7–10 days for repeats.</p>
-        <p><strong>Exchange Policy:</strong> Size change support for students.</p>
-        <p><strong>Payment Policy:</strong> Flexible on repeat clients.</p>
-        <p><strong>GST:</strong> 5% GST included.</p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-      </div>
-    </article>
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="nursing-content" id="nursing-title" role="button">
-        Nursing &amp; Paramedical<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="nursing-content" role="region" aria-labelledby="nursing-title" hidden>
-        <p><strong>What We Do:</strong> Top-grade scrub sets, aprons, and lab coats customized for hygiene and mobility.</p>
-        <p><strong>How We Work:</strong> Standardized hospital and college fabrics with logos.</p>
-        <p><strong>Delivery:</strong> 10–15 days.</p>
-        <p><strong>Exchange Policy:</strong> Within 5 days of delivery.</p>
-        <p><strong>Payment/GST:</strong> As per company policy.</p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Nursing%20and%20Paramedical%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-      </div>
-    </article>
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="security-content" id="security-title" role="button">
-        Security Guards<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="security-content" role="region" aria-labelledby="security-title" hidden>
-        <p><strong>What We Do:</strong> Durable and stylish uniforms and accessories for security professionals.</p>
-        <p><strong>Delivery:</strong> 7–12 business days.</p>
-        <p><strong>Exchange/Payment/GST:</strong> As per company policy.</p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-      </div>
-    </article>
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="hotel-content" id="hotel-title" role="button">
-        Hotel &amp; Hospital Staff<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="hotel-content" role="region" aria-labelledby="hotel-title" hidden>
-        <p><strong>What We Do:</strong> Executive chef coats, bellboy suits, maintenance, and nursing uniforms tailored to your brand style.</p>
-        <p><strong>Specialization:</strong> Custom logo embroidery and fabric themes.</p>
-        <p><strong>Delivery/Exchange/Policy:</strong> As per company policy.</p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Hotel%20and%20Hospital%20Staff%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-      </div>
-    </article>
-    <article class="accordion-item">
-      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="corporate-content" id="corporate-title" role="button">
-        Corporate &amp; Custom T-Shirts<span class="icon" aria-hidden="true">+</span>
-      </h2>
-      <div class="accordion-content" id="corporate-content" role="region" aria-labelledby="corporate-title" hidden>
-        <p><strong>What We Do:</strong> Custom tees, sweatshirts, and jackets for events, branding, and corporate campaigns.</p>
-        <p><strong>How We Work:</strong> Fast design mockups and a wide range of sizes.</p>
-        <p><strong>Delivery/GST/Exchange:</strong> Standard company policies apply.</p>
-        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Corporate%20and%20Custom%20T-Shirts%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <section class="about-contact" id="about" role="region" aria-labelledby="about-title">
-    <h2 id="about-title">About Planet10</h2>
-    <p>
-      Planet10 specializes in delivering premium, tailor-made uniforms for a variety of sectors. 
-      With over a decade of industry experience and a track record of large-scale orders—including for aviation academies—we deliver quality and timely service.
-    </p>
-    <p>
-      Our extensive catalogue, attention to detail, and in-house production provide every client with apparel that reflects their prestige and professionalism. Join the many top schools, airlines, healthcare institutions, and corporations who trust Planet10 for their uniform needs!
-    </p>
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-title loading">
+        <h2>Our Services</h2>
+        <p>Comprehensive uniform solutions for every industry and requirement</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- School Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-graduation">🎓</div>
+          </div>
+          <h3>School Uniforms</h3>
+          <p>Complete uniform solutions for pre-primary to 12th grade with custom branding and accessories.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Free consultation and design discussion</li>
+                <li>Sample approval before bulk production</li>
+                <li>Quality check at every stage</li>
+                <li>Bulk order coordination and management</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required to start production</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>Bank transfer, UPI, or cheque accepted</li>
+                <li>GST invoice provided for all transactions</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 100 pieces</li>
+                <li>Sample charges: ₹500 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">3-5 days</span></li>
+                <li>Design approval required before bulk production</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">15-20 days</span></li>
+                <li>Rush orders: <span class="highlight">10-12 days</span> (extra charges apply)</li>
+                <li>Pan India delivery available</li>
+                <li>Free delivery for orders above ₹50,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">7 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">15 days</span> return window</li>
+                <li>Defective pieces replaced free of cost</li>
+                <li>Return shipping charges borne by customer</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Aviation Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-plane">✈️</div>
+          </div>
+          <h3>Aviation Uniforms</h3>
+          <p>Professional pilot and cabin crew uniforms meeting international aviation standards.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>International aviation pattern expertise</li>
+                <li>On-site fitting camps for bulk orders</li>
+                <li>Custom embroidery and insignia work</li>
+                <li>Quality certification for aviation standards</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">60% advance</span> payment for aviation orders</li>
+                <li>Balance <span class="highlight">40%</span> payment before delivery</li>
+                <li>GST 18% applicable on all orders</li>
+                <li>Corporate billing and invoicing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Mandatory sample approval for all orders</li>
+                <li>Sample charges: ₹1,000 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">5-7 days</span></li>
+                <li>Fitting sessions arranged for sample approval</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">20-25 days</span></li>
+                <li>Rush orders: <span class="highlight">15-18 days</span> (extra charges apply)</li>
+                <li>Nationwide delivery with tracking</li>
+                <li>Free delivery for orders above ₹1,00,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">10 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">20 days</span> return window</li>
+                <li>Aviation standard quality guarantee</li>
+                <li>Free replacement for manufacturing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Medical Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-medical">👨‍⚕️</div>
+          </div>
+          <h3>Medical Uniforms</h3>
+          <p>Hygienic and comfortable medical uniforms for doctors, nurses, and healthcare professionals.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Antimicrobial and easy-care fabric selection</li>
+                <li>Healthcare facility consultation</li>
+                <li>Custom sizing for medical professionals</li>
+                <li>Hygiene and safety compliance</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>GST 12% applicable on medical uniforms</li>
+                <li>Hospital billing and credit terms available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 50 pieces</li>
+                <li>Sample charges: ₹300 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">3-4 days</span></li>
+                <li>Fabric and color approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">12-15 days</span></li>
+                <li>Emergency orders: <span class="highlight">7-10 days</span> (extra charges apply)</li>
+                <li>Hospital delivery coordination available</li>
+                <li>Free delivery for orders above ₹25,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">5 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">10 days</span> return window</li>
+                <li>Medical grade quality guarantee</li>
+                <li>Free replacement for fabric defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Medical%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Paramedical Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-ambulance">🚑</div>
+          </div>
+          <h3>Paramedical Uniforms</h3>
+          <p>Specialized uniforms for paramedics, lab technicians, and allied health professionals.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Functional design for emergency services</li>
+                <li>Durable fabric for heavy-duty use</li>
+                <li>Easy identification and visibility</li>
+                <li>Comfortable fit for long shifts</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>GST 12% applicable on paramedical uniforms</li>
+                <li>Emergency service billing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 30 pieces</li>
+                <li>Sample charges: ₹400 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">4-5 days</span></li>
+                <li>Functionality testing included</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">14-18 days</span></li>
+                <li>Emergency orders: <span class="highlight">8-12 days</span> (extra charges apply)</li>
+                <li>Nationwide delivery with tracking</li>
+                <li>Free delivery for orders above ₹30,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">7 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">12 days</span> return window</li>
+                <li>Durability guarantee for 6 months</li>
+                <li>Free replacement for material defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Paramedical%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- College Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-university">🏛️</div>
+          </div>
+          <h3>College Uniforms</h3>
+          <p>Modern and professional uniforms for colleges and universities with institutional branding.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Contemporary design consultation</li>
+                <li>Institutional branding and logo work</li>
+                <li>Bulk order management for colleges</li>
+                <li>Student size coordination</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">40% advance</span> payment required</li>
+                <li>Balance <span class="highlight">60%</span> payment before delivery</li>
+                <li>GST 18% applicable on college uniforms</li>
+                <li>Educational institution billing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 200 pieces</li>
+                <li>Sample charges: ₹600 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">5-6 days</span></li>
+                <li>Design and branding approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">18-22 days</span></li>
+                <li>Rush orders: <span class="highlight">12-15 days</span> (extra charges apply)</li>
+                <li>College delivery coordination available</li>
+                <li>Free delivery for orders above ₹75,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">10 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">15 days</span> return window</li>
+                <li>Bulk exchange coordination available</li>
+                <li>Free replacement for manufacturing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20College%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Security Guard Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-security">🛡️</div>
+          </div>
+          <h3>Security Guard Uniforms</h3>
+          <p>Durable and authoritative uniforms for security personnel with professional appearance.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>High-durability fabric selection</li>
+                <li>Professional and authoritative design</li>
+                <li>Weather-resistant materials</li>
+                <li>Custom patches and insignia work</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>GST 18% applicable on security uniforms</li>
+                <li>Security company billing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 25 pieces</li>
+                <li>Sample charges: ₹500 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">4-5 days</span></li>
+                <li>Durability testing included</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">16-20 days</span></li>
+                <li>Rush orders: <span class="highlight">10-14 days</span> (extra charges apply)</li>
+                <li>Security company delivery coordination</li>
+                <li>Free delivery for orders above ₹40,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">7 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">15 days</span> return window</li>
+                <li>Durability guarantee for 1 year</li>
+                <li>Free replacement for material defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Custom T-Shirts -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-tshirt">👕</div>
+          </div>
+          <h3>Custom T-Shirts</h3>
+          <p>Personalized t-shirts for events, promotions, and casual wear with custom designs.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Custom design consultation and creation</li>
+                <li>Multiple printing techniques available</li>
+                <li>Wide range of colors and sizes</li>
+                <li>Fast turnaround for promotional needs</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">100% advance</span> payment for orders under 50 pieces</li>
+                <li><span class="highlight">70% advance</span> for orders above 50 pieces</li>
+                <li>GST 18% applicable on custom t-shirts</li>
+                <li>UPI, card, or bank transfer accepted</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 100 pieces</li>
+                <li>Sample charges: ₹200 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">2-3 days</span></li>
+                <li>Design approval required before printing</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After design approval: <span class="highlight">5-7 days</span></li>
+                <li>Rush orders: <span class="highlight">2-3 days</span> (extra charges apply)</li>
+                <li>Local delivery available</li>
+                <li>Free delivery for orders above ₹10,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">3 days</span> of delivery</li>
+                <li>Printing errors: <span class="highlight">7 days</span> return window</li>
+                <li>Quality guarantee on printing</li>
+                <li>Free reprint for printing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Custom%20T-Shirts%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Corporate T-Shirts -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-briefcase">💼</div>
+          </div>
+          <h3>Corporate T-Shirts</h3>
+          <p>Professional corporate apparel for team building, events, and company branding.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Corporate branding consultation</li>
+                <li>Professional design and logo integration</li>
+                <li>Team building event coordination</li>
+                <li>Bulk order management</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>GST 18% applicable on corporate t-shirts</li>
+                <li>Corporate billing and credit terms available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 50 pieces</li>
+                <li>Sample charges: ₹300 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">3-4 days</span></li>
+                <li>Branding and design approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After design approval: <span class="highlight">7-10 days</span></li>
+                <li>Rush orders: <span class="highlight">4-6 days</span> (extra charges apply)</li>
+                <li>Corporate delivery coordination available</li>
+                <li>Free delivery for orders above ₹20,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">5 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">10 days</span> return window</li>
+                <li>Corporate quality guarantee</li>
+                <li>Free replacement for printing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Corporate%20T-Shirts%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Event T-Shirts -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-calendar">📅</div>
+          </div>
+          <h3>Event T-Shirts</h3>
+          <p>Special event t-shirts for conferences, festivals, sports events, and celebrations.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Event-specific design consultation</li>
+                <li>Quick turnaround for time-sensitive events</li>
+                <li>Festival and conference branding expertise</li>
+                <li>Competitive pricing for bulk orders</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">100% advance</span> payment for event orders</li>
+                <li>GST 18% applicable on event t-shirts</li>
+                <li>UPI, card, or bank transfer accepted</li>
+                <li>Event organizer billing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 200 pieces</li>
+                <li>Sample charges: ₹250 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">2-3 days</span></li>
+                <li>Event branding approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After design approval: <span class="highlight">4-6 days</span></li>
+                <li>Rush orders: <span class="highlight">2-3 days</span> (extra charges apply)</li>
+                <li>Event venue delivery available</li>
+                <li>Free delivery for orders above ₹15,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">2 days</span> of delivery</li>
+                <li>Printing errors: <span class="highlight">5 days</span> return window</li>
+                <li>Event quality guarantee</li>
+                <li>Free reprint for printing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Event%20T-Shirts%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Hotel Staff Uniforms -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-hotel">🏨</div>
+          </div>
+          <h3>Hotel Staff Uniforms</h3>
+          <p>Elegant and functional uniforms for hotel staff including front desk, housekeeping, and restaurant.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Elegant design consultation for hospitality</li>
+                <li>Hotel branding and logo integration</li>
+                <li>Comfortable fit for long working hours</li>
+                <li>Easy maintenance and care instructions</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">50% advance</span> payment required</li>
+                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
+                <li>GST 18% applicable on hotel uniforms</li>
+                <li>Hotel billing and credit terms available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 40 pieces</li>
+                <li>Sample charges: ₹800 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">5-6 days</span></li>
+                <li>Hotel branding and design approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">18-22 days</span></li>
+                <li>Rush orders: <span class="highlight">12-15 days</span> (extra charges apply)</li>
+                <li>Hotel delivery coordination available</li>
+                <li>Free delivery for orders above ₹60,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Size exchange within <span class="highlight">8 days</span> of delivery</li>
+                <li>Quality issues: <span class="highlight">15 days</span> return window</li>
+                <li>Hotel grade quality guarantee</li>
+                <li>Free replacement for manufacturing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Hotel%20Staff%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+
+        <!-- Bedsheets -->
+        <div class="service-card loading">
+          <div class="service-icon">
+            <div class="icon-bed">🛏️</div>
+          </div>
+          <h3>Bedsheets & Linens</h3>
+          <p>Premium quality bedsheets, pillow covers, and hotel linens with custom designs.</p>
+          
+          <div class="service-details">
+            <div class="policy-section">
+              <h4>🔄 How We Work</h4>
+              <ul>
+                <li>Premium fabric selection and consultation</li>
+                <li>Custom design and pattern creation</li>
+                <li>Hotel standard quality assurance</li>
+                <li>Bulk supply coordination</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>💰 Payment Policy</h4>
+              <ul>
+                <li><span class="highlight">60% advance</span> payment required</li>
+                <li>Balance <span class="highlight">40%</span> payment before delivery</li>
+                <li>GST 12% applicable on bedsheets & linens</li>
+                <li>Hotel and hospitality billing available</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>📋 Sample Requirements</h4>
+              <ul>
+                <li>Free sample for orders above 100 pieces</li>
+                <li>Sample charges: ₹1,500 per design (refundable)</li>
+                <li>Sample delivery: <span class="highlight">7-10 days</span></li>
+                <li>Fabric and design approval required</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>🚚 Delivery Timeline</h4>
+              <ul>
+                <li>After sample approval: <span class="highlight">25-30 days</span></li>
+                <li>Rush orders: <span class="highlight">18-22 days</span> (extra charges apply)</li>
+                <li>Hotel delivery coordination available</li>
+                <li>Free delivery for orders above ₹80,000</li>
+              </ul>
+            </div>
+            
+            <div class="policy-section">
+              <h4>↩️ Return & Exchange Policy</h4>
+              <ul>
+                <li>Quality issues: <span class="highlight">20 days</span> return window</li>
+                <li>Fabric defects: <span class="highlight">30 days</span> return window</li>
+                <li>Hotel grade quality guarantee</li>
+                <li>Free replacement for manufacturing defects</li>
+              </ul>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Bedsheets%20and%20Linens%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="about-contact" id="contact" role="region" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact Us</h2>
-    <p>Email: <a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a><br />
-    Phone & WhatsApp: <a href="tel:+919886518538">+91-9886518538</a></p>
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content loading">
+        <div class="about-text">
+          <h2>About Planet10</h2>
+          <p>
+            With over a decade of experience in the uniform industry, Planet10 has established itself as a trusted partner for institutions across India. We specialize in delivering premium, tailor-made uniforms that combine style, comfort, and durability.
+          </p>
+          <p>
+            Our commitment to quality and customer satisfaction has made us the preferred choice for aviation academies, educational institutions, healthcare facilities, and corporate organizations.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon">✅</div>
+              <span>10+ Years Experience</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">✅</div>
+              <span>Quality Assurance</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">✅</div>
+              <span>Timely Delivery</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">✅</div>
+              <span>Customer Support</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="images/about/factory-interior.jpg" alt="Planet10 Uniforms Factory" loading="lazy" />
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer" role="contentinfo">
-    &copy; 2015-2025 Planet10 Uniforms. Excellence in Every Stitch.
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-content loading">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h3>Phone & WhatsApp</h3>
+              <p><a href="tel:+919886518538">+91-9886518538</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Location</h3>
+              <p>India - Pan India Delivery</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="school">School Uniforms</option>
+                <option value="aviation">Aviation Uniforms</option>
+                <option value="medical">Medical Uniforms</option>
+                <option value="paramedical">Paramedical Uniforms</option>
+                <option value="college">College Uniforms</option>
+                <option value="security">Security Guard Uniforms</option>
+                <option value="custom-tshirts">Custom T-Shirts</option>
+                <option value="corporate-tshirts">Corporate T-Shirts</option>
+                <option value="event-tshirts">Event T-Shirts</option>
+                <option value="hotel">Hotel Staff Uniforms</option>
+                <option value="bedsheets">Bedsheets & Linens</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Approximate Quantity</label>
+              <input type="text" id="quantity" name="quantity" placeholder="e.g., 100 pieces">
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Requirements</label>
+              <textarea id="message" name="message" placeholder="Tell us about your specific requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Send Quote Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Planet10 Uniforms</h3>
+          <p>Your trusted partner for premium uniform solutions across all industries. Excellence in every stitch since 2015.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <p><a href="#services">School Uniforms</a></p>
+          <p><a href="#services">Aviation Uniforms</a></p>
+          <p><a href="#services">Medical Uniforms</a></p>
+          <p><a href="#services">Corporate Apparel</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: inquiryplanet10@gmail.com</p>
+          <p>Phone: +91-9886518538</p>
+          <p>WhatsApp: +91-9886518538</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <p><a href="#about">About Us</a></p>
+          <p><a href="#contact">Contact</a></p>
+          <p><a href="#services">Services</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2015-2025 Planet10 Uniforms. All rights reserved. | Excellence in Every Stitch</p>
+      </div>
+    </div>
   </footer>
 
   <script>
-    const accordionTitles = document.querySelectorAll('.accordion-title');
-    accordionTitles.forEach(title => {
-      title.addEventListener('click', () => {
-        const activeTitle = document.querySelector('.accordion-title.active');
-        if (activeTitle && activeTitle !== title) {
-          activeTitle.classList.remove('active');
-          activeTitle.nextElementSibling.hidden = true;
-          activeTitle.setAttribute('aria-expanded', 'false');
-          activeTitle.querySelector('.icon').textContent = '+';
-        }
-        const isActive = title.classList.toggle('active');
-        title.nextElementSibling.hidden = !isActive;
-        title.setAttribute('aria-expanded', isActive);
-        title.querySelector('.icon').textContent = isActive ? '−' : '+';
-      });
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
 
-      title.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          title.click();
+    // Loading animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('loaded');
         }
       });
+    }, observerOptions);
+
+    // Observe all loading elements
+    document.querySelectorAll('.loading').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Form submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const service = formData.get('service');
+      const quantity = formData.get('quantity');
+      const message = formData.get('message');
+      
+      // Create WhatsApp message
+      const whatsappMessage = `Hi! I'm interested in getting a quote for ${service} uniforms.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+Quantity: ${quantity}
+Additional Requirements: ${message}
+
+Please provide me with pricing and delivery details.`;
+
+      const whatsappUrl = `https://wa.me/919886518538?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      // Reset form
+      e.target.reset();
+      
+      // Show success message
+      alert('Redirecting to WhatsApp for quote request...');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading delay for better UX
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.loading').forEach(el => {
+          el.classList.add('loaded');
+        });
+      }, 300);
+    });
+
+    // Auto-load images from folders
+    function loadServiceImages() {
+      const serviceFolders = [
+        'school', 'aviation', 'medical', 'paramedical', 'college', 
+        'security', 'custom-tshirts', 'corporate-tshirts', 'event-tshirts', 
+        'hotel', 'bedsheets'
+      ];
+
+      serviceFolders.forEach(folder => {
+        // Try to load common image formats
+        const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
+        const imagePromises = [];
+
+        imageExtensions.forEach(ext => {
+          // Try different common filenames
+          const commonNames = [
+            `${folder}-1.${ext}`, `${folder}-uniform.${ext}`, 
+            `${folder}.${ext}`, `1.${ext}`, `image1.${ext}`
+          ];
+
+          commonNames.forEach(filename => {
+            const img = new Image();
+            const promise = new Promise((resolve) => {
+              img.onload = () => resolve({ src: `images/${folder}/${filename}`, folder });
+              img.onerror = () => resolve(null);
+            });
+            img.src = `images/${folder}/${filename}`;
+            imagePromises.push(promise);
+          });
+        });
+
+        Promise.all(imagePromises).then(results => {
+          const validImages = results.filter(result => result !== null);
+          if (validImages.length > 0) {
+            displayServiceImages(validImages[0].folder, validImages);
+          }
+        });
+      });
+    }
+
+    function displayServiceImages(folder, images) {
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach(card => {
+        const serviceTitle = card.querySelector('h3').textContent.toLowerCase();
+        if (serviceTitle.includes(folder.replace('-', ' ')) || 
+            (folder === 'custom-tshirts' && serviceTitle.includes('custom t-shirt')) ||
+            (folder === 'corporate-tshirts' && serviceTitle.includes('corporate t-shirt')) ||
+            (folder === 'event-tshirts' && serviceTitle.includes('event t-shirt'))) {
+          
+          // Create images container
+          const imagesContainer = document.createElement('div');
+          imagesContainer.className = 'service-images';
+          
+          images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.alt = `${folder} uniform`;
+            img.className = 'service-image';
+            img.loading = 'lazy';
+            imagesContainer.appendChild(img);
+          });
+
+          // Insert after the description paragraph
+          const description = card.querySelector('p');
+          description.parentNode.insertBefore(imagesContainer, description.nextSibling);
+        }
+      });
+    }
+
+    // Load images when page loads
+    window.addEventListener('load', () => {
+      setTimeout(loadServiceImages, 500);
     });
   </script>
 </body>
