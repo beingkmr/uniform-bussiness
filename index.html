@@ -3250,6 +3250,22 @@ Please provide me with pricing and delivery details.`;
       
       // More comprehensive naming patterns
       const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG', 'WEBP'];
+      
+      // Service-specific file names based on actual uploaded files
+      const serviceSpecificNames = {
+        'aviation': ['aviation-g', 'aviation-pilot', 'aviation'],
+        'school': ['boys-uniform', 'girls-uniform', 'school-g', 'school-uniforms', 'school'],
+        'custom-tshirts': ['custome-tshirts', 'custome-tshirts1', 'WhatsApp Image 2025-09-03 at 1.05.22 PM (3)', 'WhatsApp Image 2025-09-03 at 1.05.23 PM (1)'],
+        'corporate-tshirts': ['corporate-event', 'corporate-event1', 'corporate-events'],
+        'medical': ['medical-uniform', 'medical-staff', 'medical'],
+        'paramedical': ['paramedical-uniform', 'paramedical-staff', 'paramedical'],
+        'college': ['college-uniform', 'college-student', 'college'],
+        'security': ['security-uniform', 'security-guard', 'security'],
+        'hotel': ['hotel-uniform', 'hotel-staff', 'hotel'],
+        'event-tshirts': ['event-tshirt', 'event-uniform', 'event'],
+        'bedsheets': ['bedsheet', 'bedding', 'bedsheet1']
+      };
+      
       const commonNames = [
         // Simple numbers
         '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
@@ -3269,6 +3285,11 @@ Please provide me with pricing and delivery details.`;
         // Common file names
         'main', 'primary', 'hero', 'featured', 'cover', 'thumbnail'
       ];
+      
+      // Add service-specific names to the list
+      if (serviceSpecificNames[serviceKey]) {
+        commonNames.unshift(...serviceSpecificNames[serviceKey]);
+      }
 
       let photosLoaded = 0;
       const maxPhotos = 24;
@@ -3385,14 +3406,42 @@ Please provide me with pricing and delivery details.`;
       }
       console.log(`Gallery element found: ${gallery}`);
       
-      // Test a few common paths
-      const testPaths = [
+      // Service-specific test paths based on actual uploaded files
+      const serviceTestPaths = {
+        'aviation': [
+          `images/${serviceKey}/aviation-g.png`,
+          `images/${serviceKey}/aviation-pilot.png`,
+          `images/${serviceKey}/aviation.png`
+        ],
+        'school': [
+          `images/${serviceKey}/boys-uniform.png`,
+          `images/${serviceKey}/girls-uniform.png`,
+          `images/${serviceKey}/school-g.png`,
+          `images/${serviceKey}/school-uniforms.png`,
+          `images/${serviceKey}/school.png`
+        ],
+        'custom-tshirts': [
+          `images/${serviceKey}/custome-tshirts.png`,
+          `images/${serviceKey}/custome-tshirts1.png`,
+          `images/${serviceKey}/WhatsApp Image 2025-09-03 at 1.05.22 PM (3).jpeg`,
+          `images/${serviceKey}/WhatsApp Image 2025-09-03 at 1.05.23 PM (1).jpeg`
+        ],
+        'corporate-tshirts': [
+          `images/${serviceKey}/corporate-event.png`,
+          `images/${serviceKey}/corporate-event1.png`,
+          `images/${serviceKey}/corporate-events.png`
+        ]
+      };
+      
+      // Get test paths for this service
+      const testPaths = serviceTestPaths[serviceKey] || [
         `images/${serviceKey}/1.jpg`,
         `images/${serviceKey}/image1.jpg`,
         `images/${serviceKey}/sample1.jpg`,
         `images/${serviceKey}/uniform1.jpg`
       ];
       
+      console.log(`Testing ${testPaths.length} paths for ${serviceKey}:`);
       testPaths.forEach(path => {
         const img = new Image();
         img.onload = () => console.log(`✅ Image loaded: ${path}`);
