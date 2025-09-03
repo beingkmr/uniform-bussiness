@@ -389,6 +389,7 @@
       transform: translateY(-8px);
       box-shadow: var(--shadow-heavy);
       border-color: var(--primary-navy);
+      cursor: pointer;
     }
 
     .service-icon {
@@ -847,6 +848,271 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      background-color: var(--premium-white);
+      margin: 2% auto;
+      padding: 0;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1000px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-heavy);
+      animation: modalSlideIn 0.3s ease-out;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .modal-header {
+      background: var(--gradient-primary);
+      color: var(--premium-white);
+      padding: 2rem;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+    }
+
+    .modal-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .modal-header .service-icon-large {
+      font-size: 3rem;
+    }
+
+    .close {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--premium-white);
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .close:hover {
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 200px;
+      background: var(--premium-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      border: 2px dashed var(--border-color);
+    }
+
+    .modal-details {
+      background: var(--premium-gray);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .detail-section {
+      margin-bottom: 2rem;
+    }
+
+    .detail-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-section h3 {
+      color: var(--primary-navy);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .detail-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .detail-section li {
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .detail-section li::before {
+      content: '✓';
+      color: var(--success-green);
+      font-weight: bold;
+      margin-top: 0.1rem;
+    }
+
+    .modal-cta {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .modal-cta .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--premium-white);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-light);
+    }
+
+    .modal-cta .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    /* Enhanced Service Cards */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: 'Click to View Details';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--gradient-primary);
+      color: var(--premium-white);
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover::after {
+      transform: translateY(0);
+    }
+
+    /* Attractive Visual Elements */
+    .floating-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .floating-element {
+      position: absolute;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-element:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      top: 60%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+      width: 100px;
+      height: 100px;
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -870,6 +1136,11 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="floating-elements">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+    </div>
     <div class="container">
       <div class="hero-content loading">
         <h1>Premium Uniform Solutions</h1>
@@ -935,192 +1206,48 @@
       
       <div class="services-grid">
         <!-- School Uniforms -->
-        <div class="service-card loading">
+        <div class="service-card loading" data-service="school" data-icon="🎓">
           <div class="service-icon">
             <div class="icon-graduation">🎓</div>
           </div>
           <h3>School Uniforms</h3>
           <p>Complete uniform solutions for pre-primary to 12th grade with custom branding and accessories.</p>
-          
-          <div class="service-details">
-            <div class="policy-section">
-              <h4>🔄 How We Work</h4>
-              <ul>
-                <li>Free consultation and design discussion</li>
-                <li>Sample approval before bulk production</li>
-                <li>Quality check at every stage</li>
-                <li>Bulk order coordination and management</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>💰 Payment Policy</h4>
-              <ul>
-                <li><span class="highlight">50% advance</span> payment required to start production</li>
-                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
-                <li>Bank transfer, UPI, or cheque accepted</li>
-                <li>GST invoice provided for all transactions</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>📋 Sample Requirements</h4>
-              <ul>
-                <li>Free sample for orders above 100 pieces</li>
-                <li>Sample charges: ₹500 per design (refundable)</li>
-                <li>Sample delivery: <span class="highlight">3-5 days</span></li>
-                <li>Design approval required before bulk production</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>🚚 Delivery Timeline</h4>
-              <ul>
-                <li>After sample approval: <span class="highlight">15-20 days</span></li>
-                <li>Rush orders: <span class="highlight">10-12 days</span> (extra charges apply)</li>
-                <li>Pan India delivery available</li>
-                <li>Free delivery for orders above ₹50,000</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>↩️ Return & Exchange Policy</h4>
-              <ul>
-                <li>Size exchange within <span class="highlight">7 days</span> of delivery</li>
-                <li>Quality issues: <span class="highlight">15 days</span> return window</li>
-                <li>Defective pieces replaced free of cost</li>
-                <li>Return shipping charges borne by customer</li>
-              </ul>
-            </div>
-          </div>
-          
-          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+          <ul class="service-features">
+            <li>Custom logos & embroidery</li>
+            <li>Bulk order discounts</li>
+            <li>Size exchange policy</li>
+            <li>GST compliant billing</li>
+          </ul>
         </div>
 
         <!-- Aviation Uniforms -->
-        <div class="service-card loading">
+        <div class="service-card loading" data-service="aviation" data-icon="✈️">
           <div class="service-icon">
             <div class="icon-plane">✈️</div>
           </div>
           <h3>Aviation Uniforms</h3>
           <p>Professional pilot and cabin crew uniforms meeting international aviation standards.</p>
-          
-          <div class="service-details">
-            <div class="policy-section">
-              <h4>🔄 How We Work</h4>
-              <ul>
-                <li>International aviation pattern expertise</li>
-                <li>On-site fitting camps for bulk orders</li>
-                <li>Custom embroidery and insignia work</li>
-                <li>Quality certification for aviation standards</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>💰 Payment Policy</h4>
-              <ul>
-                <li><span class="highlight">60% advance</span> payment for aviation orders</li>
-                <li>Balance <span class="highlight">40%</span> payment before delivery</li>
-                <li>GST 18% applicable on all orders</li>
-                <li>Corporate billing and invoicing available</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>📋 Sample Requirements</h4>
-              <ul>
-                <li>Mandatory sample approval for all orders</li>
-                <li>Sample charges: ₹1,000 per design (refundable)</li>
-                <li>Sample delivery: <span class="highlight">5-7 days</span></li>
-                <li>Fitting sessions arranged for sample approval</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>🚚 Delivery Timeline</h4>
-              <ul>
-                <li>After sample approval: <span class="highlight">20-25 days</span></li>
-                <li>Rush orders: <span class="highlight">15-18 days</span> (extra charges apply)</li>
-                <li>Nationwide delivery with tracking</li>
-                <li>Free delivery for orders above ₹1,00,000</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>↩️ Return & Exchange Policy</h4>
-              <ul>
-                <li>Size exchange within <span class="highlight">10 days</span> of delivery</li>
-                <li>Quality issues: <span class="highlight">20 days</span> return window</li>
-                <li>Aviation standard quality guarantee</li>
-                <li>Free replacement for manufacturing defects</li>
-              </ul>
-            </div>
-          </div>
-          
-          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+          <ul class="service-features">
+            <li>International patterns</li>
+            <li>Logo embroidery</li>
+            <li>Fitting camps</li>
+            <li>Fast sample turnaround</li>
+          </ul>
         </div>
 
         <!-- Medical Uniforms -->
-        <div class="service-card loading">
+        <div class="service-card loading" data-service="medical" data-icon="👨‍⚕️">
           <div class="service-icon">
             <div class="icon-medical">👨‍⚕️</div>
           </div>
           <h3>Medical Uniforms</h3>
           <p>Hygienic and comfortable medical uniforms for doctors, nurses, and healthcare professionals.</p>
-          
-          <div class="service-details">
-            <div class="policy-section">
-              <h4>🔄 How We Work</h4>
-              <ul>
-                <li>Antimicrobial and easy-care fabric selection</li>
-                <li>Healthcare facility consultation</li>
-                <li>Custom sizing for medical professionals</li>
-                <li>Hygiene and safety compliance</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>💰 Payment Policy</h4>
-              <ul>
-                <li><span class="highlight">50% advance</span> payment required</li>
-                <li>Balance <span class="highlight">50%</span> payment before delivery</li>
-                <li>GST 12% applicable on medical uniforms</li>
-                <li>Hospital billing and credit terms available</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>📋 Sample Requirements</h4>
-              <ul>
-                <li>Free sample for orders above 50 pieces</li>
-                <li>Sample charges: ₹300 per design (refundable)</li>
-                <li>Sample delivery: <span class="highlight">3-4 days</span></li>
-                <li>Fabric and color approval required</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>🚚 Delivery Timeline</h4>
-              <ul>
-                <li>After sample approval: <span class="highlight">12-15 days</span></li>
-                <li>Emergency orders: <span class="highlight">7-10 days</span> (extra charges apply)</li>
-                <li>Hospital delivery coordination available</li>
-                <li>Free delivery for orders above ₹25,000</li>
-              </ul>
-            </div>
-            
-            <div class="policy-section">
-              <h4>↩️ Return & Exchange Policy</h4>
-              <ul>
-                <li>Size exchange within <span class="highlight">5 days</span> of delivery</li>
-                <li>Quality issues: <span class="highlight">10 days</span> return window</li>
-                <li>Medical grade quality guarantee</li>
-                <li>Free replacement for fabric defects</li>
-              </ul>
-            </div>
-          </div>
-          
-          <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Medical%20Uniforms%20-%20Planet10" class="service-button" target="_blank">Get Quote</a>
+          <ul class="service-features">
+            <li>Antimicrobial fabrics</li>
+            <li>Easy maintenance</li>
+            <li>Professional appearance</li>
+            <li>Custom sizing</li>
+          </ul>
         </div>
 
         <!-- Paramedical Uniforms -->
@@ -1785,6 +1912,30 @@
     </div>
   </footer>
 
+  <!-- Service Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">
+          <span class="service-icon-large" id="modalIcon"></span>
+          <span id="modalServiceName"></span>
+        </h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="photo-gallery" id="modalGallery">
+          <!-- Photos will be loaded here -->
+        </div>
+        <div class="modal-details" id="modalDetails">
+          <!-- Service details will be loaded here -->
+        </div>
+        <div class="modal-cta">
+          <a href="#" id="modalWhatsApp" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Header scroll effect
     window.addEventListener('scroll', () => {
@@ -1946,6 +2097,243 @@ Please provide me with pricing and delivery details.`;
     // Load images when page loads
     window.addEventListener('load', () => {
       setTimeout(loadServiceImages, 500);
+    });
+
+    // Service Modal Functionality
+    const modal = document.getElementById('serviceModal');
+    const modalTitle = document.getElementById('modalServiceName');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalGallery = document.getElementById('modalGallery');
+    const modalDetails = document.getElementById('modalDetails');
+    const modalWhatsApp = document.getElementById('modalWhatsApp');
+    const closeBtn = document.querySelector('.close');
+
+    // Service data
+    const serviceData = {
+      school: {
+        name: 'School Uniforms',
+        icon: '🎓',
+        description: 'Complete uniform solutions for pre-primary to 12th grade with custom branding and accessories.',
+        details: {
+          'How We Work': [
+            'Free consultation and design discussion',
+            'Sample approval before bulk production',
+            'Quality check at every stage',
+            'Bulk order coordination and management'
+          ],
+          'Payment Policy': [
+            '50% advance payment required to start production',
+            'Balance 50% payment before delivery',
+            'Bank transfer, UPI, or cheque accepted',
+            'GST invoice provided for all transactions'
+          ],
+          'Sample Requirements': [
+            'Free sample for orders above 100 pieces',
+            'Sample charges: ₹500 per design (refundable)',
+            'Sample delivery: 3-5 days',
+            'Design approval required before bulk production'
+          ],
+          'Delivery Timeline': [
+            'After sample approval: 15-20 days',
+            'Rush orders: 10-12 days (extra charges apply)',
+            'Pan India delivery available',
+            'Free delivery for orders above ₹50,000'
+          ],
+          'Return & Exchange Policy': [
+            'Size exchange within 7 days of delivery',
+            'Quality issues: 15 days return window',
+            'Defective pieces replaced free of cost',
+            'Return shipping charges borne by customer'
+          ]
+        },
+        whatsapp: 'School%20Uniforms%20-%20Planet10'
+      },
+      aviation: {
+        name: 'Aviation Uniforms',
+        icon: '✈️',
+        description: 'Professional pilot and cabin crew uniforms meeting international aviation standards.',
+        details: {
+          'How We Work': [
+            'International aviation pattern expertise',
+            'On-site fitting camps for bulk orders',
+            'Custom embroidery and insignia work',
+            'Quality certification for aviation standards'
+          ],
+          'Payment Policy': [
+            '60% advance payment for aviation orders',
+            'Balance 40% payment before delivery',
+            'GST 18% applicable on all orders',
+            'Corporate billing and invoicing available'
+          ],
+          'Sample Requirements': [
+            'Mandatory sample approval for all orders',
+            'Sample charges: ₹1,000 per design (refundable)',
+            'Sample delivery: 5-7 days',
+            'Fitting sessions arranged for sample approval'
+          ],
+          'Delivery Timeline': [
+            'After sample approval: 20-25 days',
+            'Rush orders: 15-18 days (extra charges apply)',
+            'Nationwide delivery with tracking',
+            'Free delivery for orders above ₹1,00,000'
+          ],
+          'Return & Exchange Policy': [
+            'Size exchange within 10 days of delivery',
+            'Quality issues: 20 days return window',
+            'Aviation standard quality guarantee',
+            'Free replacement for manufacturing defects'
+          ]
+        },
+        whatsapp: 'Aviation%20Uniforms%20-%20Planet10'
+      },
+      medical: {
+        name: 'Medical Uniforms',
+        icon: '👨‍⚕️',
+        description: 'Hygienic and comfortable medical uniforms for doctors, nurses, and healthcare professionals.',
+        details: {
+          'How We Work': [
+            'Antimicrobial and easy-care fabric selection',
+            'Healthcare facility consultation',
+            'Custom sizing for medical professionals',
+            'Hygiene and safety compliance'
+          ],
+          'Payment Policy': [
+            '50% advance payment required',
+            'Balance 50% payment before delivery',
+            'GST 12% applicable on medical uniforms',
+            'Hospital billing and credit terms available'
+          ],
+          'Sample Requirements': [
+            'Free sample for orders above 50 pieces',
+            'Sample charges: ₹300 per design (refundable)',
+            'Sample delivery: 3-4 days',
+            'Fabric and color approval required'
+          ],
+          'Delivery Timeline': [
+            'After sample approval: 12-15 days',
+            'Emergency orders: 7-10 days (extra charges apply)',
+            'Hospital delivery coordination available',
+            'Free delivery for orders above ₹25,000'
+          ],
+          'Return & Exchange Policy': [
+            'Size exchange within 5 days of delivery',
+            'Quality issues: 10 days return window',
+            'Medical grade quality guarantee',
+            'Free replacement for fabric defects'
+          ]
+        },
+        whatsapp: 'Medical%20Uniforms%20-%20Planet10'
+      }
+    };
+
+    // Open modal
+    function openModal(serviceKey) {
+      const service = serviceData[serviceKey];
+      if (!service) return;
+
+      modalTitle.textContent = service.name;
+      modalIcon.textContent = service.icon;
+      modalWhatsApp.href = `https://wa.me/919886518538?text=I'm%20interested%20in%20${service.whatsapp}`;
+
+      // Load photos
+      loadModalPhotos(serviceKey);
+
+      // Load details
+      loadModalDetails(service);
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Load photos for modal
+    function loadModalPhotos(serviceKey) {
+      modalGallery.innerHTML = '';
+      
+      // Try to load photos from the service folder
+      const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
+      const commonNames = [
+        `${serviceKey}-1`, `${serviceKey}-uniform`, 
+        `${serviceKey}`, `1`, `image1`, `sample1`
+      ];
+
+      let photosLoaded = 0;
+      const maxPhotos = 6;
+
+      imageExtensions.forEach(ext => {
+        commonNames.forEach(name => {
+          if (photosLoaded >= maxPhotos) return;
+          
+          const img = new Image();
+          img.onload = () => {
+            if (photosLoaded < maxPhotos) {
+              const galleryItem = document.createElement('div');
+              galleryItem.className = 'gallery-item';
+              galleryItem.innerHTML = `<img src="images/${serviceKey}/${name}.${ext}" alt="${serviceKey} uniform" loading="lazy">`;
+              modalGallery.appendChild(galleryItem);
+              photosLoaded++;
+            }
+          };
+          img.src = `images/${serviceKey}/${name}.${ext}`;
+        });
+      });
+
+      // Add placeholder if no photos loaded
+      setTimeout(() => {
+        if (photosLoaded === 0) {
+          const placeholder = document.createElement('div');
+          placeholder.className = 'gallery-placeholder';
+          placeholder.innerHTML = '📸 Upload photos to see them here';
+          modalGallery.appendChild(placeholder);
+        }
+      }, 1000);
+    }
+
+    // Load service details
+    function loadModalDetails(service) {
+      modalDetails.innerHTML = '';
+      
+      Object.entries(service.details).forEach(([section, items]) => {
+        const detailSection = document.createElement('div');
+        detailSection.className = 'detail-section';
+        
+        const sectionTitle = document.createElement('h3');
+        sectionTitle.textContent = section;
+        
+        const sectionList = document.createElement('ul');
+        items.forEach(item => {
+          const listItem = document.createElement('li');
+          listItem.textContent = item;
+          sectionList.appendChild(listItem);
+        });
+        
+        detailSection.appendChild(sectionTitle);
+        detailSection.appendChild(sectionList);
+        modalDetails.appendChild(detailSection);
+      });
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Event listeners
+    closeBtn.addEventListener('click', closeModal);
+    
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Make service cards clickable
+    document.addEventListener('click', (e) => {
+      const serviceCard = e.target.closest('.service-card');
+      if (serviceCard && serviceCard.dataset.service) {
+        e.preventDefault();
+        openModal(serviceCard.dataset.service);
+      }
     });
   </script>
 </body>
