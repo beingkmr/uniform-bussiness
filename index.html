@@ -3,363 +3,393 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planet10 Uniforms - Professional Uniforms Supplier</title>
+  <title>Planet10 Uniforms - Elite Professional Uniforms</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap');
+    /* Reset & base */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #111;
-      color: #eee;
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: #0c0c0c;
+      color: #f3f2f1;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
+    @keyframes fadeIn {
+      to {opacity: 1;}
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Container */
+    .header, .footer, .about-contact, .accordion {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* Header */
     .header {
-      background: #1b1e23;
+      background: linear-gradient(90deg, #1f1f1f, #121212);
+      padding: 28px 24px 20px;
       text-align: center;
-      padding: 30px 0 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: fadeIn 1.5s ease forwards 0.2s;
+      opacity: 0;
     }
     .logo {
-      width: 150px;
+      width: 160px;
       height: auto;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 0 6px #d4af37aa);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .logo:hover {
+      transform: scale(1.08);
     }
     .nav {
-      margin-top: 15px;
-    }
-    .nav a {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
       color: #d4af37;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: bold;
-      font-size: 1.1em;
-      letter-spacing: 1px;
+      text-transform: uppercase;
     }
+    .nav a:hover {
+      color: #f7d37b;
+      border-bottom: 2px solid #f7d37b;
+      padding-bottom: 3px;
+    }
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 50px 15px 20px 15px;
-      background: #191d22;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
+      color: #fff8e7;
+      padding: 90px 30px 70px;
+      position: relative;
+      z-index: 0;
+      box-shadow: inset 0 0 90px 40px #000a;
+      font-family: 'Playfair Display', serif;
+      animation: fadeIn 1.5s ease forwards 0.4s;
+      opacity: 0;
     }
     .hero h1 {
-      color: #d4af37;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
+      font-size: 3.3rem;
+      margin-bottom: 16px;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 12px #000;
+      font-weight: 700;
     }
     .experience {
-      margin: 30px 0 40px 0;
-      font-size: 1.15em;
-      color: #fafafa;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 25px;
+      background: #d4af37;
+      color: #1a1200;
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 30px;
+      box-shadow: 0 6px 15px #d4af3744;
+      letter-spacing: 1.2px;
+      user-select: none;
     }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      text-shadow: 1px 1px 5px #000a;
+      line-height: 1.55;
+      font-weight: 400;
+    }
+    /* Accordion */
     .accordion {
-      max-width: 900px;
-      margin: 40px auto 60px auto;
-      background: #15181c;
-      border-radius: 18px;
-      box-shadow: 0 6px 40px #0006;
-      padding: 0;
-      color: #eee;
+      background: #121212cc;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px #000f;
+      padding: 10px 0;
+      margin: 50px auto 70px;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease forwards 0.6s;
+      opacity: 0;
     }
     .accordion-item {
-      border-bottom: 1px solid #2d2f33;
+      border-bottom: 1.5px solid #2e2e2e;
     }
     .accordion-title {
       cursor: pointer;
-      padding: 20px 40px;
-      position: relative;
-      font-weight: 600;
-      font-size: 1.25em;
+      padding: 22px 45px 22px 40px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
       color: #d4af37;
-      user-select: none;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      transition: background-color 0.3s;
+      align-items: center;
+      position: relative;
+      user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      background: linear-gradient(90deg, #191919, #141414);
     }
-    .accordion-title:hover {
-      background-color: #282c34;
+    .accordion-title:hover, .accordion-title.active {
+      background: linear-gradient(90deg, #3f2c00, #a47416);
+      color: #fff7d2;
     }
     .accordion-title .icon {
-      transition: transform 0.3s ease;
-      font-size: 1.6em;
-      line-height: 1;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #d4af37dd;
+      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      user-select: none;
     }
     .accordion-title.active .icon {
       transform: rotate(45deg);
+      color: #fffcdc;
     }
     .accordion-content {
+      padding: 25px 45px 35px 45px;
+      background: #1f1b0d;
+      font-size: 1.05rem;
+      font-family: 'Open Sans', sans-serif;
+      color: #f0e9d2;
       display: none;
-      padding: 20px 40px 30px 40px;
-      font-size: 1em;
-      line-height: 1.5;
-      background: #1e2126;
-      color: #ddd;
+      line-height: 1.75;
+      box-shadow: inset 0 10px 25px #0007;
+      border-radius: 0 0 20px 20px;
     }
     .order-btn {
       display: inline-block;
-      margin-top: 18px;
-      padding: 12px 28px;
-      background: #d4af37;
-      color: #171717;
-      border: none;
-      border-radius: 8px;
+      margin-top: 25px;
+      padding: 14px 36px;
+      background: linear-gradient(45deg, #bb9818, #f7d355);
+      color: #422900;
       font-weight: 700;
-      font-size: 1.1em;
+      font-size: 1.15rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 15px #ceb857cc;
+      transition: background 0.4s ease;
       cursor: pointer;
+      user-select: none;
+      border: none;
+      text-align: center;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
     .order-btn:hover {
-      background-color: #edbf3f;
+      background: linear-gradient(45deg, #f7d355, #bb9818);
+      color: #291900;
+      box-shadow: 0 6px 18px #f7d355cc;
     }
+    /* About & Contact */
     .about-contact {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      background: #1e1e23;
-      border-radius: 18px;
-      padding: 30px 40px;
-      color: #eee;
-      line-height: 1.6;
+      background: #1e1b0d;
+      color: #e6db9c;
+      border-radius: 20px;
+      padding: 45px 50px;
+      margin-bottom: 75px;
+      box-shadow: 0 15px 55px #000e;
+      font-size: 1.15rem;
+      font-family: 'Open Sans', sans-serif;
+      animation: fadeIn 1.5s ease forwards 0.8s;
+      opacity: 0;
     }
     .about-contact h2 {
+      font-family: 'Playfair Display', serif;
       color: #d4af37;
+      font-size: 2.6rem;
       margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.8em;
+      margin-bottom: 25px;
+      letter-spacing: 1.3px;
+      font-weight: 700;
+      text-shadow: 1px 1px 7px #000a;
     }
     .footer {
       text-align: center;
-      color: #aaa;
-      padding: 24px;
-      font-size: 0.9em;
+      color: #86857a;
+      letter-spacing: 0.08em;
+      padding: 35px 15px 20px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.925rem;
+      background: #070703;
+      box-shadow: inset 0 10px 25px #0003;
+      user-select: none;
+      animation: fadeIn 1.5s ease forwards 1s;
+      opacity: 0;
     }
+    /* Responsive */
     @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2.3rem;
+        padding: 0 10px;
+      }
+      .experience {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
       .accordion-title {
-        padding: 18px 25px;
-        font-size: 1.1em;
+        font-size: 1.15rem;
+        padding: 20px 25px 20px 25px;
       }
       .accordion-content {
-        padding: 15px 25px 25px 25px;
-        font-size: 0.95em;
-      }
-      .order-btn {
-        font-size: 1em;
-        padding: 10px 20px;
+        padding: 20px 25px 25px 25px;
+        font-size: 1rem;
       }
       .about-contact {
-        padding: 20px 25px;
+        font-size: 1rem;
+        padding: 30px 20px;
+        margin-bottom: 40px;
+      }
+      .order-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="header">
+  <header class="header" role="banner">
     <img class="logo" src="logo.png" alt="Planet10 Logo" />
-    <div class="nav">
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
       <a href="#accordion">Uniforms</a>
       <a href="#about">About Us</a>
       <a href="#contact">Contact</a>
-    </div>
-  </div>
-  <div class="hero">
-    <h1>Professional Uniform Solutions by Planet10</h1>
-    <div class="experience">
-      <strong>
-        10+ Years Experience • Trusted by Aviation Academies • Preferred
-        Partner for Large Institutions
-      </strong>
-    </div>
-    <p>
-      Delivering comfort, durability, and elite craftsmanship across all
-      industries—schools, aviation, healthcare, security, hospitality, and
-      corporates.
-    </p>
-  </div>
+    </nav>
+  </header>
 
-  <section class="accordion" id="accordion">
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        School Uniforms
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> We offer a complete line of boy’s and girl’s uniforms
-        from pre-primary to 12th, with all branding, logos, ties, belts, and socks.
-        <br /><br />
-        <b>How We Work:</b> Sample packs, customized fabric, fast bulk supply,
-        on-time delivery, and after-sales support to schools and vendors.
-        <br /><br />
-        <b>Delivery:</b> Usually 10–20 business days after order confirmation.
-        <br />
-        <b>Exchange Policy:</b> Free exchange for sizing within 7 days of delivery.
-        <br />
-        <b>Payment Policy:</b> 50% advance, 50% on dispatch. GST Invoice provided.
-        <br />
-        <b>GST:</b> All uniforms billed with 5% GST as per Indian regulations.
-        <br />
-        <b>Contact for tailored solutions or bulk pricing!</b>
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20School%20Uniforms%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Elite Uniform Solutions by Planet10</h1>
+    <div class="experience" aria-label="Company experience and trust indicators">
+      10+ Years Experience &bull; Trusted by Aviation Academies &bull; Preferred Partner for Large Institutions
     </div>
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        Aviation Uniforms
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> Custom stitched pilot, cabin crew, and aviation academy uniforms.
-        <br /><br />
-        <b>How We Work:</b> International patterns, logo embroidery, fitting camps, fast sample turnaround.
-        <br /><br />
-        <b>Delivery:</b> 15 days for first order, 7–10 days on repeats.
-        <br />
-        <b>Exchange Policy:</b> Size change supported for students.
-        <br />
-        <b>Payment Policy:</b> Flexible on repeat clients.
-        <br />
-        <b>GST:</b> 5% GST included.
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Aviation%20Uniforms%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        Nursing &amp; Paramedical
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> Top-grade scrub sets, aprons, and lab coats for every budget.
-        <br /><br />
-        <b>How We Work:</b> Hygienic, standardized fabrics, hospital/college logos.
-        <br /><br />
-        <b>Delivery:</b> 10–15 days.
-        <br />
-        <b>Exchange Policy:</b> Within 5 days.
-        <br />
-        <b>Payment/GST:</b> As above.
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Nursing%20and%20Paramedical%20Uniforms%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        Security Guards
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> Sturdy uniforms and accessories for professional use.
-        <br /><br />
-        <b>Delivery:</b> 7–12 business days.
-        <br />
-        <b>Exchange/Payment/GST:</b> Standard company policy.
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        Hotel &amp; Hospital Staff
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> Executive chef coats, bellboy suits, maintenance and nurse dresses.
-        <br /><br />
-        <b>Specialization:</b> Fabric matched to theme, custom logo embroidery.
-        <br /><br />
-        <b>Delivery/Exchange/Policy:</b> As above.
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Hotel%20and%20Hospital%20Staff%20Uniforms%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-title" tabindex="0">
-        Corporate &amp; Custom T-Shirts
-        <span class="icon">+</span>
-      </div>
-      <div class="accordion-content">
-        <b>What We Do:</b> Custom tees, sweatshirts, and jackets for events, branding, and staff.
-        <br /><br />
-        <b>How We Work:</b> Quick design mockups, multiple sizes.
-        <br /><br />
-        <b>Delivery/GST/Exchange:</b> Standard.
-        <br /><br />
-        <a
-          href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Corporate%20and%20Custom%20T-Shirts%20-%20Planet10"
-          class="order-btn"
-          target="_blank"
-          >Order on WhatsApp</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <section class="about-contact" id="about">
-    <h2>About Planet10</h2>
     <p>
-      Planet10 specializes in delivering premium, tailor-made uniforms for a variety of
-      sectors. With over a decade of industry experience and a track record of
-      multiple large-scale orders—including for leading aviation academies—we understand
-      the importance of quality and timely delivery.
-    </p>
-    <p>
-      Our extensive catalogue, attention to detail, and in-house production ensure
-      every client receives apparel that reflects their prestige. Join top schools,
-      airlines, healthcare institutions, and corporations who trust Planet10 for their
-      uniform needs!
-    </p>
-  </section>
-  <section class="about-contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@planet10.com<br />
-      Phone: +91 98765 43210<br />
-      Address: 123 Elite Street, Bengaluru, Karnataka, India
+      Delivering unmatched comfort, durability, and premium craftsmanship across all sectors — schools, aviation, healthcare, security, hospitality, and corporate uniforms.
     </p>
   </section>
 
-  <div class="footer">© 2015-2025 Planet10 Uniforms. Excellence in Every Stitch.</div>
+  <section class="accordion" id="accordion" role="main" aria-label="Uniform product categories">
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="school-content" id="school-title" role="button">
+        School Uniforms<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="school-content" role="region" aria-labelledby="school-title" hidden>
+        <p><strong>What We Do:</strong> Complete lines of boys’ and girls’ uniforms from pre-primary to 12th grade, including branding, logos, ties, belts, and socks.</p>
+        <p><strong>How We Work:</strong> Sample packs, customized fabrics, fast bulk supplies, on-time delivery, and excellent after-sales support.</p>
+        <p><strong>Delivery:</strong> Typically 10–20 business days after order confirmation.</p>
+        <p><strong>Exchange Policy:</strong> Free size exchange within 7 days of delivery.</p>
+        <p><strong>Payment Policy:</strong> 50% advance, balance on dispatch. GST invoice included.</p>
+        <p><strong>GST:</strong> All uniforms billed with 5% GST in compliance with regulations.</p>
+        <p><strong>Contact for tailored solutions or bulk pricing!</strong></p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="aviation-content" id="aviation-title" role="button">
+        Aviation Uniforms<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="aviation-content" role="region" aria-labelledby="aviation-title" hidden>
+        <p><strong>What We Do:</strong> Custom-stitched uniforms for pilots, cabin crew, and aviation academies with international standards.</p>
+        <p><strong>How We Work:</strong> International patterns, logo embroidery, fitting camps, and fast sample turnaround.</p>
+        <p><strong>Delivery:</strong> About 15 days for first orders; 7–10 days for repeats.</p>
+        <p><strong>Exchange Policy:</strong> Size change support for students.</p>
+        <p><strong>Payment Policy:</strong> Flexible on repeat clients.</p>
+        <p><strong>GST:</strong> 5% GST included.</p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="nursing-content" id="nursing-title" role="button">
+        Nursing &amp; Paramedical<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="nursing-content" role="region" aria-labelledby="nursing-title" hidden>
+        <p><strong>What We Do:</strong> Top-grade scrub sets, aprons, and lab coats customized for hygiene and mobility.</p>
+        <p><strong>How We Work:</strong> Standardized hospital and college fabrics with logos.</p>
+        <p><strong>Delivery:</strong> 10–15 days.</p>
+        <p><strong>Exchange Policy:</strong> Within 5 days of delivery.</p>
+        <p><strong>Payment/GST:</strong> As per company policy.</p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Nursing%20and%20Paramedical%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="security-content" id="security-title" role="button">
+        Security Guards<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="security-content" role="region" aria-labelledby="security-title" hidden>
+        <p><strong>What We Do:</strong> Durable and stylish uniforms and accessories for security professionals.</p>
+        <p><strong>Delivery:</strong> 7–12 business days.</p>
+        <p><strong>Exchange/Payment/GST:</strong> As per company policy.</p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="hotel-content" id="hotel-title" role="button">
+        Hotel &amp; Hospital Staff<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="hotel-content" role="region" aria-labelledby="hotel-title" hidden>
+        <p><strong>What We Do:</strong> Executive chef coats, bellboy suits, maintenance, and nursing uniforms tailored to your brand style.</p>
+        <p><strong>Specialization:</strong> Custom logo embroidery and fabric themes.</p>
+        <p><strong>Delivery/Exchange/Policy:</strong> As per company policy.</p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Hotel%20and%20Hospital%20Staff%20Uniforms%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+    <article class="accordion-item">
+      <h2 class="accordion-title" tabindex="0" aria-expanded="false" aria-controls="corporate-content" id="corporate-title" role="button">
+        Corporate &amp; Custom T-Shirts<span class="icon" aria-hidden="true">+</span>
+      </h2>
+      <div class="accordion-content" id="corporate-content" role="region" aria-labelledby="corporate-title" hidden>
+        <p><strong>What We Do:</strong> Custom tees, sweatshirts, and jackets for events, branding, and corporate campaigns.</p>
+        <p><strong>How We Work:</strong> Fast design mockups and a wide range of sizes.</p>
+        <p><strong>Delivery/GST/Exchange:</strong> Standard company policies apply.</p>
+        <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Corporate%20and%20Custom%20T-Shirts%20-%20Planet10" class="order-btn" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="about-contact" id="about" role="region" aria-labelledby="about-title">
+    <h2 id="about-title">About Planet10</h2>
+    <p>
+      Planet10 specializes in delivering premium, tailor-made uniforms for a variety of sectors. 
+      With over a decade of industry experience and a track record of large-scale orders—including for aviation academies—we deliver quality and timely service.
+    </p>
+    <p>
+      Our extensive catalogue, attention to detail, and in-house production provide every client with apparel that reflects their prestige and professionalism. Join the many top schools, airlines, healthcare institutions, and corporations who trust Planet10 for their uniform needs!
+    </p>
+  </section>
+
+  <section class="about-contact" id="contact" role="region" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Email: <a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a><br />
+    Phone & WhatsApp: <a href="tel:+919886518538">+91-9886518538</a></p>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    &copy; 2015-2025 Planet10 Uniforms. Excellence in Every Stitch.
+  </footer>
 
   <script>
-    // Accordion logic with icon rotation
     const accordionTitles = document.querySelectorAll('.accordion-title');
-    accordionTitles.forEach((title) => {
+    accordionTitles.forEach(title => {
       title.addEventListener('click', () => {
-        const currentlyActive = document.querySelector('.accordion-title.active');
-        if (currentlyActive && currentlyActive !== title) {
-          currentlyActive.classList.remove('active');
-          currentlyActive.nextElementSibling.style.display = 'none';
+        const activeTitle = document.querySelector('.accordion-title.active');
+        if (activeTitle && activeTitle !== title) {
+          activeTitle.classList.remove('active');
+          activeTitle.nextElementSibling.hidden = true;
+          activeTitle.setAttribute('aria-expanded', 'false');
+          activeTitle.querySelector('.icon').textContent = '+';
         }
-        title.classList.toggle('active');
-        const content = title.nextElementSibling;
-        if (title.classList.contains('active')) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
+        const isActive = title.classList.toggle('active');
+        title.nextElementSibling.hidden = !isActive;
+        title.setAttribute('aria-expanded', isActive);
+        title.querySelector('.icon').textContent = isActive ? '−' : '+';
       });
 
-      // Support keyboard toggle (Enter and Space)
-      title.addEventListener('keydown', (e) => {
+      title.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           title.click();
