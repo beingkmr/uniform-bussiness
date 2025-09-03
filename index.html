@@ -42,31 +42,39 @@
   
   <style>
     :root {
-      --primary-blue: #1E40AF;
+      /* Schools365 Style Colors */
+      --primary-navy: #1B365D;
+      --primary-blue: #2563EB;
       --primary-blue-light: #3B82F6;
-      --primary-blue-dark: #1E3A8A;
-      --accent-gold: #F59E0B;
-      --accent-gold-light: #FCD34D;
-      --accent-gold-dark: #D97706;
+      --accent-orange: #F97316;
+      --accent-orange-light: #FB923C;
       --premium-white: #FFFFFF;
       --premium-gray: #F8FAFC;
-      --premium-dark: #0F172A;
-      --premium-card: #FFFFFF;
-      --premium-card-hover: #F1F5F9;
-      --text-primary: #0F172A;
-      --text-secondary: #475569;
-      --text-muted: #64748B;
-      --accent-green: #059669;
-      --accent-red: #DC2626;
-      --accent-purple: #7C3AED;
-      --border-color: #E2E8F0;
+      --premium-dark: #1F2937;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-muted: #9CA3AF;
+      --border-color: #E5E7EB;
       --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
       --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      --gradient-primary: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
-      --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
-      --gradient-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+      --gradient-primary: linear-gradient(135deg, #1B365D 0%, #2563EB 100%);
+      --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+      --gradient-hero: linear-gradient(135deg, #1B365D 0%, #2563EB 100%);
       --gradient-discount: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+      
+      /* Section Specific Colors */
+      --school-color: #059669;
+      --aviation-color: #0EA5E9;
+      --medical-color: #DC2626;
+      --paramedical-color: #7C3AED;
+      --college-color: #0891B2;
+      --security-color: #374151;
+      --custom-tshirt-color: #EC4899;
+      --corporate-tshirt-color: #8B5CF6;
+      --event-tshirt-color: #F59E0B;
+      --hotel-color: #10B981;
+      --bedsheet-color: #F97316;
     }
 
     * {
@@ -120,7 +128,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -156,7 +164,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--primary-blue);
+      color: var(--primary-navy);
     }
 
     .nav-links a::after {
@@ -166,7 +174,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--primary-blue);
+      background: var(--primary-navy);
       transition: width 0.3s ease;
     }
 
@@ -212,7 +220,7 @@
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-orange));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -298,9 +306,9 @@
     }
 
     .btn-secondary:hover {
-      background: var(--primary-blue);
+      background: var(--primary-navy);
       color: var(--premium-white);
-      border-color: var(--primary-blue);
+      border-color: var(--primary-navy);
     }
 
     /* Discount Banner */
@@ -354,7 +362,7 @@
     .trust-title {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       margin-bottom: 2rem;
     }
 
@@ -409,7 +417,7 @@
     .section-title h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       margin-bottom: 0.8rem;
     }
 
@@ -454,8 +462,53 @@
     .service-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow-heavy);
-      border-color: var(--primary-blue);
+      border-color: var(--primary-navy);
       cursor: pointer;
+    }
+
+    /* Section Specific Colors */
+    .service-card[data-service="school"] .service-icon {
+      background: linear-gradient(135deg, var(--school-color), #10B981);
+    }
+
+    .service-card[data-service="aviation"] .service-icon {
+      background: linear-gradient(135deg, var(--aviation-color), #0EA5E9);
+    }
+
+    .service-card[data-service="medical"] .service-icon {
+      background: linear-gradient(135deg, var(--medical-color), #EF4444);
+    }
+
+    .service-card[data-service="paramedical"] .service-icon {
+      background: linear-gradient(135deg, var(--paramedical-color), #8B5CF6);
+    }
+
+    .service-card[data-service="college"] .service-icon {
+      background: linear-gradient(135deg, var(--college-color), #0891B2);
+    }
+
+    .service-card[data-service="security"] .service-icon {
+      background: linear-gradient(135deg, var(--security-color), #4B5563);
+    }
+
+    .service-card[data-service="custom-tshirts"] .service-icon {
+      background: linear-gradient(135deg, var(--custom-tshirt-color), #EC4899);
+    }
+
+    .service-card[data-service="corporate-tshirts"] .service-icon {
+      background: linear-gradient(135deg, var(--corporate-tshirt-color), #8B5CF6);
+    }
+
+    .service-card[data-service="event-tshirts"] .service-icon {
+      background: linear-gradient(135deg, var(--event-tshirt-color), #F59E0B);
+    }
+
+    .service-card[data-service="hotel"] .service-icon {
+      background: linear-gradient(135deg, var(--hotel-color), #10B981);
+    }
+
+    .service-card[data-service="bedsheets"] .service-icon {
+      background: linear-gradient(135deg, var(--bedsheet-color), #F97316);
     }
 
     .service-icon {
@@ -594,13 +647,13 @@
 
     .service-details li::before {
       content: '•';
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       font-weight: bold;
       margin-top: 0.1rem;
     }
 
     .service-details .highlight {
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       font-weight: 600;
     }
 
@@ -628,7 +681,7 @@
     .about-text h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       margin-bottom: 1.5rem;
     }
 
@@ -683,7 +736,7 @@
     .contact-info h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       margin-bottom: 2rem;
     }
 
@@ -702,7 +755,7 @@
 
     .contact-item:hover {
       transform: translateX(10px);
-      border-color: var(--primary-blue);
+      border-color: var(--primary-navy);
     }
 
     .contact-item .contact-icon {
@@ -721,7 +774,7 @@
     }
 
     .contact-item a {
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       text-decoration: none;
     }
 
@@ -765,7 +818,7 @@
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
-      border-color: var(--primary-blue);
+      border-color: var(--primary-navy);
     }
 
     .form-group textarea {
@@ -1056,7 +1109,7 @@
     }
 
     .detail-section h3 {
-      color: var(--primary-blue);
+      color: var(--primary-navy);
       font-size: 1.3rem;
       margin-bottom: 1rem;
       display: flex;
@@ -1134,6 +1187,94 @@
 
     .service-card:hover::after {
       transform: translateY(0);
+    }
+
+    /* Photo Gallery Styles */
+    .photo-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .photo-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .photo-item:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-item:hover .photo-overlay {
+      transform: translateY(0);
+    }
+
+    /* Service Page Styles */
+    .service-page {
+      display: none;
+      padding: 2rem 0;
+    }
+
+    .service-page.active {
+      display: block;
+    }
+
+    .service-page-header {
+      background: var(--premium-white);
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-page-content {
+      padding: 2rem 0;
+    }
+
+    .back-button {
+      background: var(--gradient-primary);
+      color: var(--premium-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
     }
 
     /* Attractive Visual Elements */
@@ -1531,6 +1672,89 @@
       </div>
     </div>
   </footer>
+
+  <!-- Service Pages -->
+  <div id="servicePages">
+    <!-- School Uniforms Page -->
+    <div id="school-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🎓 School Uniforms</h1>
+          <p>Professional uniforms for educational institutions with custom branding and accessories.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="school-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="school-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviation Uniforms Page -->
+    <div id="aviation-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>✈️ Aviation Uniforms</h1>
+          <p>Premium uniforms for aviation professionals meeting international standards.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="aviation-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="aviation-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Uniforms Page -->
+    <div id="medical-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>👨‍⚕️ Medical Uniforms</h1>
+          <p>Hygienic and comfortable medical uniforms for healthcare professionals.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="medical-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="medical-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Medical%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more service pages as needed -->
+  </div>
 
   <!-- Service Modal -->
   <div id="serviceModal" class="modal">
@@ -2256,9 +2480,150 @@ Please provide me with pricing and delivery details.`;
       const serviceCard = e.target.closest('.service-card');
       if (serviceCard && serviceCard.dataset.service) {
         e.preventDefault();
-        openModal(serviceCard.dataset.service);
+        const serviceKey = serviceCard.dataset.service;
+        
+        // Check if we have a dedicated page for this service
+        if (['school', 'aviation', 'medical'].includes(serviceKey)) {
+          showServicePage(serviceKey);
+        } else {
+          openModal(serviceKey);
+        }
       }
     });
+
+    // Show service page
+    function showServicePage(serviceKey) {
+      // Hide main content
+      document.querySelector('.hero').style.display = 'none';
+      document.querySelector('.trust-section').style.display = 'none';
+      document.querySelector('.services-section').style.display = 'none';
+      document.querySelector('.about-section').style.display = 'none';
+      document.querySelector('.contact-section').style.display = 'none';
+      document.querySelector('.footer').style.display = 'none';
+      
+      // Show service page
+      const servicePage = document.getElementById(`${serviceKey}-page`);
+      if (servicePage) {
+        servicePage.classList.add('active');
+        loadServicePageContent(serviceKey);
+      }
+    }
+
+    // Show main page
+    function showMainPage() {
+      // Show main content
+      document.querySelector('.hero').style.display = 'flex';
+      document.querySelector('.trust-section').style.display = 'block';
+      document.querySelector('.services-section').style.display = 'block';
+      document.querySelector('.about-section').style.display = 'block';
+      document.querySelector('.contact-section').style.display = 'block';
+      document.querySelector('.footer').style.display = 'block';
+      
+      // Hide all service pages
+      document.querySelectorAll('.service-page').forEach(page => {
+        page.classList.remove('active');
+      });
+    }
+
+    // Load service page content
+    function loadServicePageContent(serviceKey) {
+      const service = serviceData[serviceKey];
+      if (!service) return;
+
+      // Load photos
+      loadServicePagePhotos(serviceKey);
+
+      // Load details
+      loadServicePageDetails(serviceKey, service);
+    }
+
+    // Load photos for service page
+    function loadServicePagePhotos(serviceKey) {
+      const gallery = document.getElementById(`${serviceKey}-gallery`);
+      if (!gallery) return;
+      
+      gallery.innerHTML = '';
+      
+      // Try to load photos from the service folder
+      const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
+      const commonNames = [
+        `${serviceKey}-1`, `${serviceKey}-uniform`, 
+        `${serviceKey}`, `1`, `image1`, `sample1`, `sample2`, `sample3`
+      ];
+
+      let photosLoaded = 0;
+      const maxPhotos = 12;
+
+      imageExtensions.forEach(ext => {
+        commonNames.forEach(name => {
+          if (photosLoaded >= maxPhotos) return;
+          
+          const img = new Image();
+          img.onload = () => {
+            if (photosLoaded < maxPhotos) {
+              const photoItem = document.createElement('div');
+              photoItem.className = 'photo-item';
+              photoItem.innerHTML = `
+                <img src="images/${serviceKey}/${name}.${ext}" alt="${serviceKey} uniform" loading="lazy">
+                <div class="photo-overlay">
+                  <h4>${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)} Uniform</h4>
+                  <p>Click to view details</p>
+                </div>
+              `;
+              gallery.appendChild(photoItem);
+              photosLoaded++;
+            }
+          };
+          img.src = `images/${serviceKey}/${name}.${ext}`;
+        });
+      });
+
+      // Add placeholder if no photos loaded
+      setTimeout(() => {
+        if (photosLoaded === 0) {
+          const placeholder = document.createElement('div');
+          placeholder.className = 'photo-item';
+          placeholder.style.gridColumn = '1 / -1';
+          placeholder.style.textAlign = 'center';
+          placeholder.style.padding = '3rem';
+          placeholder.style.background = 'var(--premium-gray)';
+          placeholder.style.borderRadius = '8px';
+          placeholder.innerHTML = `
+            <h3>📸 Upload Photos</h3>
+            <p>Upload photos to the <strong>images/${serviceKey}/</strong> folder to see them here</p>
+            <p>Supported formats: JPG, PNG, WebP</p>
+          `;
+          gallery.appendChild(placeholder);
+        }
+      }, 2000);
+    }
+
+    // Load service page details
+    function loadServicePageDetails(serviceKey, service) {
+      const detailsContainer = document.getElementById(`${serviceKey}-details`);
+      if (!detailsContainer) return;
+      
+      detailsContainer.innerHTML = '';
+      
+      Object.entries(service.details).forEach(([section, items]) => {
+        const detailSection = document.createElement('div');
+        detailSection.className = 'detail-section';
+        
+        const sectionTitle = document.createElement('h3');
+        sectionTitle.textContent = section;
+        
+        const sectionList = document.createElement('ul');
+        items.forEach(item => {
+          const listItem = document.createElement('li');
+          listItem.textContent = item;
+          sectionList.appendChild(listItem);
+        });
+        
+        detailSection.appendChild(sectionTitle);
+        detailSection.appendChild(sectionList);
+        detailsContainer.appendChild(detailSection);
+      });
+    }
   </script>
 </body>
 </html>
