@@ -124,9 +124,9 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: 2.8rem;
       font-weight: 700;
       color: var(--primary-navy);
       text-decoration: none;
@@ -138,9 +138,9 @@
     }
 
     .logo img {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
       box-shadow: var(--shadow-light);
       transition: all 0.3s ease;
     }
@@ -1344,11 +1344,12 @@
   <header class="header" id="header">
     <div class="container">
       <nav class="nav">
-        <a href="#" class="logo">
+        <a href="#" class="logo" onclick="showMainPage()">
           <img src="logo.png" alt="Planet10 Logo" />
           Planet10
         </a>
         <ul class="nav-links">
+          <li><a href="#" onclick="showMainPage()">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1367,10 +1368,10 @@
     </div>
     <div class="container">
       <div class="hero-content loading">
-        <h1>India's Leading Uniform Manufacturer</h1>
+        <h1>Planet10 Uniforms</h1>
         <p class="hero-subtitle">
-          Premium quality uniforms for schools, aviation, healthcare, and corporate sectors. 
-          Trusted by 500+ institutions across India with 10+ years of excellence.
+          Professional uniform solutions for schools, aviation, healthcare, and corporate sectors. 
+          Trusted by 50+ institutions across India with 10+ years of excellence.
         </p>
         <div class="hero-buttons">
           <a href="#services" class="btn-primary">Explore Services</a>
@@ -1388,19 +1389,19 @@
         <div class="trust-badges">
           <div class="trust-badge">
             <div class="icon-award">🏆</div>
-            <span>ISO Certified Quality</span>
+            <span>10+ Years Experience</span>
       </div>
           <div class="trust-badge">
             <div class="icon-shipping">🚚</div>
-            <span>Fast Delivery</span>
+            <span>50+ Happy Clients</span>
       </div>
           <div class="trust-badge">
             <div class="icon-shield">🛡️</div>
-            <span>GST Compliant</span>
+            <span>5K+ Uniforms Delivered</span>
       </div>
           <div class="trust-badge">
             <div class="icon-users">👥</div>
-            <span>Expert Team</span>
+            <span>Pan India Service</span>
       </div>
       </div>
       </div>
@@ -1753,7 +1754,213 @@
       </div>
     </div>
 
-    <!-- Add more service pages as needed -->
+    <!-- Paramedical Uniforms Page -->
+    <div id="paramedical-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🚑 Paramedical Uniforms</h1>
+          <p>Specialized uniforms for paramedics, lab technicians, and allied health professionals.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="paramedical-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="paramedical-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Paramedical%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- College Uniforms Page -->
+    <div id="college-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🏛️ College Uniforms</h1>
+          <p>Modern and professional uniforms for colleges and universities with institutional branding.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="college-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="college-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20College%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Guard Uniforms Page -->
+    <div id="security-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🛡️ Security Guard Uniforms</h1>
+          <p>Durable and authoritative uniforms for security personnel with professional appearance.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="security-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="security-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom T-Shirts Page -->
+    <div id="custom-tshirts-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>👕 Custom T-Shirts</h1>
+          <p>Personalized t-shirts for events, promotions, and casual wear with custom designs.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="custom-tshirts-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="custom-tshirts-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Custom%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corporate T-Shirts Page -->
+    <div id="corporate-tshirts-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>💼 Corporate T-Shirts</h1>
+          <p>Professional corporate apparel for team building, events, and company branding.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="corporate-tshirts-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="corporate-tshirts-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Corporate%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event T-Shirts Page -->
+    <div id="event-tshirts-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>📅 Event T-Shirts</h1>
+          <p>Special event t-shirts for conferences, festivals, sports events, and celebrations.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="event-tshirts-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="event-tshirts-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Event%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel Staff Uniforms Page -->
+    <div id="hotel-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🏨 Hotel Staff Uniforms</h1>
+          <p>Elegant and functional uniforms for hotel staff including front desk, housekeeping, and restaurant.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="hotel-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="hotel-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Hotel%20Staff%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bedsheets & Linens Page -->
+    <div id="bedsheets-page" class="service-page">
+      <div class="service-page-header">
+        <div class="container">
+          <a href="#" class="back-button" onclick="showMainPage()">
+            ← Back to Services
+          </a>
+          <h1>🛏️ Bedsheets & Linens</h1>
+          <p>Premium quality bedsheets, pillow covers, and hotel linens with custom designs.</p>
+        </div>
+      </div>
+      <div class="service-page-content">
+        <div class="container">
+          <div class="photo-gallery-grid" id="bedsheets-gallery">
+            <!-- Photos will be loaded here -->
+          </div>
+          <div class="modal-details" id="bedsheets-details">
+            <!-- Service details will be loaded here -->
+          </div>
+          <div class="modal-cta">
+            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Bedsheets%20and%20Linens%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Service Modal -->
@@ -2482,12 +2689,8 @@ Please provide me with pricing and delivery details.`;
         e.preventDefault();
         const serviceKey = serviceCard.dataset.service;
         
-        // Check if we have a dedicated page for this service
-        if (['school', 'aviation', 'medical'].includes(serviceKey)) {
-          showServicePage(serviceKey);
-        } else {
-          openModal(serviceKey);
-        }
+        // All services now have dedicated pages
+        showServicePage(serviceKey);
       }
     });
 
