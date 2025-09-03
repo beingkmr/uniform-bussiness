@@ -1258,7 +1258,7 @@
     }
 
     /* Attractive Visual Elements */
-    /* Planet Background Animation */
+    /* Dynamic Time-Based Background */
     .planet-background {
       position: fixed;
       top: 0;
@@ -1268,46 +1268,73 @@
       pointer-events: none;
       z-index: -1;
       overflow: hidden;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      transition: all 2s ease-in-out;
+    }
+
+    /* Time-based background themes */
+    .planet-background.night {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%);
+    }
+
+    .planet-background.dawn {
+      background: linear-gradient(135deg, #2c1810 0%, #8b4513 30%, #daa520 70%, #ffd700 100%);
+    }
+
+    .planet-background.morning {
+      background: linear-gradient(135deg, #87ceeb 0%, #98d8e8 30%, #b0e0e6 70%, #e0f6ff 100%);
+    }
+
+    .planet-background.noon {
+      background: linear-gradient(135deg, #87ceeb 0%, #add8e6 30%, #b0e0e6 70%, #f0f8ff 100%);
+    }
+
+    .planet-background.evening {
+      background: linear-gradient(135deg, #ff7f50 0%, #ff6347 30%, #ff4500 70%, #8b0000 100%);
+    }
+
+    .planet-background.dusk {
+      background: linear-gradient(135deg, #4b0082 0%, #8a2be2 30%, #da70d6 70%, #ff69b4 100%);
     }
 
     .planet-orbit {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 800px;
-      height: 800px;
+      width: 1200px;
+      height: 1200px;
       transform: translate(-50%, -50%);
-      border: 1px solid rgba(212, 175, 55, 0.1);
+      border: 2px solid rgba(212, 175, 55, 0.2);
       border-radius: 50%;
-      animation: orbit 20s linear infinite;
+      animation: orbit 60s linear infinite;
     }
 
     .planet {
       position: absolute;
-      top: -100px;
+      top: -150px;
       left: 50%;
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       background: linear-gradient(135deg, #d4af37 0%, #cd7f32 50%, #b8860b 100%);
       border-radius: 50%;
       transform: translateX(-50%);
       box-shadow: 
-        0 0 60px rgba(212, 175, 55, 0.6),
-        inset -20px -20px 40px rgba(0, 0, 0, 0.3),
-        inset 20px 20px 40px rgba(255, 255, 255, 0.1);
-      animation: planet-rotate 15s linear infinite;
+        0 0 100px rgba(212, 175, 55, 0.8),
+        0 0 200px rgba(212, 175, 55, 0.4),
+        inset -30px -30px 60px rgba(0, 0, 0, 0.4),
+        inset 30px 30px 60px rgba(255, 255, 255, 0.2);
+      animation: planet-rotate 20s linear infinite;
       cursor: pointer;
       transition: all 0.3s ease;
       pointer-events: auto;
     }
 
     .planet:hover {
-      transform: translateX(-50%) scale(1.05);
+      transform: translateX(-50%) scale(1.08);
       box-shadow: 
-        0 0 80px rgba(212, 175, 55, 0.8),
-        inset -20px -20px 40px rgba(0, 0, 0, 0.3),
-        inset 20px 20px 40px rgba(255, 255, 255, 0.1);
+        0 0 150px rgba(212, 175, 55, 1),
+        0 0 300px rgba(212, 175, 55, 0.6),
+        inset -30px -30px 60px rgba(0, 0, 0, 0.4),
+        inset 30px 30px 60px rgba(255, 255, 255, 0.2);
     }
 
     .planet.clicked {
@@ -1387,23 +1414,64 @@
 
     .star {
       position: absolute;
-      width: 3px;
-      height: 3px;
-      background: rgba(212, 175, 55, 0.8);
+      width: 4px;
+      height: 4px;
+      background: rgba(212, 175, 55, 0.9);
       border-radius: 50%;
-      animation: twinkle 3s ease-in-out infinite;
-      box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+      animation: twinkle 4s ease-in-out infinite;
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+      transition: all 2s ease-in-out;
     }
 
-    .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-    .star:nth-child(2) { top: 20%; left: 80%; animation-delay: 0.5s; }
-    .star:nth-child(3) { top: 30%; left: 60%; animation-delay: 1s; }
-    .star:nth-child(4) { top: 40%; left: 10%; animation-delay: 1.5s; }
-    .star:nth-child(5) { top: 50%; left: 90%; animation-delay: 2s; }
-    .star:nth-child(6) { top: 60%; left: 30%; animation-delay: 2.5s; }
-    .star:nth-child(7) { top: 70%; left: 70%; animation-delay: 3s; }
-    .star:nth-child(8) { top: 80%; left: 40%; animation-delay: 3.5s; }
-    .star:nth-child(9) { top: 90%; left: 85%; animation-delay: 4s; }
+    /* Time-based star colors */
+    .planet-background.night .star {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .planet-background.dawn .star {
+      background: rgba(255, 215, 0, 0.8);
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
+
+    .planet-background.morning .star {
+      background: rgba(135, 206, 235, 0.7);
+      box-shadow: 0 0 6px rgba(135, 206, 235, 0.5);
+    }
+
+    .planet-background.noon .star {
+      background: rgba(173, 216, 230, 0.6);
+      box-shadow: 0 0 4px rgba(173, 216, 230, 0.4);
+    }
+
+    .planet-background.evening .star {
+      background: rgba(255, 69, 0, 0.8);
+      box-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
+    }
+
+    .planet-background.dusk .star {
+      background: rgba(138, 43, 226, 0.8);
+      box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    }
+
+    .star:nth-child(1) { top: 8%; left: 15%; animation-delay: 0s; }
+    .star:nth-child(2) { top: 15%; left: 85%; animation-delay: 0.3s; }
+    .star:nth-child(3) { top: 25%; left: 45%; animation-delay: 0.6s; }
+    .star:nth-child(4) { top: 35%; left: 75%; animation-delay: 0.9s; }
+    .star:nth-child(5) { top: 45%; left: 25%; animation-delay: 1.2s; }
+    .star:nth-child(6) { top: 55%; left: 65%; animation-delay: 1.5s; }
+    .star:nth-child(7) { top: 65%; left: 35%; animation-delay: 1.8s; }
+    .star:nth-child(8) { top: 75%; left: 85%; animation-delay: 2.1s; }
+    .star:nth-child(9) { top: 85%; left: 15%; animation-delay: 2.4s; }
+    .star:nth-child(10) { top: 12%; left: 55%; animation-delay: 2.7s; }
+    .star:nth-child(11) { top: 22%; left: 25%; animation-delay: 3s; }
+    .star:nth-child(12) { top: 32%; left: 85%; animation-delay: 3.3s; }
+    .star:nth-child(13) { top: 42%; left: 45%; animation-delay: 3.6s; }
+    .star:nth-child(14) { top: 52%; left: 75%; animation-delay: 3.9s; }
+    .star:nth-child(15) { top: 62%; left: 15%; animation-delay: 4.2s; }
+    .star:nth-child(16) { top: 72%; left: 55%; animation-delay: 4.5s; }
+    .star:nth-child(17) { top: 82%; left: 35%; animation-delay: 4.8s; }
+    .star:nth-child(18) { top: 92%; left: 75%; animation-delay: 5.1s; }
 
     @keyframes orbit {
       0% { transform: translate(-50%, -50%) rotate(0deg); }
@@ -1761,6 +1829,15 @@
       </div>
     </div>
     <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
@@ -2529,6 +2606,35 @@
 
     // Initialize lively animations
     addLivelyAnimations();
+
+    // Time-based background system
+    function initTimeBasedBackground() {
+      const background = document.querySelector('.planet-background');
+      const currentHour = new Date().getHours();
+      
+      // Remove existing time classes
+      background.classList.remove('night', 'dawn', 'morning', 'noon', 'evening', 'dusk');
+      
+      // Apply time-based theme
+      if (currentHour >= 22 || currentHour < 5) {
+        background.classList.add('night');
+      } else if (currentHour >= 5 && currentHour < 7) {
+        background.classList.add('dawn');
+      } else if (currentHour >= 7 && currentHour < 10) {
+        background.classList.add('morning');
+      } else if (currentHour >= 10 && currentHour < 16) {
+        background.classList.add('noon');
+      } else if (currentHour >= 16 && currentHour < 19) {
+        background.classList.add('evening');
+      } else if (currentHour >= 19 && currentHour < 22) {
+        background.classList.add('dusk');
+      }
+      
+      console.log(`Applied ${background.classList[1]} theme for hour ${currentHour}`);
+    }
+
+    // Initialize time-based background
+    initTimeBasedBackground();
 
     // Loading animations
     const observerOptions = {
