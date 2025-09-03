@@ -124,29 +124,34 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       font-weight: 700;
       color: var(--primary-navy);
       text-decoration: none;
       transition: all 0.3s ease;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .logo:hover {
       transform: scale(1.05);
+      color: var(--accent-orange);
     }
 
     .logo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 16px;
-      box-shadow: var(--shadow-light);
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-medium);
       transition: all 0.3s ease;
+      border: 3px solid var(--primary-navy);
     }
 
     .logo img:hover {
-      box-shadow: var(--shadow-medium);
+      box-shadow: var(--shadow-heavy);
+      border-color: var(--accent-orange);
+      transform: scale(1.1);
     }
 
     .nav-links {
@@ -200,43 +205,49 @@
 
     /* Hero Section */
     .hero {
-      background: var(--gradient-hero);
-      min-height: 80vh;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 70vh;
       display: flex;
       align-items: center;
       text-align: center;
       position: relative;
       overflow: hidden;
-      padding: 4rem 0;
+      padding: 3rem 0;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, var(--primary-navy), var(--accent-orange));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary-navy);
       text-shadow: none;
-      line-height: 1.3;
+      line-height: 1.2;
     }
 
     .hero-subtitle {
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
       font-weight: 400;
-      max-width: 650px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--accent-orange);
+      font-weight: 600;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .hero-stats {
@@ -275,29 +286,29 @@
     .btn-primary {
       background: var(--gradient-accent);
       color: var(--premium-white);
-      padding: 18px 36px;
-      border-radius: 50px;
+      padding: 16px 32px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
       box-shadow: var(--shadow-medium);
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      text-transform: none;
+      letter-spacing: 0.5px;
     }
 
     .btn-secondary {
       background: transparent;
-      color: var(--premium-white);
-      padding: 18px 36px;
-      border: 2px solid var(--primary-teal);
-      border-radius: 50px;
+      color: var(--primary-navy);
+      padding: 16px 32px;
+      border: 2px solid var(--primary-navy);
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      text-transform: none;
+      letter-spacing: 0.5px;
     }
 
     .btn-primary:hover, .btn-secondary:hover {
@@ -1368,14 +1379,15 @@
     </div>
     <div class="container">
       <div class="hero-content loading">
+        <div class="hero-tagline">Premium Uniform Solutions</div>
         <h1>Planet10 Uniforms</h1>
         <p class="hero-subtitle">
-          Professional uniform solutions for schools, aviation, healthcare, and corporate sectors. 
-          Trusted by 50+ institutions across India with 10+ years of excellence.
+          Your trusted partner for professional uniforms across all industries. 
+          From schools to aviation, healthcare to corporate - we deliver excellence in every stitch.
         </p>
         <div class="hero-buttons">
-          <a href="#services" class="btn-primary">Explore Services</a>
-          <a href="#contact" class="btn-secondary">Get Quote</a>
+          <a href="#services" class="btn-primary">Explore Our Services</a>
+          <a href="#contact" class="btn-secondary">Get Custom Quote</a>
         </div>
       </div>
     </div>
@@ -2709,6 +2721,12 @@ Please provide me with pricing and delivery details.`;
       if (servicePage) {
         servicePage.classList.add('active');
         loadServicePageContent(serviceKey);
+        
+        // Scroll to top of the page
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       }
     }
 
@@ -2725,6 +2743,12 @@ Please provide me with pricing and delivery details.`;
       // Hide all service pages
       document.querySelectorAll('.service-page').forEach(page => {
         page.classList.remove('active');
+      });
+      
+      // Scroll to top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     }
 
