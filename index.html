@@ -16,9 +16,11 @@
   <style>
     /* Critical CSS - Above the fold styles */
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#1a1a2e;color:#E5E5E5;line-height:1.6;overflow-x:hidden}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:linear-gradient(135deg,#0c0c0c 0%,#1a1a2e 50%,#16213e 100%);color:#E5E5E5;line-height:1.6;overflow-x:hidden;position:relative}
+    body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 50%,rgba(120,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 40% 80%,rgba(120,219,255,0.2) 0%,transparent 50%);z-index:-1;animation:spaceFloat 20s ease-in-out infinite}
+    @keyframes spaceFloat{0%,100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-20px) rotate(1deg)}}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .header{background:linear-gradient(135deg,#16213e 0%,#1a1a2e 100%);backdrop-filter:blur(15px);border-bottom:1px solid #0f3460;position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+    .header{background:linear-gradient(135deg,rgba(12,12,12,0.9) 0%,rgba(26,26,46,0.8) 100%);backdrop-filter:blur(15px);border-bottom:1px solid #4a4a8a;position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.6)}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;position:relative}
     .logo{display:flex;align-items:center;gap:12px;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700;color:#FFD700;text-decoration:none}
     .logo img{width:50px;height:50px;border-radius:8px;box-shadow:0 4px 12px rgba(255,215,0,0.3)}
@@ -26,36 +28,46 @@
     .nav-links a{color:#E5E5E5;text-decoration:none;font-weight:500;transition:color 0.3s ease;position:relative}
     .nav-links a:hover{color:#FFD700}
     .cta-button{background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
-    .hero{background:linear-gradient(135deg,rgba(26,33,62,0.9),rgba(26,26,46,0.8)),url('images/hero/hero-background-1.jpg');background-size:cover;background-position:center;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative}
-    .hero-content{max-width:800px;margin:0 auto}
-    .hero h1{font-family:Playfair Display,serif;font-size:3.5rem;font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#FFFFFF,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero-subtitle{font-size:1.25rem;color:#E5E5E5;margin-bottom:2rem;font-weight:400}
+    .hero{background:linear-gradient(135deg,rgba(12,12,12,0.8),rgba(26,26,46,0.7)),url('images/hero/hero-background-1.jpg');background-size:cover;background-position:center;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 30% 40%,rgba(255,215,0,0.1) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(120,219,255,0.1) 0%,transparent 50%);animation:planetOrbit 30s linear infinite}
+    @keyframes planetOrbit{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    .hero-content{max-width:800px;margin:0 auto;position:relative;z-index:2}
+    .hero h1{font-family:Playfair Display,serif;font-size:3.5rem;font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#FFFFFF,#FFD700,#FF6B6B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 0 30px rgba(255,215,0,0.5);animation:textGlow 3s ease-in-out infinite alternate}
+    @keyframes textGlow{0%{filter:drop-shadow(0 0 10px rgba(255,215,0,0.3))}100%{filter:drop-shadow(0 0 20px rgba(255,215,0,0.6))}}
+    .hero-subtitle{font-size:1.25rem;color:#E5E5E5;margin-bottom:2rem;font-weight:400;text-shadow:0 2px 4px rgba(0,0,0,0.8)}
     .hero-stats{display:flex;justify-content:center;gap:3rem;margin:3rem 0;flex-wrap:wrap}
     .stat-item{text-align:center}
-    .stat-number{font-size:2.5rem;font-weight:800;color:#FFD700;display:block}
-    .stat-label{color:#E5E5E5;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
+    .stat-number{font-size:2.5rem;font-weight:800;color:#FFD700;display:block;text-shadow:0 0 20px rgba(255,215,0,0.6);animation:statPulse 2s ease-in-out infinite alternate}
+    @keyframes statPulse{0%{transform:scale(1)}100%{transform:scale(1.05)}}
+    .stat-label{color:#E5E5E5;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;text-shadow:0 2px 4px rgba(0,0,0,0.8)}
     .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
-    .btn-secondary{background:transparent;color:#E5E5E5;padding:16px 32px;border:2px solid #FFD700;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease}
+    .btn-primary{background:linear-gradient(135deg,#FFD700,#FF6B6B,#4ECDC4);color:#0c0c0c;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(255,215,0,0.4);position:relative;overflow:hidden}
+    .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.5s}
+    .btn-primary:hover::before{left:100%}
+    .btn-secondary{background:transparent;color:#E5E5E5;padding:16px 32px;border:2px solid #FFD700;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s ease;position:relative;overflow:hidden}
+    .btn-secondary:hover{background:rgba(255,215,0,0.1);box-shadow:0 0 20px rgba(255,215,0,0.3)}
     @media (max-width:768px){.nav{flex-direction:column;gap:1rem;position:relative}.logo{margin:0 auto}.nav-links{gap:1rem;margin:0 auto}.cta-button{margin:0 auto}.hero h1{font-size:2.5rem}.hero-stats{gap:2rem}.hero-buttons{flex-direction:column;align-items:center}}
   </style>
   
   <style>
     :root {
-      /* Elegant Navy Color Palette */
-      --primary-navy: #1a1a2e;
-      --primary-blue: #16213e;
-      --primary-blue-light: #0f3460;
+      /* Planet/Space Color Palette */
+      --primary-navy: #0c0c0c;
+      --primary-blue: #1a1a2e;
+      --primary-blue-light: #16213e;
       --accent-gold: #FFD700;
-      --accent-bronze: #FFA500;
-      --accent-silver: #B8B8B8;
+      --accent-bronze: #FF6B6B;
+      --accent-silver: #4ECDC4;
       --premium-white: #FFFFFF;
       --premium-gray: #E5E5E5;
-      --premium-dark: #1a1a2e;
+      --premium-dark: #0c0c0c;
       --text-primary: #E5E5E5;
       --text-secondary: #B8B8B8;
       --text-muted: #8A8A8A;
-      --border-color: #0f3460;
+      --border-color: #4a4a8a;
+      --planet-orange: #FF6B6B;
+      --planet-blue: #4ECDC4;
+      --planet-purple: #A8E6CF;
       --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
       --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
       --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -1350,9 +1362,10 @@
       width: 1200px;
       height: 1200px;
       transform: translate(-50%, -50%);
-      border: 2px solid rgba(212, 175, 55, 0.2);
+      border: 3px solid rgba(255, 215, 0, 0.4);
       border-radius: 50%;
       animation: orbit 60s linear infinite;
+      box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
     }
 
     .planet {
@@ -1361,18 +1374,79 @@
       left: 50%;
       width: 300px;
       height: 300px;
-      background: linear-gradient(135deg, #d4af37 0%, #cd7f32 50%, #b8860b 100%);
+      background: linear-gradient(135deg, #FFD700 0%, #FF6B6B 30%, #4ECDC4 60%, #A8E6CF 100%);
       border-radius: 50%;
       transform: translateX(-50%);
       box-shadow: 
-        0 0 100px rgba(212, 175, 55, 0.8),
-        0 0 200px rgba(212, 175, 55, 0.4),
+        0 0 150px rgba(255, 215, 0, 0.9),
+        0 0 200px rgba(255, 107, 107, 0.6),
+        0 0 250px rgba(78, 205, 196, 0.4),
         inset -30px -30px 60px rgba(0, 0, 0, 0.4),
         inset 30px 30px 60px rgba(255, 255, 255, 0.2);
-      animation: planet-rotate 20s linear infinite;
+      animation: planet-rotate 20s linear infinite, planetPulse 4s ease-in-out infinite;
       cursor: pointer;
       transition: all 0.3s ease;
       pointer-events: auto;
+      z-index: 1;
+    }
+    
+    @keyframes planetPulse {
+      0%, 100% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.1); }
+    }
+    
+    /* Floating Planets */
+    .floating-planet {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 15s ease-in-out infinite;
+    }
+    
+    .floating-planet-1 {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+      box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+    }
+    
+    .floating-planet-2 {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #4ECDC4, #7EDDD6);
+      top: 60%;
+      right: 15%;
+      animation-delay: 3s;
+      box-shadow: 0 0 25px rgba(78, 205, 196, 0.6);
+    }
+    
+    .floating-planet-3 {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #A8E6CF, #C8F0E0);
+      top: 40%;
+      right: 30%;
+      animation-delay: 6s;
+      box-shadow: 0 0 35px rgba(168, 230, 207, 0.6);
+    }
+    
+    .floating-planet-4 {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #FFD700, #FFE55C);
+      bottom: 30%;
+      left: 20%;
+      animation-delay: 9s;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-20px) rotate(90deg); }
+      50% { transform: translateY(-10px) rotate(180deg); }
+      75% { transform: translateY(-30px) rotate(270deg); }
     }
 
     .planet:hover {
@@ -1931,6 +2005,12 @@
         <div class="surface-detail"></div>
       </div>
     </div>
+    
+    <!-- Additional Floating Planets -->
+    <div class="floating-planet floating-planet-1"></div>
+    <div class="floating-planet floating-planet-2"></div>
+    <div class="floating-planet floating-planet-3"></div>
+    <div class="floating-planet floating-planet-4"></div>
     <div class="stars">
       <div class="star"></div>
       <div class="star"></div>
