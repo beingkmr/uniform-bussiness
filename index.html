@@ -16,17 +16,17 @@
   <style>
     /* Critical CSS - Above the fold styles */
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#0F0F0F;color:#E5E5E5;line-height:1.6;overflow-x:hidden}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#1a1a2e;color:#E5E5E5;line-height:1.6;overflow-x:hidden}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .header{background:linear-gradient(135deg,#1A1A1A 0%,#0F0F0F 100%);backdrop-filter:blur(15px);border-bottom:1px solid #2A2A2A;position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+    .header{background:linear-gradient(135deg,#16213e 0%,#1a1a2e 100%);backdrop-filter:blur(15px);border-bottom:1px solid #0f3460;position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;position:relative}
     .logo{display:flex;align-items:center;gap:12px;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700;color:#FFD700;text-decoration:none}
     .logo img{width:50px;height:50px;border-radius:8px;box-shadow:0 4px 12px rgba(255,215,0,0.3)}
     .nav-links{display:flex;list-style:none;gap:2rem}
     .nav-links a{color:#E5E5E5;text-decoration:none;font-weight:500;transition:color 0.3s ease;position:relative}
     .nav-links a:hover{color:#FFD700}
-    .cta-button{background:linear-gradient(135deg,#FFD700,#FFA500);color:#0F0F0F;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
-    .hero{background:linear-gradient(135deg,rgba(15,15,15,0.9),rgba(26,26,26,0.8)),url('images/hero/hero-background-1.jpg');background-size:cover;background-position:center;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative}
+    .cta-button{background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
+    .hero{background:linear-gradient(135deg,rgba(26,33,62,0.9),rgba(26,26,46,0.8)),url('images/hero/hero-background-1.jpg');background-size:cover;background-position:center;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative}
     .hero-content{max-width:800px;margin:0 auto}
     .hero h1{font-family:Playfair Display,serif;font-size:3.5rem;font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#FFFFFF,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .hero-subtitle{font-size:1.25rem;color:#E5E5E5;margin-bottom:2rem;font-weight:400}
@@ -35,33 +35,33 @@
     .stat-number{font-size:2.5rem;font-weight:800;color:#FFD700;display:block}
     .stat-label{color:#E5E5E5;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
     .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:linear-gradient(135deg,#FFD700,#FFA500);color:#0F0F0F;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
+    .btn-primary{background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;padding:16px 32px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
     .btn-secondary{background:transparent;color:#E5E5E5;padding:16px 32px;border:2px solid #FFD700;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease}
     @media (max-width:768px){.nav{flex-direction:column;gap:1rem;position:relative}.logo{margin:0 auto}.nav-links{gap:1rem;margin:0 auto}.cta-button{margin:0 auto}.hero h1{font-size:2.5rem}.hero-stats{gap:2rem}.hero-buttons{flex-direction:column;align-items:center}}
   </style>
   
   <style>
     :root {
-      /* Elegant Dark Color Palette */
-      --primary-navy: #0F0F0F;
-      --primary-blue: #1A1A1A;
-      --primary-blue-light: #2A2A2A;
+      /* Elegant Navy Color Palette */
+      --primary-navy: #1a1a2e;
+      --primary-blue: #16213e;
+      --primary-blue-light: #0f3460;
       --accent-gold: #FFD700;
       --accent-bronze: #FFA500;
       --accent-silver: #B8B8B8;
       --premium-white: #FFFFFF;
       --premium-gray: #E5E5E5;
-      --premium-dark: #0F0F0F;
+      --premium-dark: #1a1a2e;
       --text-primary: #E5E5E5;
       --text-secondary: #B8B8B8;
       --text-muted: #8A8A8A;
-      --border-color: #2A2A2A;
+      --border-color: #0f3460;
       --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
       --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
       --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.5);
-      --gradient-primary: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+      --gradient-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       --gradient-accent: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-      --gradient-hero: linear-gradient(135deg, rgba(15,15,15,0.9), rgba(26,26,26,0.8));
+      --gradient-hero: linear-gradient(135deg, rgba(26,33,62,0.9), rgba(26,26,46,0.8));
       
       /* Section Specific Colors */
       --school-color: #059669;
@@ -110,7 +110,7 @@
     }
 
     .header.scrolled {
-      background: rgba(15, 15, 15, 0.95);
+      background: rgba(26, 26, 46, 0.95);
       box-shadow: var(--shadow-heavy);
     }
 
@@ -189,7 +189,7 @@
 
     .cta-button {
       background: var(--gradient-accent);
-      color: var(--premium-dark);
+      color: var(--primary-navy);
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
