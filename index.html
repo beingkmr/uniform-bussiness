@@ -20,7 +20,7 @@
     body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 50%,rgba(120,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 40% 80%,rgba(120,219,255,0.2) 0%,transparent 50%);z-index:-1;animation:spaceFloat 20s ease-in-out infinite}
     @keyframes spaceFloat{0%,100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-20px) rotate(1deg)}}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .header{background:linear-gradient(135deg,rgba(12,12,12,0.9) 0%,rgba(26,26,46,0.8) 100%);backdrop-filter:blur(15px);border-bottom:1px solid #4a4a8a;position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.6)}
+    .header{background:rgba(0,0,0,0.3);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.2);position:sticky;top:0;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;position:relative}
     .logo{display:flex;align-items:center;gap:12px;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700;color:#FFD700;text-decoration:none}
     .logo img{width:50px;height:50px;border-radius:8px;box-shadow:0 4px 12px rgba(255,215,0,0.3)}
@@ -107,19 +107,19 @@
 
     /* Header */
     .header {
-      background: var(--gradient-primary);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--border-color);
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       position: sticky;
       top: 0;
       z-index: 1000;
       transition: all 0.3s ease;
-      box-shadow: var(--shadow-medium);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .header.scrolled {
-      background: rgba(26, 26, 46, 0.95);
-      box-shadow: var(--shadow-heavy);
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
     .nav {
@@ -341,9 +341,9 @@
 
     /* Trust Indicators */
     .trust-section {
-      background: var(--primary-blue);
+      background: transparent;
       padding: 3rem 0;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .trust-content {
@@ -372,10 +372,12 @@
       align-items: center;
       gap: 0.5rem;
       padding: 1.5rem;
-      background: var(--premium-gray);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      border: 1px solid var(--border-color);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
     }
 
     .trust-badge:hover {
@@ -399,7 +401,7 @@
 
     /* Services Grid */
     .services-section {
-      background: var(--primary-navy);
+      background: transparent;
       padding: 4rem 0;
     }
 
@@ -434,14 +436,15 @@
     }
 
     .service-card {
-      background: var(--premium-white);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       padding: 1.8rem;
-      border: 1px solid var(--border-color);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      box-shadow: var(--shadow-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
       text-align: center;
     }
 
@@ -538,15 +541,17 @@
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 0.8rem;
-      color: var(--text-primary);
+      color: #FFFFFF;
       font-family: 'Playfair Display', serif;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     }
 
     .service-card p {
-      color: var(--text-secondary);
+      color: #E5E5E5;
       margin-bottom: 1.2rem;
       line-height: 1.5;
       font-size: 0.95rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     }
 
     /* Service Images */
@@ -663,7 +668,7 @@
 
     /* About Section */
     .about-section {
-      background: var(--primary-blue);
+      background: transparent;
       padding: 4rem 0;
     }
 
@@ -720,7 +725,7 @@
     /* Contact Section */
     .contact-section {
       padding: 4rem 0;
-      background: var(--primary-navy);
+      background: transparent;
     }
 
     .contact-content {
@@ -824,8 +829,8 @@
 
     /* Footer */
     .footer {
-      background: var(--primary-navy);
-      border-top: 1px solid var(--border-color);
+      background: transparent;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding: 3rem 0 2rem;
     }
 
