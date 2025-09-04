@@ -25,17 +25,17 @@
     .logo{display:flex;align-items:center;gap:12px;font-family:Playfair Display,serif;font-size:1.8rem;font-weight:700;color:#FFD700;text-decoration:none}
     .logo img{width:50px;height:50px;border-radius:8px;box-shadow:0 4px 12px rgba(255,215,0,0.3)}
     .nav-links{display:flex;list-style:none;gap:2rem}
-    .nav-links a{color:#FFFFFF;text-decoration:none;font-weight:600;transition:color 0.3s ease;position:relative;text-shadow:0 2px 4px rgba(0,0,0,0.9),0 0 10px rgba(255,255,255,0.3);font-size:1.1rem}
-    .nav-links a:hover{color:#87CEEB;text-shadow:0 2px 4px rgba(0,0,0,0.9),0 0 15px rgba(135,206,235,0.5)}
+    .nav-links a{color:#FFFFFF;text-decoration:none;font-weight:500;transition:color 0.3s ease;position:relative;text-shadow:0 1px 3px rgba(0,0,0,0.8);font-size:1rem}
+    .nav-links a:hover{color:#E5E5E5;text-shadow:0 1px 3px rgba(0,0,0,0.8)}
     .cta-button{background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(255,215,0,0.4)}
     .hero{background:transparent;min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}
     .hero-content{max-width:800px;margin:0 auto;position:relative;z-index:2}
-    .hero h1{font-family:Playfair Display,serif;font-size:4rem;font-weight:700;margin-bottom:1.5rem;color:#FFFFFF;text-shadow:0 4px 8px rgba(0,0,0,0.9),0 0 20px rgba(255,255,255,0.3)}
-    .hero-subtitle{font-size:1.4rem;color:#FFFFFF;margin-bottom:2rem;font-weight:500;text-shadow:0 2px 6px rgba(0,0,0,0.9),0 0 15px rgba(255,255,255,0.2)}
+    .hero h1{font-family:Playfair Display,serif;font-size:3.5rem;font-weight:700;margin-bottom:1.5rem;color:#FFFFFF;text-shadow:0 2px 4px rgba(0,0,0,0.8)}
+    .hero-subtitle{font-size:1.2rem;color:#E5E5E5;margin-bottom:2rem;font-weight:400;text-shadow:0 1px 3px rgba(0,0,0,0.8)}
     .hero-stats{display:flex;justify-content:center;gap:3rem;margin:3rem 0;flex-wrap:wrap}
     .stat-item{text-align:center}
-    .stat-number{font-size:3rem;font-weight:800;color:#FFFFFF;display:block;text-shadow:0 3px 6px rgba(0,0,0,0.9),0 0 15px rgba(255,255,255,0.3)}
-    .stat-label{color:#FFFFFF;font-size:1rem;text-transform:uppercase;letter-spacing:1px;text-shadow:0 2px 4px rgba(0,0,0,0.9),0 0 10px rgba(255,255,255,0.2)}
+    .stat-number{font-size:2.5rem;font-weight:800;color:#FFFFFF;display:block;text-shadow:0 2px 4px rgba(0,0,0,0.8)}
+    .stat-label{color:#E5E5E5;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;text-shadow:0 1px 3px rgba(0,0,0,0.8)}
     .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
     .btn-primary{background:linear-gradient(135deg,#FFD700,#FF6B6B,#4ECDC4);color:#0c0c0c;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 20px rgba(255,215,0,0.4);position:relative;overflow:hidden}
     .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.5s}
@@ -172,16 +172,16 @@
     .nav-links a {
       color: #FFFFFF;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.3s ease;
       position: relative;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9),0 0 10px rgba(255,255,255,0.3);
-      font-size: 1.1rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      font-size: 1rem;
     }
 
     .nav-links a:hover {
-      color: #87CEEB;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.9),0 0 15px rgba(135,206,235,0.5);
+      color: #E5E5E5;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     }
 
     .nav-links a::after {
@@ -1381,24 +1381,21 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
       background: 
         radial-gradient(circle at 30% 30%, #4A90E2 0%, #2E8B57 25%, #228B22 50%, #32CD32 75%, #00CED1 100%),
         linear-gradient(45deg, #87CEEB 0%, #4682B4 30%, #2E8B57 60%, #228B22 100%);
       border-radius: 50%;
       transform: translate(-50%, -50%);
       box-shadow: 
-        0 0 80px rgba(74, 144, 226, 0.6),
-        0 0 120px rgba(46, 139, 87, 0.4),
-        0 0 160px rgba(34, 139, 34, 0.3),
-        inset -25px -25px 50px rgba(0, 0, 0, 0.4),
-        inset 25px 25px 50px rgba(255, 255, 255, 0.1);
-      animation: earthRotate 20s linear infinite, planetFloat 10s ease-in-out infinite;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      pointer-events: auto;
+        0 0 40px rgba(74, 144, 226, 0.3),
+        0 0 60px rgba(46, 139, 87, 0.2),
+        inset -20px -20px 40px rgba(0, 0, 0, 0.3),
+        inset 20px 20px 40px rgba(255, 255, 255, 0.1);
+      animation: earthRotate 30s linear infinite;
       z-index: -1;
+      opacity: 0.7;
     }
     
     @keyframes planetFloat {
@@ -1433,59 +1430,6 @@
       50% { transform: translateX(-50%) scale(1.1); }
     }
     
-    /* Floating Planets */
-    .floating-planet {
-      position: absolute;
-      border-radius: 50%;
-      animation: float 15s ease-in-out infinite;
-    }
-    
-    .floating-planet-1 {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #4A90E2, #2E8B57, #228B22);
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-      box-shadow: 0 0 15px rgba(74, 144, 226, 0.3);
-    }
-    
-    .floating-planet-2 {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #87CEEB, #4682B4, #2E8B57);
-      top: 60%;
-      right: 15%;
-      animation-delay: 3s;
-      box-shadow: 0 0 12px rgba(135, 206, 235, 0.3);
-    }
-    
-    .floating-planet-3 {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, #4A90E2, #2E8B57, #228B22);
-      top: 40%;
-      right: 30%;
-      animation-delay: 6s;
-      box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
-    }
-    
-    .floating-planet-4 {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, #87CEEB, #4682B4, #2E8B57);
-      bottom: 30%;
-      left: 20%;
-      animation-delay: 9s;
-      box-shadow: 0 0 15px rgba(135, 206, 235, 0.3);
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      25% { transform: translateY(-20px) rotate(90deg); }
-      50% { transform: translateY(-10px) rotate(180deg); }
-      75% { transform: translateY(-30px) rotate(270deg); }
-    }
 
     .planet:hover {
       transform: translateX(-50%) scale(1.08);
@@ -2044,11 +1988,6 @@
       </div>
     </div>
     
-    <!-- Additional Floating Planets -->
-    <div class="floating-planet floating-planet-1"></div>
-    <div class="floating-planet floating-planet-2"></div>
-    <div class="floating-planet floating-planet-3"></div>
-    <div class="floating-planet floating-planet-4"></div>
     <div class="stars">
       <div class="star"></div>
       <div class="star"></div>
