@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Store Locator - Planet10 Uniforms</title>
+  <meta name="description" content="Find Planet10 Uniforms stores near you. Professional uniform solutions across India." />
+  <meta name="keywords" content="uniform stores, store locator, uniform shop near me, Planet10 locations" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Helvetica Neue',Arial,sans-serif;background:#ffffff;color:#000000;line-height:1.6;overflow-x:hidden;position:relative}
+    
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    
+    .header{background:#ffffff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:1000;transition:all 0.3s ease}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;position:relative}
+    .logo{display:flex;align-items:center;gap:12px;font-family:'Times New Roman',serif;font-size:2rem;font-weight:400;color:#000000;text-decoration:none;letter-spacing:2px}
+    .logo img{width:40px;height:40px}
+    .nav-links{display:flex;list-style:none;gap:2.5rem}
+    .nav-links a{color:#000000;text-decoration:none;font-weight:400;transition:color 0.3s ease;position:relative;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
+    .nav-links a:hover{color:#666666}
+    .cta-button{background:#000000;color:#ffffff;padding:12px 24px;text-decoration:none;font-weight:400;transition:all 0.3s ease;border:1px solid #000000;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem}
+    
+    .page-header{text-align:center;padding:4rem 0 2rem;background:#ffffff;margin-bottom:3rem}
+    .page-header h1{font-family:'Times New Roman',serif;font-size:2.5rem;font-weight:400;color:#000000;margin-bottom:1rem;letter-spacing:2px}
+    .page-header p{font-size:0.9rem;color:#666666;max-width:600px;margin:0 auto;text-transform:uppercase;letter-spacing:1px}
+    
+    .search-section{padding:2rem 0;background:#ffffff;border:1px solid #e5e5e5;margin-bottom:3rem}
+    .search-container{max-width:600px;margin:0 auto;text-align:center}
+    .search-box{display:flex;gap:1rem;margin-bottom:2rem}
+    .search-input{flex:1;padding:15px 20px;border:1px solid #e5e5e5;font-size:0.9rem;background:#ffffff;color:#000000;outline:none;transition:all 0.3s ease}
+    .search-input:focus{border-color:#000000}
+    .search-btn{background:#000000;color:#ffffff;padding:15px 30px;border:1px solid #000000;font-weight:400;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem}
+    .search-btn:hover{background:#ffffff;color:#000000}
+    
+    .stores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;margin:3rem 0}
+    .store-card{background:#ffffff;padding:2rem;transition:all 0.3s ease;border:1px solid #e5e5e5}
+    .store-card:hover{border-color:#000000;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+    .store-name{font-family:'Times New Roman',serif;font-size:1.3rem;font-weight:400;color:#000000;margin-bottom:1rem;letter-spacing:1px}
+    .store-address{color:#666666;margin-bottom:0.5rem;font-size:0.9rem}
+    .store-hours{color:#999999;font-size:0.8rem;margin-bottom:1rem}
+    .store-contact{color:#000000;font-size:0.8rem;margin-bottom:1rem}
+    .store-link{display:inline-block;background:#000000;color:#ffffff;padding:10px 20px;text-decoration:none;font-weight:400;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem;border:1px solid #000000}
+    .store-link:hover{background:#ffffff;color:#000000}
+    
+    .map-section{background:#ffffff;border:1px solid #e5e5e5;padding:2rem;margin:3rem 0;text-align:center}
+    .map-placeholder{background:#f8f8f8;padding:3rem;color:#000000;font-size:1rem}
+    
+    @media (max-width:768px){
+      .nav{flex-direction:column;gap:1rem}
+      .logo{margin:0 auto}
+      .nav-links{gap:1rem;margin:0 auto}
+      .cta-button{margin:0 auto}
+      .page-header h1{font-size:2.5rem}
+      .search-box{flex-direction:column}
+      .stores-grid{grid-template-columns:1fr}
+      .container{padding:0 20px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="logo">
+        <img src="../logo.png" alt="Planet10 Uniforms">
+        <span>Planet10 Uniforms</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html">Store Locator</a></li>
+      </ul>
+      <a href="../index.html#contact" class="cta-button">Get Quote</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Store Locator</h1>
+      <p>Find Planet10 Uniforms stores near you. Professional uniform solutions across India.</p>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Enter city, state, or postal code..." id="searchInput">
+          <button class="search-btn" onclick="searchStores()">Search Stores</button>
+        </div>
+        <p style="color:#4a90e2;font-size:0.9rem;">Search for stores in your area or browse all locations below</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stores Grid -->
+  <section class="stores-grid container">
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Bangalore - Phoenix Mall</h3>
+      <p class="store-address">📍 Phoenix MarketCity, Whitefield Road, Bangalore, Karnataka 560066</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43210 | ✉️ bangalore@planet10uniforms.com</p>
+      <a href="planet10-bangalore-phoenix-mall-s1001.html" class="store-link">View Store Details</a>
+    </div>
+
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Delhi - Connaught Place</h3>
+      <p class="store-address">📍 Connaught Place, Block A, New Delhi, Delhi 110001</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43211 | ✉️ delhi@planet10uniforms.com</p>
+      <a href="planet10-delhi-connaught-place-s1002.html" class="store-link">View Store Details</a>
+    </div>
+
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Mumbai - Bandra West</h3>
+      <p class="store-address">📍 Linking Road, Bandra West, Mumbai, Maharashtra 400050</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43212 | ✉️ mumbai@planet10uniforms.com</p>
+      <a href="planet10-mumbai-bandra-west-s1003.html" class="store-link">View Store Details</a>
+    </div>
+
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Chennai - T. Nagar</h3>
+      <p class="store-address">📍 Pondy Bazaar, T. Nagar, Chennai, Tamil Nadu 600017</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43213 | ✉️ chennai@planet10uniforms.com</p>
+      <a href="planet10-chennai-t-nagar-s1004.html" class="store-link">View Store Details</a>
+    </div>
+
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Kolkata - Park Street</h3>
+      <p class="store-address">📍 Park Street, Kolkata, West Bengal 700016</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43214 | ✉️ kolkata@planet10uniforms.com</p>
+      <a href="planet10-kolkata-park-street-s1005.html" class="store-link">View Store Details</a>
+    </div>
+
+    <div class="store-card">
+      <h3 class="store-name">Planet10 Hyderabad - Banjara Hills</h3>
+      <p class="store-address">📍 Road No. 12, Banjara Hills, Hyderabad, Telangana 500034</p>
+      <p class="store-hours">🕒 Mon-Sat: 10:00 AM - 9:00 PM | Sun: 11:00 AM - 8:00 PM</p>
+      <p class="store-contact">📞 +91 98765 43215 | ✉️ hyderabad@planet10uniforms.com</p>
+      <a href="planet10-hyderabad-banjara-hills-s1006.html" class="store-link">View Store Details</a>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section container">
+    <h2 style="font-family:Playfair Display,serif;color:#2c5282;margin-bottom:1rem;">Interactive Store Map</h2>
+    <div class="map-placeholder">
+      <p>🗺️ Interactive map showing all Planet10 Uniforms store locations</p>
+      <p style="margin-top:1rem;font-size:0.9rem;color:#4a90e2;">Click on any store marker to view details and get directions</p>
+    </div>
+  </section>
+
+  <script>
+    function searchStores() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const storeCards = document.querySelectorAll('.store-card');
+      
+      storeCards.forEach(card => {
+        const storeName = card.querySelector('.store-name').textContent.toLowerCase();
+        const storeAddress = card.querySelector('.store-address').textContent.toLowerCase();
+        
+        if (storeName.includes(searchTerm) || storeAddress.includes(searchTerm)) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeIn 0.5s ease-in';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      if (searchTerm === '') {
+        storeCards.forEach(card => {
+          card.style.display = 'block';
+        });
+      }
+    }
+
+    // Add fadeIn animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Search on Enter key
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchStores();
+      }
+    });
+  </script>
+</body>
+</html>
