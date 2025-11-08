@@ -358,6 +358,63 @@
       line-height: 1.6;
     }
 
+    .industries-section {
+      background: var(--surface);
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .industry-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 0.85rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .industry-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+
+    .industry-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .industry-card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .industry-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .industry-card ul li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 0.6rem;
+    }
+
     .contact-section {
       background: var(--white);
       border-top: 1px solid var(--border);
@@ -473,6 +530,7 @@
     <span>
       <a href="tel:+919611151555">+91-9611151555</a>
       <a href="tel:+919611102555">+91-9611102555</a>
+      <a href="tel:+919886518538">+91-9886518538</a>
     </span>
   </div>
   <header>
@@ -486,6 +544,7 @@
         <li><a href="#custom">Custom</a></li>
         <li><a href="#options">Options</a></li>
         <li><a href="#products">Products</a></li>
+        <li><a href="#industries">Industries</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a class="cta" href="#contact">Request Quote</a>
@@ -509,11 +568,11 @@
             <span>Years Experience</span>
           </div>
           <div class="data-card">
-            <strong>150+</strong>
+            <strong>50+</strong>
             <span>Institutions Served</span>
           </div>
           <div class="data-card">
-            <strong>25K+</strong>
+            <strong>5K+</strong>
             <span>Uniforms Delivered</span>
           </div>
           <div class="data-card">
@@ -644,6 +703,47 @@
       </div>
     </section>
 
+    <section id="industries" class="section industries-section">
+      <div class="section-header">
+        <h2>Industries & Categories We Serve</h2>
+        <p>Beyond school wear, Planet10 Uniforms powers diverse teams with purpose-built apparel, textiles, and accessories tailored to each environment.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card">
+          <h3>Aviation Uniforms</h3>
+          <p>Pilot, cabin crew, and ground staff looks with crisp tailoring, epaulettes, and airline-compliant detailing.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Paramedical Uniforms</h3>
+          <p>High-mobility scrub sets, lab coats, and protective layers engineered for emergency response teams.</p>
+        </div>
+        <div class="industry-card">
+          <h3>T-Shirts</h3>
+          <p>Everyday crew necks and polos with breathable fabrics and consistent fits for student communities.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Custom T-Shirts</h3>
+          <p>Fully branded tees with custom dyes, graphics, and packaging for campaigns and alumni programs.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Event T-Shirts</h3>
+          <p>Quick-turn uniforms for marathons, college fests, and corporate outreach with vibrant prints.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Hotel Staff Uniforms</h3>
+          <p>Front office, housekeeping, kitchen, and concierge lines finished with premium fabrics and trims.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Bedsheets & Linens</h3>
+          <p>Hospitality-grade bedding, towels, and table linen crafted for durability and luxurious touch.</p>
+        </div>
+        <div class="industry-card">
+          <h3>Medical Uniforms</h3>
+          <p>Antimicrobial scrubs, OT gowns, and patient wear with breathable panels and ergonomic cuts.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section contact-section">
       <div class="section-header">
         <h2>Let's Design Your Next Uniform</h2>
@@ -653,10 +753,14 @@
         <div class="contact-card">
           <h3>Talk to Us</h3>
           <p>Speak directly with our uniform specialists for fabric suggestions, costings, and delivery schedules.</p>
+          <a href="mailto:contact@theplanet10.com">Primary Email: contact@theplanet10.com</a>
           <a href="tel:+919611151555">Call +91-9611151555</a>
           <a href="tel:+919611102555">Call +91-9611102555</a>
-          <a href="mailto:hello@planet10uniforms.com">hello@planet10uniforms.com</a>
-          <p>Planet10 Uniforms, Bengaluru · Serving schools nationwide</p>
+          <a href="tel:+919886518538">Call +91-9886518538</a>
+          <a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a>
+          <p>Registered Office: B81, Bharath Nagar, 3rd Main Road, BEML Nagar, KGF - 563115</p>
+          <p>Main Branch: Ittina Padma-1, New Police Station Road, Ramamurthy Nagar, Bengaluru - 560016</p>
+          <p>GSTIN: 29RFUPS1638C1ZK</p>
         </div>
         <div class="contact-card">
           <h3>Request a Custom Quote</h3>
@@ -688,6 +792,7 @@
     <div class="footer-inner">
       <strong>Planet10 Uniforms</strong>
       <span>Premium school uniform manufacturer delivering tailored apparel solutions across India.</span>
+      <span>GSTIN: 29RFUPS1638C1ZK</span>
       <span>&copy; <span id="currentYear"></span> Planet10 Uniforms. All rights reserved.</span>
     </div>
   </footer>
