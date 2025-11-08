@@ -2,3828 +2,711 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Planet10 Uniforms - Premium Professional Uniform Solutions</title>
-  <meta name="description" content="Leading uniform manufacturer with 10+ years experience. School, aviation, medical, corporate uniforms & custom apparel. Trusted by top institutions." />
-  <meta name="keywords" content="uniforms, school uniforms, aviation uniforms, medical uniforms, corporate uniforms, custom tshirts, hotel uniforms, security uniforms" />
-  
-  <!-- Fonts - Optimized loading -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planet10 Uniforms | School Uniform Manufacturer</title>
+  <meta name="description" content="Planet10 Uniforms manufactures premium school uniforms across India. Explore tailored solutions, fabric options, accessories, and custom printing services." />
+  <meta name="keywords" content="school uniforms, custom school uniforms, uniform manufacturer, school uniform supplier India" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Critical CSS inlined for faster loading -->
-  <style>
-    /* Zara-Inspired Critical CSS */
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Helvetica Neue',Arial,sans-serif;background:#ffffff;color:#000000;line-height:1.6;overflow-x:hidden;position:relative}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .header{background:#ffffff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:1000;transition:all 0.3s ease}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;position:relative}
-    .logo{display:flex;align-items:center;gap:12px;font-family:'Times New Roman',serif;font-size:2rem;font-weight:400;color:#000000;text-decoration:none;letter-spacing:2px}
-    .logo img{width:40px;height:40px}
-    .nav-links{display:flex;list-style:none;gap:2.5rem}
-    .nav-links a{color:#000000;text-decoration:none;font-weight:400;transition:color 0.3s ease;position:relative;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
-    .nav-links a:hover{color:#666666}
-    .cta-button{background:#000000;color:#ffffff;padding:12px 24px;text-decoration:none;font-weight:400;transition:all 0.3s ease;border:1px solid #000000;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem}
-    .cta-button:hover{background:#ffffff;color:#000000}
-    .hero{background:#ffffff;min-height:80vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}
-    .hero-content{max-width:800px;margin:0 auto;position:relative;z-index:2}
-    .hero h1{font-family:'Times New Roman',serif;font-size:3rem;font-weight:400;margin-bottom:1.5rem;color:#000000;letter-spacing:2px}
-    .hero-subtitle{font-size:1rem;color:#666666;margin-bottom:2rem;font-weight:400;text-transform:uppercase;letter-spacing:1px}
-    .hero-stats{display:flex;justify-content:center;gap:4rem;margin:3rem 0;flex-wrap:wrap}
-    .stat-item{text-align:center}
-    .stat-number{font-size:2rem;font-weight:300;color:#000000;display:block;font-family:'Times New Roman',serif}
-    .stat-label{color:#666666;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px}
-    .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:#000000;color:#ffffff;padding:16px 32px;text-decoration:none;font-weight:400;transition:all 0.3s ease;border:1px solid #000000;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem}
-    .btn-primary:hover{background:#ffffff;color:#000000}
-    .btn-secondary{background:#ffffff;color:#000000;padding:16px 32px;border:1px solid #000000;text-decoration:none;font-weight:400;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;font-size:0.8rem}
-    .btn-secondary:hover{background:#000000;color:#ffffff}
-    @media (max-width:768px){.nav{flex-direction:column;gap:1rem;position:relative}.logo{margin:0 auto}.nav-links{gap:1rem;margin:0 auto}.cta-button{margin:0 auto}.hero h1{font-size:2rem}.hero-stats{gap:2rem}.hero-buttons{flex-direction:column;align-items:center}.container{padding:0 15px}}
-    @media (min-width:1200px){.hero h1{font-size:3.5rem}.hero-subtitle{font-size:1.1rem}.stat-number{font-size:2.5rem}}
-  </style>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Zara-Inspired Monochromatic Palette */
-      --black: #000000;
-      --dark-gray: #333333;
-      --medium-gray: #666666;
-      --light-gray: #999999;
-      --very-light-gray: #cccccc;
+      --primary: #1b1b1f;
+      --secondary: #2d2d32;
+      --accent: #c7a66b;
+      --text: #1f1f23;
+      --muted: #5c5c63;
+      --surface: #f7f7f9;
       --white: #ffffff;
-      --border-gray: #e5e5e5;
-      --background-gray: #f8f8f8;
-      
-      /* Typography */
-      --font-primary: 'Helvetica Neue', Arial, sans-serif;
-      --font-serif: 'Times New Roman', serif;
-      
-      /* Spacing */
-      --spacing-xs: 0.5rem;
-      --spacing-sm: 1rem;
-      --spacing-md: 1.5rem;
-      --spacing-lg: 2rem;
-      --spacing-xl: 3rem;
-      
-      /* Shadows */
-      --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
-      --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.1);
-      --shadow-heavy: 0 4px 12px rgba(0, 0, 0, 0.15);
-      
-      /* Transitions */
-      --transition-fast: 0.2s ease;
-      --transition-normal: 0.3s ease;
-      --transition-slow: 0.5s ease;
+      --border: #e4e4e8;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
     body {
-      font-family: var(--font-primary);
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text);
+      background: var(--surface);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    /* Header */
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border-gray);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    .header.scrolled {
-      background: var(--white);
-      box-shadow: var(--shadow-light);
-    }
-
-    .nav {
+    .top-bar {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 0;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .top-bar span, .top-bar a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
     }
 
     .logo {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--black);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      letter-spacing: 2px;
+      flex-direction: column;
+      gap: 0.35rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    .logo:hover {
-      color: var(--medium-gray);
+    .logo strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
 
-    .logo img {
-      width: 40px;
-      height: 40px;
+    .logo span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.3em;
     }
 
     .nav-links {
       display: flex;
+      gap: 1.75rem;
       list-style: none;
-      gap: 2.5rem;
-    }
-
-    .nav-links a {
-      color: var(--black);
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.3s ease;
-      position: relative;
-      font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .nav-links a:hover {
-      color: var(--medium-gray);
-    }
-
-    .cta-button {
-      background: var(--black);
-      color: var(--white);
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: 400;
-      transition: all 0.3s ease;
-      border: 1px solid var(--black);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.12em;
       font-size: 0.8rem;
     }
 
-    .cta-button:hover {
-      background: var(--white);
-      color: var(--black);
+    .cta {
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
     }
 
-    /* Hero Section */
+    .cta:hover { background: var(--secondary); }
+
     .hero {
-      background: var(--white);
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
       position: relative;
       overflow: hidden;
-      padding: 4rem 0;
+      background: linear-gradient(140deg, rgba(27,27,31,0.92), rgba(27,27,31,0.5)), url('images/school/school-uniforms.png') center/cover;
+      color: var(--white);
+      padding: clamp(5rem, 8vw, 7rem) 1.5rem;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(27,27,31,0.9) 0%, rgba(27,27,31,0.65) 45%, rgba(27,27,31,0.15) 100%);
     }
 
     .hero-content {
-      max-width: 800px;
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
       margin: 0 auto;
+      display: grid;
+      gap: 3rem;
+    }
+
+    .hero-copy {
+      max-width: 620px;
     }
 
     .hero h1 {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      color: var(--black);
-      line-height: 1.2;
-      letter-spacing: 2px;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--medium-gray);
-      margin-bottom: 2.5rem;
-      font-weight: 400;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .hero-tagline {
-      font-size: 0.9rem;
-      color: var(--medium-gray);
-      font-weight: 400;
-      margin-bottom: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-      margin: 3rem 0;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 300;
-      color: var(--black);
-      display: block;
-      font-family: var(--font-serif);
-    }
-
-    .stat-label {
-      color: var(--medium-gray);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--black);
-      color: var(--white);
-      padding: 16px 32px;
-      text-decoration: none;
-      font-weight: 400;
-      transition: all 0.3s ease;
-      border: 1px solid var(--black);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-    }
-
-    .btn-secondary {
-      background: var(--white);
-      color: var(--black);
-      padding: 16px 32px;
-      border: 1px solid var(--black);
-      text-decoration: none;
-      font-weight: 400;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-    }
-
-    .btn-primary:hover {
-      background: var(--white);
-      color: var(--black);
-    }
-
-    .btn-secondary:hover {
-      background: var(--black);
-      color: var(--white);
-    }
-
-
-
-    /* Trust Indicators */
-    .trust-section {
-      background: transparent;
-      padding: 3rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .trust-content {
-      text-align: center;
-    }
-
-    .trust-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #FFFFFF;
+      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+      line-height: 1.12;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.82);
       margin-bottom: 2rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     }
 
-    .trust-badges {
+    .hero-actions {
       display: flex;
-      justify-content: center;
-      gap: 3rem;
       flex-wrap: wrap;
-      margin-top: 2rem;
+      gap: 1rem;
     }
 
-    .trust-badge {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-    }
-
-    .trust-badge:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    .trust-badge .icon-award,
-    .trust-badge .icon-shipping,
-    .trust-badge .icon-shield,
-    .trust-badge .icon-users {
-      font-size: 2rem;
-      filter: grayscale(0.3) brightness(1.2);
-    }
-
-    .trust-badge span {
-      font-weight: 600;
-      color: #E5E5E5;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    }
-
-    /* Services Grid */
-    .services-section {
-      background: var(--white);
-      padding: 4rem 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .section-title h2 {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      color: var(--black);
-      margin-bottom: 1rem;
-      font-weight: 400;
-      letter-spacing: 2px;
-    }
-
-    .section-title p {
-      color: var(--medium-gray);
-      font-size: 0.9rem;
+    .hero-actions a {
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      max-width: 550px;
-      margin: 0 auto;
-      font-weight: 400;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-      line-height: 1.5;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    .services-grid {
+    .hero-actions a.primary { background: var(--accent); color: var(--primary); border-color: transparent; }
+    .hero-actions a.secondary { background: transparent; color: var(--white); }
+    .hero-actions a.secondary:hover { background: rgba(255,255,255,0.1); }
+
+    .hero-data {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .data-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .data-card:hover { transform: translateY(-6px); }
+
+    .data-card strong { display: block; font-size: 2rem; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
+    .data-card span { font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
+    }
+
+    .section-header {
+      display: grid;
+      gap: 0.6rem;
+      max-width: 680px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      letter-spacing: 0.03em;
+      color: var(--primary);
+    }
+
+    .section-header p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 2.25rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .feature-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .feature-card ul li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 0.65rem;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .option-card {
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: grid;
+      gap: 1rem;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .option-card.active {
+      border-color: var(--accent);
+      transform: translateY(-6px);
+    }
+
+    .option-card h3 {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .option-summary {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .option-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .option-card.active .option-details {
+      max-height: 320px;
+    }
+
+    .option-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-rows: 180px auto;
+      box-shadow: var(--shadow);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-card div {
+      padding: 1.5rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .product-card h4 {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+    }
+
+    .product-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2.5rem;
       margin-top: 3rem;
     }
 
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border-gray);
+    .contact-card {
       padding: 2rem;
-      transition: all 0.3s ease;
-      position: relative;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .service-card:hover {
-      border-color: var(--black);
-      box-shadow: var(--shadow-light);
-    }
-
-    /* Section Specific Colors */
-    .service-card[data-service="school"] .service-icon {
-      background: linear-gradient(135deg, #4ecdc4, #55a3ff);
-    }
-
-    .service-card[data-service="aviation"] .service-icon {
-      background: linear-gradient(135deg, #74b9ff, #87ceeb);
-    }
-
-    .service-card[data-service="medical"] .service-icon {
-      background: linear-gradient(135deg, #ff7f7f, #fd79a8);
-    }
-
-    .service-card[data-service="paramedical"] .service-icon {
-      background: linear-gradient(135deg, #55a3ff, #74b9ff);
-    }
-
-    .service-card[data-service="college"] .service-icon {
-      background: linear-gradient(135deg, #87ceeb, #b0e0e6);
-    }
-
-    .service-card[data-service="security"] .service-icon {
-      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    }
-
-    .service-card[data-service="custom-tshirts"] .service-icon {
-      background: linear-gradient(135deg, #fd79a8, #fdcb6e);
-    }
-
-    .service-card[data-service="corporate-tshirts"] .service-icon {
-      background: linear-gradient(135deg, #74b9ff, #55a3ff);
-    }
-
-    .service-card[data-service="event-tshirts"] .service-icon {
-      background: linear-gradient(135deg, #fdcb6e, #ffeaa7);
-    }
-
-    .service-card[data-service="hotel"] .service-icon {
-      background: linear-gradient(135deg, #00b894, #4ecdc4);
-    }
-
-    .service-card[data-service="bedsheets"] .service-icon {
-      background: linear-gradient(135deg, #fdcb6e, #ffeaa7);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem auto;
-    }
-
-    .service-icon .icon-graduation,
-    .service-icon .icon-plane,
-    .service-icon .icon-medical,
-    .service-icon .icon-ambulance,
-    .service-icon .icon-university,
-    .service-icon .icon-security,
-    .service-icon .icon-tshirt,
-    .service-icon .icon-briefcase,
-    .service-icon .icon-calendar,
-    .service-icon .icon-hotel,
-    .service-icon .icon-bed {
-      font-size: 1.2rem;
-      color: var(--white);
-    }
-
-    .service-card h3 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-      color: var(--black);
-      font-family: var(--font-primary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .service-card p {
-      color: var(--medium-gray);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-      font-size: 0.9rem;
-    }
-
-    /* Service Images */
-    .service-images {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      max-height: 200px;
-      overflow: hidden;
+      gap: 1.5rem;
     }
 
-    .service-image {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      transition: transform 0.3s ease;
-    }
-
-    .service-image:hover {
-      transform: scale(1.05);
-    }
-
-    .service-features {
-      list-style: none;
-      margin-bottom: 2rem;
-      display: none;
-    }
-
-    .service-features li {
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .service-features li::before {
-      content: '✓';
-      color: var(--success-green);
-      font-weight: bold;
-    }
-
-    .service-button {
-      background: var(--gradient-primary);
-      color: var(--premium-white);
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: all 0.3s ease;
-      width: 100%;
-      text-align: center;
-    }
-
-    .service-button:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    /* Service Details */
-    .service-details {
-      margin-top: 1.5rem;
-      padding: 1.5rem;
-      background: var(--premium-gray);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .service-details h4 {
-      color: var(--primary-navy);
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .service-details ul {
-      list-style: none;
-      margin-bottom: 1rem;
-    }
-
-    .service-details li {
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .service-details li::before {
-      content: '•';
-      color: var(--primary-navy);
-      font-weight: bold;
-      margin-top: 0.1rem;
-    }
-
-    .service-details .highlight {
-      color: var(--primary-navy);
-      font-weight: 600;
-    }
-
-    .service-details .policy-section {
-      margin-bottom: 1.5rem;
-    }
-
-    .service-details .policy-section:last-child {
-      margin-bottom: 0;
-    }
-
-    /* About Section */
-    .about-section {
-      background: transparent;
-      padding: 4rem 0;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .about-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--primary-navy);
-      margin-bottom: 1.5rem;
-    }
-
-    .about-text p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .about-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .about-feature {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--text-secondary);
-    }
-
-    .about-feature .feature-icon {
-      font-size: 1.2rem;
-      filter: grayscale(0.3) brightness(1.1);
-    }
-
-    .about-image {
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: var(--shadow-heavy);
-    }
-
-    /* Contact Section */
-    .contact-section {
-      padding: 4rem 0;
-      background: transparent;
-    }
-
-    .contact-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .contact-info h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--primary-navy);
-      margin-bottom: 2rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background: var(--premium-white);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-light);
-    }
-
-    .contact-item:hover {
-      transform: translateX(10px);
-      border-color: var(--primary-navy);
-    }
-
-    .contact-item .contact-icon {
-      font-size: 1.5rem;
-      width: 30px;
-      filter: grayscale(0.3) brightness(1.1);
-    }
-
-    .contact-item div h3 {
-      color: var(--text-primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-item div p {
-      color: var(--text-secondary);
-    }
-
-    .contact-item a {
-      color: var(--primary-navy);
-      text-decoration: none;
-    }
-
-    .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-form {
-      background: var(--premium-white);
-      padding: 2rem;
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-light);
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      background: var(--premium-gray);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      color: var(--text-primary);
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary-navy);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    /* Footer */
-    .footer {
-      background: transparent;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 3rem 0 2rem;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-section h3 {
-      color: var(--premium-white);
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .footer-section p,
-    .footer-section a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      line-height: 1.6;
-    }
-
-    .footer-section a:hover {
-      color: var(--premium-white);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 2rem;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .nav-links {
-        gap: 1rem;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-stats {
-        gap: 2rem;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .trust-badges {
-        gap: 1.5rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-content,
-      .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .about-features {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .fade-in-up {
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Performance optimizations */
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .service-card,
-    .trust-badge,
-    .contact-item {
-      will-change: transform;
-    }
-
-    /* Optimize animations */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    /* Image optimization */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Preload critical resources */
-    .hero {
-      background-attachment: scroll; /* Better for mobile performance */
-    }
-
-    /* Loading animation */
-    .loading {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    .loading.loaded {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(5px);
-    }
-
-    .modal-content {
-      background-color: var(--premium-white);
-      margin: 2% auto;
-      padding: 0;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 1000px;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: var(--shadow-heavy);
-      animation: modalSlideIn 0.3s ease-out;
-    }
-
-    @keyframes modalSlideIn {
-      from {
-        opacity: 0;
-        transform: translateY(-50px) scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .modal-header {
-      background: var(--gradient-primary);
-      color: var(--premium-white);
-      padding: 2rem;
-      border-radius: 16px 16px 0 0;
-      position: relative;
-    }
-
-    .modal-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+    .contact-card h3 {
       margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .modal-header .service-icon-large {
-      font-size: 3rem;
-    }
-
-    .close {
-      position: absolute;
-      right: 2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--premium-white);
-      font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .close:hover {
-      transform: translateY(-50%) scale(1.2);
-    }
-
-    .modal-body {
-      padding: 2rem;
-    }
-
-    .photo-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-light);
-      transition: all 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: var(--shadow-medium);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .gallery-placeholder {
-      width: 100%;
-      height: 200px;
-      background: var(--premium-gray);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 1.2rem;
-      border: 2px dashed var(--border-color);
-    }
-
-    .modal-details {
-      background: var(--premium-gray);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-
-    .detail-section {
-      margin-bottom: 2rem;
-    }
-
-    .detail-section:last-child {
-      margin-bottom: 0;
-    }
-
-    .detail-section h3 {
-      color: var(--primary-navy);
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .detail-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .detail-section li {
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .detail-section li::before {
-      content: '✓';
-      color: var(--success-green);
-      font-weight: bold;
-      margin-top: 0.1rem;
-    }
-
-    .modal-cta {
-      text-align: center;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .modal-cta .btn-primary {
-      background: var(--gradient-primary);
-      color: var(--premium-white);
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-light);
-    }
-
-    .modal-cta .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    /* Enhanced Service Cards */
-    .service-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::after {
-      content: '🔍 Explore Details & Photos';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--gradient-accent);
-      color: var(--premium-white);
-      padding: 1rem;
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 600;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.08em;
+      font-size: 1rem;
     }
 
-    .service-card:hover::after {
-      transform: translateY(0);
-    }
-
-    /* Photo Gallery Styles */
-    .photo-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .photo-item {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--shadow-light);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .photo-item:hover {
-      transform: scale(1.05);
-      box-shadow: var(--shadow-medium);
-    }
-
-    .photo-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-
-    .photo-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .photo-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
-      color: white;
-      padding: 1rem;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-
-    .photo-item:hover .photo-overlay {
-      transform: translateY(0);
-    }
-
-    /* Service Page Styles */
-    .service-page {
-      display: none;
-      padding: 2rem 0;
-    }
-
-    .service-page.active {
-      display: block;
-    }
-
-    .service-page-header {
-      background: var(--premium-white);
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .service-page-content {
-      padding: 2rem 0;
-    }
-
-    .back-button {
-      background: var(--gradient-primary);
-      color: var(--premium-white);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
+    .contact-card a {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .back-button:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    /* Attractive Visual Elements */
-    /* Dynamic Time-Based Background */
-    .planet-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
-      transition: all 2s ease-in-out;
-      background: linear-gradient(135deg, rgba(173, 216, 230, 0.1) 0%, rgba(135, 206, 235, 0.05) 50%, rgba(176, 224, 230, 0.1) 100%);
-      animation: seaWaves 8s ease-in-out infinite;
-    }
-    
-    @keyframes seaWaves {
-      0%, 100% { 
-        background: linear-gradient(135deg, rgba(173, 216, 230, 0.1) 0%, rgba(135, 206, 235, 0.05) 50%, rgba(176, 224, 230, 0.1) 100%);
-        transform: translateY(0px);
-      }
-      50% { 
-        background: linear-gradient(135deg, rgba(135, 206, 235, 0.15) 0%, rgba(173, 216, 230, 0.08) 50%, rgba(135, 206, 235, 0.12) 100%);
-        transform: translateY(-5px);
-      }
-    }
-
-    /* Time-based background themes */
-    .planet-background.night {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%);
-    }
-
-    .planet-background.dawn {
-      background: linear-gradient(135deg, #2c1810 0%, #8b4513 30%, #daa520 70%, #ffd700 100%);
-    }
-
-    .planet-background.morning {
-      background: linear-gradient(135deg, #87ceeb 0%, #98d8e8 30%, #b0e0e6 70%, #e0f6ff 100%);
-    }
-
-    .planet-background.noon {
-      background: linear-gradient(135deg, #87ceeb 0%, #add8e6 30%, #b0e0e6 70%, #f0f8ff 100%);
-    }
-
-    .planet-background.evening {
-      background: linear-gradient(135deg, #ff7f50 0%, #ff6347 30%, #ff4500 70%, #8b0000 100%);
-    }
-
-    .planet-background.dusk {
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 70%, #dbeafe 100%);
-    }
-
-    /* Section-specific background themes */
-    .planet-background.school {
-      background: linear-gradient(135deg, #2e8b57 0%, #3cb371 30%, #90ee90 70%, #f0fff0 100%);
-    }
-
-    .planet-background.aviation {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #60a5fa 70%, #dbeafe 100%);
-    }
-
-    .planet-background.medical {
-      background: linear-gradient(135deg, #dc2626 0%, #ef4444 30%, #f87171 70%, #fef2f2 100%);
-    }
-
-    .planet-background.paramedical {
-      background: linear-gradient(135deg, #059669 0%, #10b981 30%, #34d399 70%, #ecfdf5 100%);
-    }
-
-    .planet-background.college {
-      background: linear-gradient(135deg, #0891b2 0%, #06b6d4 30%, #67e8f9 70%, #f0f9ff 100%);
-    }
-
-    .planet-background.security {
-      background: linear-gradient(135deg, #374151 0%, #4b5563 30%, #6b7280 70%, #f9fafb 100%);
-    }
-
-    .planet-background.hotel {
-      background: linear-gradient(135deg, #d97706 0%, #f59e0b 30%, #fbbf24 70%, #fffbeb 100%);
-    }
-
-    .planet-background.custom-tshirts {
-      background: linear-gradient(135deg, #be185d 0%, #ec4899 30%, #f472b6 70%, #fdf2f8 100%);
-    }
-
-    .planet-background.corporate-tshirts {
-      background: linear-gradient(135deg, #1f2937 0%, #374151 30%, #6b7280 70%, #f9fafb 100%);
-    }
-
-    .planet-background.event-tshirts {
-      background: linear-gradient(135deg, #7c2d12 0%, #ea580c 30%, #fb923c 70%, #fff7ed 100%);
-    }
-
-    .planet-background.bedsheets {
-      background: linear-gradient(135deg, #f97316 0%, #fb923c 30%, #fdba74 70%, #fff7ed 100%);
-    }
-
-    .planet-orbit {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 1200px;
-      height: 1200px;
-      transform: translate(-50%, -50%);
-      border: 3px solid rgba(255, 215, 0, 0.4);
-      border-radius: 50%;
-      animation: orbit 60s linear infinite;
-      box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
-    }
-
-    .planet {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 600px;
-      height: 600px;
-      background: 
-        radial-gradient(circle at 30% 30%, #1e40af 0%, #3b82f6 50%, #60a5fa 100%),
-        radial-gradient(circle at 70% 40%, #166534 0%, #16a34a 50%, #22c55e 100%),
-        linear-gradient(45deg, #1e40af 0%, #3b82f6 100%);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 
-        0 0 50px rgba(30, 64, 175, 0.4),
-        0 0 100px rgba(59, 130, 246, 0.3),
-        0 0 150px rgba(135, 206, 235, 0.2),
-        inset -30px -30px 60px rgba(0, 0, 0, 0.3),
-        inset 30px 30px 60px rgba(255, 255, 255, 0.2);
-      animation: earthRotate 30s linear infinite;
-      z-index: -1;
-      opacity: 0.8;
-    }
-    
-    @keyframes planetFloat {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.05); }
-    }
-    
-    .planet::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
-        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 35%),
-        radial-gradient(circle at 50% 60%, rgba(255, 255, 255, 0.2) 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 20%);
-      border-radius: 50%;
-      animation: earthRotate 30s linear infinite reverse;
-    }
-    
-    @keyframes earthRotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    @keyframes planetPulse {
-      0%, 100% { transform: translateX(-50%) scale(1); }
-      50% { transform: translateX(-50%) scale(1.1); }
-    }
-    
-
-    .planet:hover {
-      transform: translateX(-50%) scale(1.08);
-      box-shadow: 
-        0 0 150px rgba(212, 175, 55, 1),
-        0 0 300px rgba(212, 175, 55, 0.6),
-        inset -30px -30px 60px rgba(0, 0, 0, 0.4),
-        inset 30px 30px 60px rgba(255, 255, 255, 0.2);
-    }
-
-    .planet.clicked {
-      animation-play-state: paused;
-      transform: translateX(-50%) scale(1.1);
-    }
-
-    .planet::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.15) 50%, transparent 70%);
-      animation: planetShine 4s ease-in-out infinite;
-    }
-
-    .planet::after {
-      content: '';
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 60%);
-      top: 10%;
-      left: 10%;
-    }
-
-    /* Planet surface details */
-    .planet .surface-detail {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 50%;
-    }
-
-    .planet .surface-detail:nth-child(1) {
-      width: 30px;
-      height: 30px;
-      top: 20%;
-      left: 30%;
-      animation: surfaceMove 8s ease-in-out infinite;
-    }
-
-    .planet .surface-detail:nth-child(2) {
-      width: 20px;
-      height: 20px;
-      top: 60%;
-      left: 70%;
-      animation: surfaceMove 12s ease-in-out infinite reverse;
-    }
-
-    .planet .surface-detail:nth-child(3) {
-      width: 40px;
-      height: 40px;
-      top: 70%;
-      left: 20%;
-      animation: surfaceMove 10s ease-in-out infinite;
-    }
-
-    @keyframes planetShine {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.9; }
-    }
-
-    @keyframes surfaceMove {
-      0%, 100% { transform: translateX(0px) translateY(0px); }
-      25% { transform: translateX(5px) translateY(-3px); }
-      50% { transform: translateX(-3px) translateY(5px); }
-      75% { transform: translateX(-5px) translateY(-3px); }
-    }
-
-    .stars {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    .star {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(212, 175, 55, 0.9);
-      border-radius: 50%;
-      animation: twinkle 4s ease-in-out infinite;
-      box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
-      transition: all 2s ease-in-out;
-    }
-
-    /* Time-based star colors */
-    .planet-background.night .star {
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-
-    .planet-background.dawn .star {
-      background: rgba(255, 215, 0, 0.8);
-      box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
-    }
-
-    .planet-background.morning .star {
-      background: rgba(135, 206, 235, 0.7);
-      box-shadow: 0 0 6px rgba(135, 206, 235, 0.5);
-    }
-
-    .planet-background.noon .star {
-      background: rgba(173, 216, 230, 0.6);
-      box-shadow: 0 0 4px rgba(173, 216, 230, 0.4);
-    }
-
-    .planet-background.evening .star {
-      background: rgba(255, 69, 0, 0.8);
-      box-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
-    }
-
-    .planet-background.dusk .star {
-      background: rgba(30, 64, 175, 0.8);
-      box-shadow: 0 0 8px rgba(30, 64, 175, 0.6);
-    }
-
-    /* Section-specific star colors */
-    .planet-background.school .star {
-      background: rgba(46, 139, 87, 0.8);
-      box-shadow: 0 0 8px rgba(46, 139, 87, 0.6);
-    }
-
-    .planet-background.aviation .star {
-      background: rgba(30, 58, 138, 0.8);
-      box-shadow: 0 0 8px rgba(30, 58, 138, 0.6);
-    }
-
-    .planet-background.medical .star {
-      background: rgba(220, 38, 38, 0.8);
-      box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
-    }
-
-    .planet-background.paramedical .star {
-      background: rgba(5, 150, 105, 0.8);
-      box-shadow: 0 0 8px rgba(5, 150, 105, 0.6);
-    }
-
-    .planet-background.college .star {
-      background: rgba(8, 145, 178, 0.8);
-      box-shadow: 0 0 8px rgba(8, 145, 178, 0.6);
-    }
-
-    .planet-background.security .star {
-      background: rgba(55, 65, 81, 0.8);
-      box-shadow: 0 0 8px rgba(55, 65, 81, 0.6);
-    }
-
-    .planet-background.hotel .star {
-      background: rgba(217, 119, 6, 0.8);
-      box-shadow: 0 0 8px rgba(217, 119, 6, 0.6);
-    }
-
-    .planet-background.custom-tshirts .star {
-      background: rgba(190, 24, 93, 0.8);
-      box-shadow: 0 0 8px rgba(190, 24, 93, 0.6);
-    }
-
-    .planet-background.corporate-tshirts .star {
-      background: rgba(31, 41, 55, 0.8);
-      box-shadow: 0 0 8px rgba(31, 41, 55, 0.6);
-    }
-
-    .planet-background.event-tshirts .star {
-      background: rgba(124, 45, 18, 0.8);
-      box-shadow: 0 0 8px rgba(124, 45, 18, 0.6);
-    }
-
-    .planet-background.bedsheets .star {
-      background: rgba(249, 115, 22, 0.8);
-      box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
-    }
-
-    .star:nth-child(1) { top: 8%; left: 15%; animation-delay: 0s; }
-    .star:nth-child(2) { top: 15%; left: 85%; animation-delay: 0.3s; }
-    .star:nth-child(3) { top: 25%; left: 45%; animation-delay: 0.6s; }
-    .star:nth-child(4) { top: 35%; left: 75%; animation-delay: 0.9s; }
-    .star:nth-child(5) { top: 45%; left: 25%; animation-delay: 1.2s; }
-    .star:nth-child(6) { top: 55%; left: 65%; animation-delay: 1.5s; }
-    .star:nth-child(7) { top: 65%; left: 35%; animation-delay: 1.8s; }
-    .star:nth-child(8) { top: 75%; left: 85%; animation-delay: 2.1s; }
-    .star:nth-child(9) { top: 85%; left: 15%; animation-delay: 2.4s; }
-    .star:nth-child(10) { top: 12%; left: 55%; animation-delay: 2.7s; }
-    .star:nth-child(11) { top: 22%; left: 25%; animation-delay: 3s; }
-    .star:nth-child(12) { top: 32%; left: 85%; animation-delay: 3.3s; }
-    .star:nth-child(13) { top: 42%; left: 45%; animation-delay: 3.6s; }
-    .star:nth-child(14) { top: 52%; left: 75%; animation-delay: 3.9s; }
-    .star:nth-child(15) { top: 62%; left: 15%; animation-delay: 4.2s; }
-    .star:nth-child(16) { top: 72%; left: 55%; animation-delay: 4.5s; }
-    .star:nth-child(17) { top: 82%; left: 35%; animation-delay: 4.8s; }
-    .star:nth-child(18) { top: 92%; left: 75%; animation-delay: 5.1s; }
-
-    @keyframes orbit {
-      0% { transform: translate(-50%, -50%) rotate(0deg); }
-      100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    @keyframes planet-rotate {
-      0% { transform: translateX(-50%) rotate(0deg); }
-      100% { transform: translateX(-50%) rotate(360deg); }
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-
-    /* Lively Animations */
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-10px); }
-      60% { transform: translateY(-5px); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      75% { transform: translateX(5px); }
-    }
-
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 5px rgba(245, 158, 11, 0.5); }
-      50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.8), 0 0 30px rgba(245, 158, 11, 0.6); }
-    }
-
-    @keyframes slideInUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes slideInLeft {
-      from { transform: translateX(-30px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes slideInRight {
-      from { transform: translateX(30px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes fadeInScale {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    /* Animated Elements */
-    .bounce-animation {
-      animation: bounce 2s infinite;
-    }
-
-    .pulse-animation {
-      animation: pulse 2s infinite;
-    }
-
-    .glow-animation {
-      animation: glow 2s infinite;
-    }
-
-    .slide-in-up {
-      animation: slideInUp 0.6s ease-out;
-    }
-
-    .slide-in-left {
-      animation: slideInLeft 0.6s ease-out;
-    }
-
-    .slide-in-right {
-      animation: slideInRight 0.6s ease-out;
-    }
-
-    .fade-in-scale {
-      animation: fadeInScale 0.6s ease-out;
-    }
-
-    /* Location Popup */
-    .location-popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: var(--premium-white);
-      border-radius: 16px;
-      box-shadow: var(--shadow-heavy);
-      padding: 2rem;
-      max-width: 400px;
-      width: 90%;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      border: 2px solid var(--accent-coral);
-    }
-
-    .location-popup.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .location-popup h3 {
-      color: var(--primary-navy);
-      margin-bottom: 1rem;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-
-    .location-info {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .gps-coordinates {
-      background: var(--premium-gray);
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      font-family: 'Courier New', monospace;
-      font-size: 0.9rem;
-      color: var(--text-primary);
-    }
-
-    .location-fact {
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-coral));
-      color: var(--premium-white);
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      color: var(--primary);
       font-weight: 600;
-    }
-
-    .close-popup {
-      background: var(--primary-navy);
-      color: var(--premium-white);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-
-    .close-popup:hover {
-      background: var(--accent-coral);
-      transform: translateY(-2px);
-    }
-
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .popup-overlay.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Elegant Banner */
-    .elegant-banner {
-      background: var(--gradient-primary);
-      color: var(--premium-white);
-      padding: 0.8rem 0;
-      text-align: center;
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
-    }
-
-    .elegant-banner p {
-      margin: 0;
-      opacity: 0.9;
-    }
-
-    .hot-deal {
-      position: relative;
-      background: linear-gradient(135deg, #f59e0b, #f97316);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.8rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      animation: pulse 2s infinite;
+      font-size: 0.85rem;
     }
 
-    .hot-deal::before {
-      content: '🔥';
-      margin-right: 0.5rem;
+    form {
+      display: grid;
+      gap: 1rem;
     }
 
-    .limited-time {
-      background: linear-gradient(135deg, #dc2626, #ef4444);
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 15px;
-      font-size: 0.7rem;
-      font-weight: 600;
+    label {
+      font-size: 0.86rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      animation: shake 1s infinite;
+      color: var(--muted);
     }
 
-    .price-highlight {
-      background: linear-gradient(135deg, #059669, #10b981);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-align: center;
-      margin: 1rem 0;
-      box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
-    }
-
-    .cta-button {
-      background: linear-gradient(135deg, #f59e0b, #f97316);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
+    input, textarea {
       width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .cta-button:hover::before {
-      left: 100%;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
-    }
-
-    .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      animation: pulse 3s infinite;
-    }
-
-    .social-proof {
-      background: rgba(245, 158, 11, 0.1);
-      border: 2px solid var(--accent-gold);
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1rem;
-      margin: 1rem 0;
-      text-align: center;
+      font-size: 0.95rem;
+      background: #fafafb;
     }
 
-    .social-proof h4 {
-      color: var(--accent-gold);
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
+    textarea { min-height: 140px; resize: vertical; }
 
-    .social-proof p {
-      color: var(--text-primary);
-      font-size: 0.9rem;
-      margin: 0;
-    }
-
-    /* Elegant Service Features */
-    .service-features {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .feature-tag {
-      background: var(--gradient-accent);
-      color: var(--premium-white);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Elegant CTA Button */
-    .elegant-cta {
-      background: var(--gradient-accent);
-      color: var(--premium-white);
-      padding: 1rem 2rem;
+    button {
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
       border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-transform: none;
-      letter-spacing: 0.5px;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-medium);
-      text-decoration: none;
-      display: inline-block;
+      transition: background 0.3s ease;
     }
 
-    .elegant-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-heavy);
+    button:hover { background: var(--secondary); }
+
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.7);
+      padding: 2.5rem 1.5rem;
+    }
+
+    footer .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    footer strong {
+      color: var(--white);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      nav { flex-wrap: wrap; justify-content: center; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar { justify-content: center; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .product-card { grid-template-rows: 200px auto; }
     }
   </style>
 </head>
 <body>
-  <!-- Planet Background -->
-  <div class="planet-background">
-    <div class="planet-orbit">
-      <div class="planet" id="interactive-planet">
-        <div class="surface-detail"></div>
-        <div class="surface-detail"></div>
-        <div class="surface-detail"></div>
-      </div>
-    </div>
-    
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
+  <div class="top-bar">
+    <span>Monday – Saturday · 08:30 – 20:00</span>
+    <span>
+      <a href="tel:+919611151555">+91-9611151555</a>
+      <a href="tel:+919611102555">+91-9611102555</a>
+    </span>
   </div>
-
-  <!-- Location Popup -->
-  <div class="popup-overlay" id="popup-overlay"></div>
-  <div class="location-popup" id="location-popup">
-    <h3>🪐 Planet10 Location</h3>
-    <div class="location-info">
-      <div class="gps-coordinates" id="gps-coordinates">
-        Latitude: 12.9716° N<br>
-        Longitude: 77.5946° E<br>
-        Altitude: 920m above sea level
-      </div>
-      <div class="location-fact" id="location-fact">
-        🌟 You're exploring the heart of India's Silicon Valley - Bangalore! 
-        This is where innovation meets tradition, and where Planet10 creates 
-        uniforms for the world's leading companies.
-      </div>
-    </div>
-    <button class="close-popup" onclick="closeLocationPopup()">Explore More</button>
-  </div>
-
-  <!-- Elegant Announcement Banner -->
-  <div class="elegant-banner">
-    <div class="container">
-      <p>✨ Premium Quality • Custom Solutions • Nationwide Delivery</p>
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <nav class="nav">
-        <a href="#" class="logo" onclick="showMainPage()">
-          <img src="logo.png" alt="Planet10 Logo" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="#" onclick="showMainPage()">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="stores-locator/index.html">Store Locator</a></li>
-        </ul>
-        <a href="#contact" class="cta-button">Get Quote</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <a class="logo" href="#home">
+        <strong>Planet10 Uniforms</strong>
+        <span>School · College · Corporate</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#custom">Custom</a></li>
+        <li><a href="#options">Options</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="cta" href="#contact">Request Quote</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-
-    <div class="container">
-      <div class="hero-content loading">
-        <div class="hero-tagline">Excellence in Every Stitch</div>
-        <h1>Professional Uniform Solutions</h1>
-        <p class="hero-subtitle">
-          Crafting sophisticated uniforms for discerning clients across industries. 
-          From educational institutions to corporate enterprises, we deliver unparalleled quality and timeless elegance.
-        </p>
-        
-        <!-- Elegant Social Proof -->
-        <div class="social-proof">
-          <h4>Trusted by Leading Organizations</h4>
-          <p>Over 50 prestigious institutions rely on our expertise for their uniform requirements</p>
-        </div>
-
-        <div class="hero-buttons">
-          <a href="#services" class="elegant-cta">Explore Our Collection</a>
-          <a href="https://wa.me/919876543210?text=Hi, I would like to discuss uniform requirements" class="btn-secondary">Request Consultation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Section -->
-  <section class="trust-section">
-    <div class="container">
-            <div class="trust-content loading">
-        <h2 class="trust-title">Why Choose Planet10?</h2>
-        <div class="trust-badges">
-          <div class="trust-badge">
-            <div class="icon-award">🏆</div>
-            <span>10+ Years Experience</span>
-      </div>
-          <div class="trust-badge">
-            <div class="icon-shipping">🚚</div>
-            <span>50+ Happy Clients</span>
-      </div>
-          <div class="trust-badge">
-            <div class="icon-shield">🛡️</div>
-            <span>5K+ Uniforms Delivered</span>
-      </div>
-          <div class="trust-badge">
-            <div class="icon-users">👥</div>
-            <span>Pan India Service</span>
-      </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-title loading">
-        <h2>Our Premium Services</h2>
-        <p>Comprehensive uniform solutions for every industry. Click to explore our capabilities, view samples, and get detailed pricing information.</p>
-      </div>
-      
-      <div class="services-grid">
-        <!-- School Uniforms -->
-        <div class="service-card loading" data-service="school" data-icon="🎓">
-          <div class="service-icon">
-            <div class="icon-graduation">🎓</div>
-          </div>
-          <h3>School Uniforms</h3>
-          <p>Elegant and durable uniforms for educational institutions. Premium fabrics with modern designs that inspire confidence and professionalism.</p>
-          <div class="service-features">
-            <span class="feature-tag">Premium Quality</span>
-            <span class="feature-tag">Custom Sizing</span>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <h1>School Uniforms Tailored for Comfort, Durability & Pride</h1>
+          <p>Partner with India's trusted uniform manufacturer delivering premium fabrics, impeccable stitching, and customized branding for institutions that care about presentation.</p>
+          <div class="hero-actions">
+            <a class="primary" href="#contact">Book a Consultation</a>
+            <a class="secondary" href="#options">Explore Options</a>
           </div>
         </div>
-
-        <!-- Aviation Uniforms -->
-        <div class="service-card loading" data-service="aviation" data-icon="✈️">
-          <div class="service-icon">
-            <div class="icon-plane">✈️</div>
+        <div class="hero-data">
+          <div class="data-card">
+            <strong>10+</strong>
+            <span>Years Experience</span>
           </div>
-          <h3>Aviation Uniforms</h3>
-          <p>Sophisticated uniforms for aviation professionals. International standards with impeccable attention to detail and comfort.</p>
-          <div class="service-features">
-            <span class="feature-tag">International Standards</span>
-            <span class="feature-tag">Comfort Focused</span>
+          <div class="data-card">
+            <strong>150+</strong>
+            <span>Institutions Served</span>
           </div>
-        </div>
-
-        <!-- Medical Uniforms -->
-        <div class="service-card loading" data-service="medical" data-icon="👨‍⚕️">
-          <div class="service-icon">
-            <div class="icon-medical">👨‍⚕️</div>
+          <div class="data-card">
+            <strong>25K+</strong>
+            <span>Uniforms Delivered</span>
           </div>
-          <h3>Medical Uniforms</h3>
-          <p>Specialized healthcare uniforms designed for comfort and hygiene. Explore our medical-grade solutions.</p>
-        </div>
-
-        <!-- Paramedical Uniforms -->
-        <div class="service-card loading" data-service="paramedical" data-icon="🚑">
-          <div class="service-icon">
-            <div class="icon-ambulance">🚑</div>
+          <div class="data-card">
+            <strong>100%</strong>
+            <span>Custom Branding</span>
           </div>
-          <h3>Paramedical Uniforms</h3>
-          <p>Functional uniforms for emergency and allied health services. See our specialized designs and features.</p>
-        </div>
-
-        <!-- College Uniforms -->
-        <div class="service-card loading" data-service="college" data-icon="🏛️">
-          <div class="service-icon">
-            <div class="icon-university">🏛️</div>
-          </div>
-          <h3>College Uniforms</h3>
-          <p>Contemporary uniforms for higher education institutions. Discover our modern designs and branding solutions.</p>
-        </div>
-
-        <!-- Security Guard Uniforms -->
-        <div class="service-card loading" data-service="security" data-icon="🛡️">
-          <div class="service-icon">
-            <div class="icon-security">🛡️</div>
-          </div>
-          <h3>Security Guard Uniforms</h3>
-          <p>Professional security uniforms designed for authority and durability. Explore our protective gear solutions.</p>
-        </div>
-
-        <!-- Custom T-Shirts -->
-        <div class="service-card loading" data-service="custom-tshirts" data-icon="👕">
-          <div class="service-icon">
-            <div class="icon-tshirt">👕</div>
-          </div>
-          <h3>Custom T-Shirts</h3>
-          <p>Personalized t-shirts for events, promotions, and casual wear. Discover our custom design capabilities.</p>
-        </div>
-
-        <!-- Corporate T-Shirts -->
-        <div class="service-card loading" data-service="corporate-tshirts" data-icon="💼">
-          <div class="service-icon">
-            <div class="icon-briefcase">💼</div>
-          </div>
-          <h3>Corporate T-Shirts</h3>
-          <p>Professional corporate apparel for team building, events, and company branding. Explore our corporate solutions.</p>
-        </div>
-
-        <!-- Event T-Shirts -->
-        <div class="service-card loading" data-service="event-tshirts" data-icon="📅">
-          <div class="service-icon">
-            <div class="icon-calendar">📅</div>
-          </div>
-          <h3>Event T-Shirts</h3>
-          <p>Special event t-shirts for conferences, festivals, sports events, and celebrations. See our event solutions.</p>
-        </div>
-
-        <!-- Hotel Staff Uniforms -->
-        <div class="service-card loading" data-service="hotel" data-icon="🏨">
-          <div class="service-icon">
-            <div class="icon-hotel">🏨</div>
-          </div>
-          <h3>Hotel Staff Uniforms</h3>
-          <p>Elegant and functional uniforms for hotel staff including front desk, housekeeping, and restaurant. Explore our hospitality solutions.</p>
-        </div>
-
-        <!-- Bedsheets -->
-        <div class="service-card loading" data-service="bedsheets" data-icon="🛏️">
-          <div class="service-icon">
-            <div class="icon-bed">🛏️</div>
-          </div>
-          <h3>Bedsheets & Linens</h3>
-          <p>Premium quality bedsheets, pillow covers, and hotel linens with custom designs. Discover our textile solutions.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="about-content loading">
-        <div class="about-text">
-          <h2>About Planet10</h2>
-          <p>
-            With over a decade of experience in the uniform industry, Planet10 has established itself as a trusted partner for institutions across India. We specialize in delivering premium, tailor-made uniforms that combine style, comfort, and durability.
-          </p>
-          <p>
-            Our commitment to quality and customer satisfaction has made us the preferred choice for aviation academies, educational institutions, healthcare facilities, and corporate organizations.
-          </p>
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="feature-icon">✅</div>
-              <span>10+ Years Experience</span>
-            </div>
-            <div class="about-feature">
-              <div class="feature-icon">✅</div>
-              <span>Quality Assurance</span>
-            </div>
-            <div class="about-feature">
-              <div class="feature-icon">✅</div>
-              <span>Timely Delivery</span>
-            </div>
-            <div class="about-feature">
-              <div class="feature-icon">✅</div>
-              <span>Customer Support</span>
-            </div>
-          </div>
+    <section id="custom" class="section">
+      <div class="section-header">
+        <h2>Tailored School Uniform Solutions</h2>
+        <p>Our design team crafts distinctive uniforms for boys, girls, teachers, and staff. From pattern development to logo placement, every detail reflects your institution's identity.</p>
+      </div>
+      <div class="two-column">
+        <div class="feature-card">
+          <h3>Complete Kits</h3>
+          <ul>
+            <li>Blazers, shirts, trousers, and skirts designed for daily use</li>
+            <li>Sportswear, sweatshirts, and hoodies for active routines</li>
+            <li>Coordinated teacher and staff attire with premium finishing</li>
+          </ul>
         </div>
-        <div class="about-image">
-          <img src="images/about/factory-interior.jpg" alt="Planet10 Uniforms Factory" loading="lazy" />
+        <div class="feature-card">
+          <h3>Custom Branding</h3>
+          <ul>
+            <li>Embroidery, woven labels, and custom buttons in your colors</li>
+            <li>Logo placements tailored for visibility and comfort</li>
+            <li>Dedicated account manager throughout production</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-content loading">
-        <div class="contact-info">
-          <h2>Get In Touch</h2>
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <div>
-              <h3>Email</h3>
-              <p><a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a></p>
-            </div>
+    <section id="options" class="section">
+      <div class="section-header">
+        <h2>Uniform Options, Accessories & Materials</h2>
+        <p>Choose from carefully curated fabrics, trims, and printing technologies engineered to withstand daily wear while keeping students comfortable in every season.</p>
+      </div>
+      <div class="options-grid">
+        <article class="option-card active" data-option>
+          <h3>Fabric Options</h3>
+          <p class="option-summary">Special pantones, breathable blends, and durable GSM weights.</p>
+          <div class="option-details">
+            <ul>
+              <li>Special Pantones Gabardine Fabric for structure</li>
+              <li>3 Thread Fleece for sweaters and hoodies</li>
+              <li>Supreme & Pique knits for polos and tees</li>
+              <li>Dry-fast performance fabrics for sportswear</li>
+              <li>Custom GSM recommendations per garment</li>
+            </ul>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <div>
-              <h3>Phone & WhatsApp</h3>
-              <p><a href="tel:+919886518538">+91-9886518538</a></p>
-            </div>
+        </article>
+        <article class="option-card" data-option>
+          <h3>Accessory Options</h3>
+          <p class="option-summary">Premium finishing touches to reinforce your brand identity.</p>
+          <div class="option-details">
+            <ul>
+              <li>Private label development & packaging</li>
+              <li>Branded tapes, trims, and care labels</li>
+              <li>Custom alloy buttons & zipper choices</li>
+              <li>Multiple pocket styles for functionality</li>
+            </ul>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">🕒</div>
-            <div>
-              <h3>Business Hours</h3>
-              <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
-            </div>
+        </article>
+        <article class="option-card" data-option>
+          <h3>Printing & Embroidery</h3>
+          <p class="option-summary">High-fidelity logo applications tailored to each fabric.</p>
+          <div class="option-details">
+            <ul>
+              <li>Silk screen printing for vibrant colors</li>
+              <li>Heated transfer prints with stretch resistance</li>
+              <li>Embossed embroidery with long-lasting threads</li>
+              <li>DTF, DTG & sublimation for complex gradients</li>
+            </ul>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <h3>Location</h3>
-              <p>India - Pan India Delivery</p>
-            </div>
+        </article>
+        <article class="option-card" data-option>
+          <h3>Model Options</h3>
+          <p class="option-summary">Uniform sets curated for students, teachers, and teams.</p>
+          <div class="option-details">
+            <ul>
+              <li>Active wear for sports teams and events</li>
+              <li>Teacher and staff professional attire</li>
+              <li>Seasonal jackets, rainwear, and outerwear</li>
+              <li>Student wear from kindergarten to college</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-header">
+        <h2>Signature School Uniform Range</h2>
+        <p>Mix and match essential categories to build a cohesive wardrobe. Each garment is engineered for easy maintenance and consistent fit across sizes.</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/school/school.png" alt="School shirt and tie">
+          <div>
+            <h4>Shirts & Blouses</h4>
+            <p>Crisp easy-care fabrics with stain guard and reinforced seams for daily wear.</p>
           </div>
         </div>
-        
-        <div class="contact-form">
-          <h3>Request a Quote</h3>
+        <div class="product-card">
+          <img src="images/school/boys-uniform.png" alt="Boys school uniform">
+          <div>
+            <h4>Trousers & Shorts</h4>
+            <p>Tailored fits with stretch waistbands and breathable linings to keep students comfortable.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/school/girls-uniform.png" alt="Girls school uniform">
+          <div>
+            <h4>Skirts & Tunics</h4>
+            <p>Structured silhouettes with pleats that hold shape and smart design details.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/school/school-g.png" alt="School hoodies and jackets">
+          <div>
+            <h4>Outerwear</h4>
+            <p>Hoodies, sweatshirts, and jackets crafted in weather-ready fabrics with cozy linings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <h2>Let's Design Your Next Uniform</h2>
+        <p>Share your requirements and our consultants will guide you through sampling, sizing, and full-scale production with transparent timelines.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Talk to Us</h3>
+          <p>Speak directly with our uniform specialists for fabric suggestions, costings, and delivery schedules.</p>
+          <a href="tel:+919611151555">Call +91-9611151555</a>
+          <a href="tel:+919611102555">Call +91-9611102555</a>
+          <a href="mailto:hello@planet10uniforms.com">hello@planet10uniforms.com</a>
+          <p>Planet10 Uniforms, Bengaluru · Serving schools nationwide</p>
+        </div>
+        <div class="contact-card">
+          <h3>Request a Custom Quote</h3>
           <form>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
             </div>
-            <div class="form-group">
+            <div>
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <input id="email" name="email" type="email" placeholder="Your email" required>
             </div>
-            <div class="form-group">
+            <div>
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" required>
+              <input id="phone" name="phone" type="tel" placeholder="Contact number">
             </div>
-            <div class="form-group">
-              <label for="service">Service Required</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="school">School Uniforms</option>
-                <option value="aviation">Aviation Uniforms</option>
-                <option value="medical">Medical Uniforms</option>
-                <option value="paramedical">Paramedical Uniforms</option>
-                <option value="college">College Uniforms</option>
-                <option value="security">Security Guard Uniforms</option>
-                <option value="custom-tshirts">Custom T-Shirts</option>
-                <option value="corporate-tshirts">Corporate T-Shirts</option>
-                <option value="event-tshirts">Event T-Shirts</option>
-                <option value="hotel">Hotel Staff Uniforms</option>
-                <option value="bedsheets">Bedsheets & Linens</option>
-              </select>
+            <div>
+              <label for="message">Your Requirements</label>
+              <textarea id="message" name="message" placeholder="Let us know the garments, quantities, and delivery timeline."></textarea>
             </div>
-            <div class="form-group">
-              <label for="quantity">Approximate Quantity</label>
-              <input type="text" id="quantity" name="quantity" placeholder="e.g., 100 pieces">
-            </div>
-            <div class="form-group">
-              <label for="message">Additional Requirements</label>
-              <textarea id="message" name="message" placeholder="Tell us about your specific requirements..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary" style="width: 100%;">Send Quote Request</button>
+            <button type="submit">Submit Request</button>
           </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Planet10 Uniforms</h3>
-          <p>Your trusted partner for premium uniform solutions across all industries. Excellence in every stitch since 2015.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <p><a href="#services">School Uniforms</a></p>
-          <p><a href="#services">Aviation Uniforms</a></p>
-          <p><a href="#services">Medical Uniforms</a></p>
-          <p><a href="#services">Corporate Apparel</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p>Email: inquiryplanet10@gmail.com</p>
-          <p>Phone: +91-9886518538</p>
-          <p>WhatsApp: +91-9886518538</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <p><a href="#about">About Us</a></p>
-          <p><a href="#contact">Contact</a></p>
-          <p><a href="#services">Services</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2015-2025 Planet10 Uniforms. All rights reserved. | Excellence in Every Stitch</p>
-      </div>
+  <footer>
+    <div class="footer-inner">
+      <strong>Planet10 Uniforms</strong>
+      <span>Premium school uniform manufacturer delivering tailored apparel solutions across India.</span>
+      <span>&copy; <span id="currentYear"></span> Planet10 Uniforms. All rights reserved.</span>
     </div>
   </footer>
 
-
-  <!-- Service Pages -->
-  <div id="servicePages">
-    <!-- School Uniforms Page -->
-    <div id="school-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🎓 School Uniforms</h1>
-          <p>Professional uniforms for educational institutions with custom branding and accessories.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="school-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="school-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20School%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Aviation Uniforms Page -->
-    <div id="aviation-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>✈️ Aviation Uniforms</h1>
-          <p>Premium uniforms for aviation professionals meeting international standards.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="aviation-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="aviation-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Aviation%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Medical Uniforms Page -->
-    <div id="medical-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>👨‍⚕️ Medical Uniforms</h1>
-          <p>Hygienic and comfortable medical uniforms for healthcare professionals.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="medical-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="medical-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Medical%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paramedical Uniforms Page -->
-    <div id="paramedical-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🚑 Paramedical Uniforms</h1>
-          <p>Specialized uniforms for paramedics, lab technicians, and allied health professionals.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="paramedical-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="paramedical-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Paramedical%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- College Uniforms Page -->
-    <div id="college-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🏛️ College Uniforms</h1>
-          <p>Modern and professional uniforms for colleges and universities with institutional branding.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="college-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="college-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20College%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Security Guard Uniforms Page -->
-    <div id="security-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🛡️ Security Guard Uniforms</h1>
-          <p>Durable and authoritative uniforms for security personnel with professional appearance.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="security-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="security-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Security%20Guard%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Custom T-Shirts Page -->
-    <div id="custom-tshirts-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>👕 Custom T-Shirts</h1>
-          <p>Personalized t-shirts for events, promotions, and casual wear with custom designs.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="custom-tshirts-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="custom-tshirts-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Custom%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Corporate T-Shirts Page -->
-    <div id="corporate-tshirts-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>💼 Corporate T-Shirts</h1>
-          <p>Professional corporate apparel for team building, events, and company branding.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="corporate-tshirts-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="corporate-tshirts-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Corporate%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Event T-Shirts Page -->
-    <div id="event-tshirts-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>📅 Event T-Shirts</h1>
-          <p>Special event t-shirts for conferences, festivals, sports events, and celebrations.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="event-tshirts-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="event-tshirts-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Event%20T-Shirts%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hotel Staff Uniforms Page -->
-    <div id="hotel-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🏨 Hotel Staff Uniforms</h1>
-          <p>Elegant and functional uniforms for hotel staff including front desk, housekeeping, and restaurant.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="hotel-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="hotel-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Hotel%20Staff%20Uniforms%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bedsheets & Linens Page -->
-    <div id="bedsheets-page" class="service-page">
-      <div class="service-page-header">
-        <div class="container">
-          <a href="#" class="back-button" onclick="showMainPage()">
-            ← Back to Services
-          </a>
-          <h1>🛏️ Bedsheets & Linens</h1>
-          <p>Premium quality bedsheets, pillow covers, and hotel linens with custom designs.</p>
-        </div>
-      </div>
-      <div class="service-page-content">
-        <div class="container">
-          <div class="photo-gallery-grid" id="bedsheets-gallery">
-            <!-- Photos will be loaded here -->
-          </div>
-          <div class="modal-details" id="bedsheets-details">
-            <!-- Service details will be loaded here -->
-          </div>
-          <div class="modal-cta">
-            <a href="https://wa.me/919886518538?text=I'm%20interested%20in%20Bedsheets%20and%20Linens%20-%20Planet10" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal -->
-  <div id="serviceModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="modalTitle">
-          <span class="service-icon-large" id="modalIcon"></span>
-          <span id="modalServiceName"></span>
-        </h2>
-        <span class="close">&times;</span>
-      </div>
-      <div class="modal-body">
-        <div class="photo-gallery" id="modalGallery">
-          <!-- Photos will be loaded here -->
-        </div>
-        <div class="modal-details" id="modalDetails">
-          <!-- Service details will be loaded here -->
-        </div>
-        <div class="modal-cta">
-          <a href="#" id="modalWhatsApp" class="btn-primary" target="_blank">Get Quote on WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('header');
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Interactive planet functionality
-    const planet = document.getElementById('interactive-planet');
-    if (planet) {
-      planet.addEventListener('click', showLocationPopup);
-    }
-
-    // Close popup when clicking overlay
-    const overlay = document.getElementById('popup-overlay');
-    if (overlay) {
-      overlay.addEventListener('click', closeLocationPopup);
-    }
-
-    // Add lively animations to elements
-    function addLivelyAnimations() {
-      // Add bounce animation to service cards on hover
-      const serviceCards = document.querySelectorAll('.service-card');
-      serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-          card.style.transform = 'translateY(-10px) scale(1.02)';
-          card.style.transition = 'all 0.3s ease';
+    document.querySelectorAll('[data-option]').forEach(function(card) {
+      card.addEventListener('click', function() {
+        const isActive = card.classList.contains('active');
+        document.querySelectorAll('[data-option]').forEach(function(other) {
+          other.classList.remove('active');
         });
-        
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'translateY(0) scale(1)';
-        });
-      });
-
-      // Add pulse animation to buttons
-      const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
-      buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-          button.style.transform = 'scale(1.05)';
-          button.style.transition = 'all 0.3s ease';
-        });
-        
-        button.addEventListener('mouseleave', () => {
-          button.style.transform = 'scale(1)';
-        });
-      });
-
-      // Add shake animation to urgency elements
-      const urgencyElements = document.querySelectorAll('.limited-time, .hot-deal');
-      urgencyElements.forEach(element => {
-        element.addEventListener('click', () => {
-          element.style.animation = 'shake 0.5s ease-in-out';
-          setTimeout(() => {
-            element.style.animation = '';
-          }, 500);
-        });
-      });
-    }
-
-    // Initialize lively animations
-    addLivelyAnimations();
-
-    // Background system - time-based and section-specific
-    function initTimeBasedBackground() {
-      const background = document.querySelector('.planet-background');
-      const currentHour = new Date().getHours();
-      
-      // Remove existing time classes
-      background.classList.remove('night', 'dawn', 'morning', 'noon', 'evening', 'dusk');
-      
-      // Apply time-based theme
-      if (currentHour >= 22 || currentHour < 5) {
-        background.classList.add('night');
-      } else if (currentHour >= 5 && currentHour < 7) {
-        background.classList.add('dawn');
-      } else if (currentHour >= 7 && currentHour < 10) {
-        background.classList.add('morning');
-      } else if (currentHour >= 10 && currentHour < 16) {
-        background.classList.add('noon');
-      } else if (currentHour >= 16 && currentHour < 19) {
-        background.classList.add('evening');
-      } else if (currentHour >= 19 && currentHour < 22) {
-        background.classList.add('dusk');
-      }
-      
-      console.log(`Applied ${background.classList[1]} theme for hour ${currentHour}`);
-    }
-
-    // Section-specific background system
-    function setSectionBackground(sectionKey) {
-      const background = document.querySelector('.planet-background');
-      
-      // Remove all existing section classes
-      background.classList.remove('school', 'aviation', 'medical', 'paramedical', 'college', 'security', 'hotel', 'custom-tshirts', 'corporate-tshirts', 'event-tshirts', 'bedsheets');
-      
-      // Apply section-specific theme
-      if (sectionKey) {
-        background.classList.add(sectionKey);
-        console.log(`Applied ${sectionKey} section theme`);
-      } else {
-        // Return to time-based theme
-        initTimeBasedBackground();
-      }
-    }
-
-    // Initialize time-based background
-    initTimeBasedBackground();
-
-    // Loading animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('loaded');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all loading elements
-    document.querySelectorAll('.loading').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Form submission
-    document.querySelector('form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(e.target);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const phone = formData.get('phone');
-      const service = formData.get('service');
-      const quantity = formData.get('quantity');
-      const message = formData.get('message');
-      
-      // Create WhatsApp message
-      const whatsappMessage = `Hi! I'm interested in getting a quote for ${service} uniforms.
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Service: ${service}
-Quantity: ${quantity}
-Additional Requirements: ${message}
-
-Please provide me with pricing and delivery details.`;
-
-      const whatsappUrl = `https://wa.me/919886518538?text=${encodeURIComponent(whatsappMessage)}`;
-      
-      // Open WhatsApp
-      window.open(whatsappUrl, '_blank');
-      
-      // Reset form
-      e.target.reset();
-      
-      // Show success message
-      alert('Redirecting to WhatsApp for quote request...');
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        if (!isActive) {
+          card.classList.add('active');
         }
       });
     });
 
-    // Add loading delay for better UX
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.querySelectorAll('.loading').forEach(el => {
-          el.classList.add('loaded');
-        });
-      }, 300);
-    });
-
-    // Auto-load images from folders
-    function loadServiceImages() {
-      const serviceFolders = [
-        'school', 'aviation', 'medical', 'paramedical', 'college', 
-        'security', 'custom-tshirts', 'corporate-tshirts', 'event-tshirts', 
-        'hotel', 'bedsheets'
-      ];
-
-      serviceFolders.forEach(folder => {
-        // Try to load common image formats
-        const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
-        const imagePromises = [];
-
-        imageExtensions.forEach(ext => {
-          // Try different common filenames
-          const commonNames = [
-            `${folder}-1.${ext}`, `${folder}-uniform.${ext}`, 
-            `${folder}.${ext}`, `1.${ext}`, `image1.${ext}`
-          ];
-
-          commonNames.forEach(filename => {
-            const img = new Image();
-            const promise = new Promise((resolve) => {
-              img.onload = () => resolve({ src: `images/${folder}/${filename}`, folder });
-              img.onerror = () => resolve(null);
-            });
-            img.src = `images/${folder}/${filename}`;
-            imagePromises.push(promise);
-          });
-        });
-
-        Promise.all(imagePromises).then(results => {
-          const validImages = results.filter(result => result !== null);
-          if (validImages.length > 0) {
-            displayServiceImages(validImages[0].folder, validImages);
-          }
-        });
-      });
-    }
-
-    function displayServiceImages(folder, images) {
-      const serviceCards = document.querySelectorAll('.service-card');
-      serviceCards.forEach(card => {
-        const serviceTitle = card.querySelector('h3').textContent.toLowerCase();
-        if (serviceTitle.includes(folder.replace('-', ' ')) || 
-            (folder === 'custom-tshirts' && serviceTitle.includes('custom t-shirt')) ||
-            (folder === 'corporate-tshirts' && serviceTitle.includes('corporate t-shirt')) ||
-            (folder === 'event-tshirts' && serviceTitle.includes('event t-shirt'))) {
-          
-          // Create images container
-          const imagesContainer = document.createElement('div');
-          imagesContainer.className = 'service-images';
-          
-          images.forEach(image => {
-            const img = document.createElement('img');
-            img.src = image.src;
-            img.alt = `${folder} uniform`;
-            img.className = 'service-image';
-            img.loading = 'lazy';
-            imagesContainer.appendChild(img);
-          });
-
-          // Insert after the description paragraph
-          const description = card.querySelector('p');
-          description.parentNode.insertBefore(imagesContainer, description.nextSibling);
-        }
-      });
-    }
-
-    // Load images when page loads
-    window.addEventListener('load', () => {
-      setTimeout(loadServiceImages, 500);
-    });
-
-    // Service Modal Functionality
-    const modal = document.getElementById('serviceModal');
-    const modalTitle = document.getElementById('modalServiceName');
-    const modalIcon = document.getElementById('modalIcon');
-    const modalGallery = document.getElementById('modalGallery');
-    const modalDetails = document.getElementById('modalDetails');
-    const modalWhatsApp = document.getElementById('modalWhatsApp');
-    const closeBtn = document.querySelector('.close');
-
-    // Service data
-    const serviceData = {
-      school: {
-        name: 'School Uniforms',
-        icon: '🎓',
-        description: 'Complete uniform solutions for pre-primary to 12th grade with custom branding and accessories.',
-        details: {
-          'How We Work': [
-            'Free consultation and design discussion',
-            'Sample approval before bulk production',
-            'Quality check at every stage',
-            'Bulk order coordination and management'
-          ],
-          'Payment Policy': [
-            '50% advance payment required to start production',
-            'Balance 50% payment before delivery',
-            'Bank transfer, UPI, or cheque accepted',
-            'GST invoice provided for all transactions'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 100 pieces',
-            'Sample charges: ₹500 per design (refundable)',
-            'Sample delivery: 3-5 days',
-            'Design approval required before bulk production'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 15-20 days',
-            'Rush orders: 10-12 days (extra charges apply)',
-            'Pan India delivery available',
-            'Free delivery for orders above ₹50,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 7 days of delivery',
-            'Quality issues: 15 days return window',
-            'Defective pieces replaced free of cost',
-            'Return shipping charges borne by customer'
-          ]
-        },
-        whatsapp: 'School%20Uniforms%20-%20Planet10'
-      },
-      aviation: {
-        name: 'Aviation Uniforms',
-        icon: '✈️',
-        description: 'Professional pilot and cabin crew uniforms meeting international aviation standards.',
-        details: {
-          'How We Work': [
-            'International aviation pattern expertise',
-            'On-site fitting camps for bulk orders',
-            'Custom embroidery and insignia work',
-            'Quality certification for aviation standards'
-          ],
-          'Payment Policy': [
-            '60% advance payment for aviation orders',
-            'Balance 40% payment before delivery',
-            'GST 18% applicable on all orders',
-            'Corporate billing and invoicing available'
-          ],
-          'Sample Requirements': [
-            'Mandatory sample approval for all orders',
-            'Sample charges: ₹1,000 per design (refundable)',
-            'Sample delivery: 5-7 days',
-            'Fitting sessions arranged for sample approval'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 20-25 days',
-            'Rush orders: 15-18 days (extra charges apply)',
-            'Nationwide delivery with tracking',
-            'Free delivery for orders above ₹1,00,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 10 days of delivery',
-            'Quality issues: 20 days return window',
-            'Aviation standard quality guarantee',
-            'Free replacement for manufacturing defects'
-          ]
-        },
-        whatsapp: 'Aviation%20Uniforms%20-%20Planet10'
-      },
-      medical: {
-        name: 'Medical Uniforms',
-        icon: '👨‍⚕️',
-        description: 'Hygienic and comfortable medical uniforms for doctors, nurses, and healthcare professionals.',
-        details: {
-          'How We Work': [
-            'Antimicrobial and easy-care fabric selection',
-            'Healthcare facility consultation',
-            'Custom sizing for medical professionals',
-            'Hygiene and safety compliance'
-          ],
-          'Payment Policy': [
-            '50% advance payment required',
-            'Balance 50% payment before delivery',
-            'GST 12% applicable on medical uniforms',
-            'Hospital billing and credit terms available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 50 pieces',
-            'Sample charges: ₹300 per design (refundable)',
-            'Sample delivery: 3-4 days',
-            'Fabric and color approval required'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 12-15 days',
-            'Emergency orders: 7-10 days (extra charges apply)',
-            'Hospital delivery coordination available',
-            'Free delivery for orders above ₹25,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 5 days of delivery',
-            'Quality issues: 10 days return window',
-            'Medical grade quality guarantee',
-            'Free replacement for fabric defects'
-          ]
-        },
-        whatsapp: 'Medical%20Uniforms%20-%20Planet10'
-      },
-      paramedical: {
-        name: 'Paramedical Uniforms',
-        icon: '🚑',
-        description: 'Specialized uniforms for paramedics, lab technicians, and allied health professionals.',
-        details: {
-          'How We Work': [
-            'Functional design for emergency services',
-            'Durable fabric for heavy-duty use',
-            'Easy identification and visibility',
-            'Comfortable fit for long shifts'
-          ],
-          'Payment Policy': [
-            '50% advance payment required',
-            'Balance 50% payment before delivery',
-            'GST 12% applicable on paramedical uniforms',
-            'Emergency service billing available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 30 pieces',
-            'Sample charges: ₹400 per design (refundable)',
-            'Sample delivery: 4-5 days',
-            'Functionality testing included'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 14-18 days',
-            'Emergency orders: 8-12 days (extra charges apply)',
-            'Nationwide delivery with tracking',
-            'Free delivery for orders above ₹30,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 7 days of delivery',
-            'Quality issues: 12 days return window',
-            'Durability guarantee for 6 months',
-            'Free replacement for material defects'
-          ]
-        },
-        whatsapp: 'Paramedical%20Uniforms%20-%20Planet10'
-      },
-      college: {
-        name: 'College Uniforms',
-        icon: '🏛️',
-        description: 'Modern and professional uniforms for colleges and universities with institutional branding.',
-        details: {
-          'How We Work': [
-            'Contemporary design consultation',
-            'Institutional branding and logo work',
-            'Bulk order management for colleges',
-            'Student size coordination'
-          ],
-          'Payment Policy': [
-            '40% advance payment required',
-            'Balance 60% payment before delivery',
-            'GST 18% applicable on college uniforms',
-            'Educational institution billing available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 200 pieces',
-            'Sample charges: ₹600 per design (refundable)',
-            'Sample delivery: 5-6 days',
-            'Design and branding approval required'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 18-22 days',
-            'Rush orders: 12-15 days (extra charges apply)',
-            'College delivery coordination available',
-            'Free delivery for orders above ₹75,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 10 days of delivery',
-            'Quality issues: 15 days return window',
-            'Bulk exchange coordination available',
-            'Free replacement for manufacturing defects'
-          ]
-        },
-        whatsapp: 'College%20Uniforms%20-%20Planet10'
-      },
-      security: {
-        name: 'Security Guard Uniforms',
-        icon: '🛡️',
-        description: 'Durable and authoritative uniforms for security personnel with professional appearance.',
-        details: {
-          'How We Work': [
-            'High-durability fabric selection',
-            'Professional and authoritative design',
-            'Weather-resistant materials',
-            'Custom patches and insignia work'
-          ],
-          'Payment Policy': [
-            '50% advance payment required',
-            'Balance 50% payment before delivery',
-            'GST 18% applicable on security uniforms',
-            'Security company billing available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 25 pieces',
-            'Sample charges: ₹500 per design (refundable)',
-            'Sample delivery: 4-5 days',
-            'Durability testing included'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 16-20 days',
-            'Rush orders: 10-14 days (extra charges apply)',
-            'Security company delivery coordination',
-            'Free delivery for orders above ₹40,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 7 days of delivery',
-            'Quality issues: 15 days return window',
-            'Durability guarantee for 1 year',
-            'Free replacement for material defects'
-          ]
-        },
-        whatsapp: 'Security%20Guard%20Uniforms%20-%20Planet10'
-      },
-      'custom-tshirts': {
-        name: 'Custom T-Shirts',
-        icon: '👕',
-        description: 'Personalized t-shirts for events, promotions, and casual wear with custom designs.',
-        details: {
-          'How We Work': [
-            'Custom design consultation and creation',
-            'Multiple printing techniques available',
-            'Wide range of colors and sizes',
-            'Fast turnaround for promotional needs'
-          ],
-          'Payment Policy': [
-            '100% advance payment for orders under 50 pieces',
-            '70% advance for orders above 50 pieces',
-            'GST 18% applicable on custom t-shirts',
-            'UPI, card, or bank transfer accepted'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 100 pieces',
-            'Sample charges: ₹200 per design (refundable)',
-            'Sample delivery: 2-3 days',
-            'Design approval required before printing'
-          ],
-          'Delivery Timeline': [
-            'After design approval: 5-7 days',
-            'Rush orders: 2-3 days (extra charges apply)',
-            'Local delivery available',
-            'Free delivery for orders above ₹10,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 3 days of delivery',
-            'Printing errors: 7 days return window',
-            'Quality guarantee on printing',
-            'Free reprint for printing defects'
-          ]
-        },
-        whatsapp: 'Custom%20T-Shirts%20-%20Planet10'
-      },
-      'corporate-tshirts': {
-        name: 'Corporate T-Shirts',
-        icon: '💼',
-        description: 'Professional corporate apparel for team building, events, and company branding.',
-        details: {
-          'How We Work': [
-            'Corporate branding consultation',
-            'Professional design and logo integration',
-            'Team building event coordination',
-            'Bulk order management'
-          ],
-          'Payment Policy': [
-            '50% advance payment required',
-            'Balance 50% payment before delivery',
-            'GST 18% applicable on corporate t-shirts',
-            'Corporate billing and credit terms available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 50 pieces',
-            'Sample charges: ₹300 per design (refundable)',
-            'Sample delivery: 3-4 days',
-            'Branding and design approval required'
-          ],
-          'Delivery Timeline': [
-            'After design approval: 7-10 days',
-            'Rush orders: 4-6 days (extra charges apply)',
-            'Corporate delivery coordination available',
-            'Free delivery for orders above ₹20,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 5 days of delivery',
-            'Quality issues: 10 days return window',
-            'Corporate quality guarantee',
-            'Free replacement for printing defects'
-          ]
-        },
-        whatsapp: 'Corporate%20T-Shirts%20-%20Planet10'
-      },
-      'event-tshirts': {
-        name: 'Event T-Shirts',
-        icon: '📅',
-        description: 'Special event t-shirts for conferences, festivals, sports events, and celebrations.',
-        details: {
-          'How We Work': [
-            'Event-specific design consultation',
-            'Quick turnaround for time-sensitive events',
-            'Festival and conference branding expertise',
-            'Competitive pricing for bulk orders'
-          ],
-          'Payment Policy': [
-            '100% advance payment for event orders',
-            'GST 18% applicable on event t-shirts',
-            'UPI, card, or bank transfer accepted',
-            'Event organizer billing available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 200 pieces',
-            'Sample charges: ₹250 per design (refundable)',
-            'Sample delivery: 2-3 days',
-            'Event branding approval required'
-          ],
-          'Delivery Timeline': [
-            'After design approval: 4-6 days',
-            'Rush orders: 2-3 days (extra charges apply)',
-            'Event venue delivery available',
-            'Free delivery for orders above ₹15,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 2 days of delivery',
-            'Printing errors: 5 days return window',
-            'Event quality guarantee',
-            'Free reprint for printing defects'
-          ]
-        },
-        whatsapp: 'Event%20T-Shirts%20-%20Planet10'
-      },
-      hotel: {
-        name: 'Hotel Staff Uniforms',
-        icon: '🏨',
-        description: 'Elegant and functional uniforms for hotel staff including front desk, housekeeping, and restaurant.',
-        details: {
-          'How We Work': [
-            'Elegant design consultation for hospitality',
-            'Hotel branding and logo integration',
-            'Comfortable fit for long working hours',
-            'Easy maintenance and care instructions'
-          ],
-          'Payment Policy': [
-            '50% advance payment required',
-            'Balance 50% payment before delivery',
-            'GST 18% applicable on hotel uniforms',
-            'Hotel billing and credit terms available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 40 pieces',
-            'Sample charges: ₹800 per design (refundable)',
-            'Sample delivery: 5-6 days',
-            'Hotel branding and design approval required'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 18-22 days',
-            'Rush orders: 12-15 days (extra charges apply)',
-            'Hotel delivery coordination available',
-            'Free delivery for orders above ₹60,000'
-          ],
-          'Return & Exchange Policy': [
-            'Size exchange within 8 days of delivery',
-            'Quality issues: 15 days return window',
-            'Hotel grade quality guarantee',
-            'Free replacement for manufacturing defects'
-          ]
-        },
-        whatsapp: 'Hotel%20Staff%20Uniforms%20-%20Planet10'
-      },
-      bedsheets: {
-        name: 'Bedsheets & Linens',
-        icon: '🛏️',
-        description: 'Premium quality bedsheets, pillow covers, and hotel linens with custom designs.',
-        details: {
-          'How We Work': [
-            'Premium fabric selection and consultation',
-            'Custom design and pattern creation',
-            'Hotel standard quality assurance',
-            'Bulk supply coordination'
-          ],
-          'Payment Policy': [
-            '60% advance payment required',
-            'Balance 40% payment before delivery',
-            'GST 12% applicable on bedsheets & linens',
-            'Hotel and hospitality billing available'
-          ],
-          'Sample Requirements': [
-            'Free sample for orders above 100 pieces',
-            'Sample charges: ₹1,500 per design (refundable)',
-            'Sample delivery: 7-10 days',
-            'Fabric and design approval required'
-          ],
-          'Delivery Timeline': [
-            'After sample approval: 25-30 days',
-            'Rush orders: 18-22 days (extra charges apply)',
-            'Hotel delivery coordination available',
-            'Free delivery for orders above ₹80,000'
-          ],
-          'Return & Exchange Policy': [
-            'Quality issues: 20 days return window',
-            'Fabric defects: 30 days return window',
-            'Hotel grade quality guarantee',
-            'Free replacement for manufacturing defects'
-          ]
-        },
-        whatsapp: 'Bedsheets%20and%20Linens%20-%20Planet10'
-      }
-    };
-
-    // Open modal
-    function openModal(serviceKey) {
-      const service = serviceData[serviceKey];
-      if (!service) return;
-
-      modalTitle.textContent = service.name;
-      modalIcon.textContent = service.icon;
-      modalWhatsApp.href = `https://wa.me/919886518538?text=I'm%20interested%20in%20${service.whatsapp}`;
-
-      // Load photos
-      loadModalPhotos(serviceKey);
-
-      // Load details
-      loadModalDetails(service);
-
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-
-    // Load photos for modal
-    function loadModalPhotos(serviceKey) {
-      modalGallery.innerHTML = '';
-      
-      // Try to load photos from the service folder
-      const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
-      const commonNames = [
-        `${serviceKey}-1`, `${serviceKey}-uniform`, 
-        `${serviceKey}`, `1`, `image1`, `sample1`
-      ];
-
-      let photosLoaded = 0;
-      const maxPhotos = 6;
-
-      imageExtensions.forEach(ext => {
-        commonNames.forEach(name => {
-          if (photosLoaded >= maxPhotos) return;
-          
-          const img = new Image();
-          img.onload = () => {
-            if (photosLoaded < maxPhotos) {
-              const galleryItem = document.createElement('div');
-              galleryItem.className = 'gallery-item';
-              galleryItem.innerHTML = `<img src="images/${serviceKey}/${name}.${ext}" alt="${serviceKey} uniform" loading="lazy">`;
-              modalGallery.appendChild(galleryItem);
-              photosLoaded++;
-            }
-          };
-          img.src = `images/${serviceKey}/${name}.${ext}`;
-        });
-      });
-
-      // Add placeholder if no photos loaded
-      setTimeout(() => {
-        if (photosLoaded === 0) {
-          const placeholder = document.createElement('div');
-          placeholder.className = 'gallery-placeholder';
-          placeholder.innerHTML = '📸 Upload photos to see them here';
-          modalGallery.appendChild(placeholder);
-        }
-      }, 1000);
-    }
-
-    // Load service details
-    function loadModalDetails(service) {
-      modalDetails.innerHTML = '';
-      
-      Object.entries(service.details).forEach(([section, items]) => {
-        const detailSection = document.createElement('div');
-        detailSection.className = 'detail-section';
-        
-        const sectionTitle = document.createElement('h3');
-        sectionTitle.textContent = section;
-        
-        const sectionList = document.createElement('ul');
-        items.forEach(item => {
-          const listItem = document.createElement('li');
-          listItem.textContent = item;
-          sectionList.appendChild(listItem);
-        });
-        
-        detailSection.appendChild(sectionTitle);
-        detailSection.appendChild(sectionList);
-        modalDetails.appendChild(detailSection);
-      });
-    }
-
-    // Close modal
-    function closeModal() {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    // Event listeners
-    closeBtn.addEventListener('click', closeModal);
-    
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    // Make service cards clickable
-    document.addEventListener('click', (e) => {
-      const serviceCard = e.target.closest('.service-card');
-      if (serviceCard && serviceCard.dataset.service) {
-        e.preventDefault();
-        const serviceKey = serviceCard.dataset.service;
-        
-        // All services now have dedicated pages
-        showServicePage(serviceKey);
-      }
-    });
-
-    // Show service page
-    function showServicePage(serviceKey) {
-      // Hide main content
-      document.querySelector('.hero').style.display = 'none';
-      document.querySelector('.trust-section').style.display = 'none';
-      document.querySelector('.services-section').style.display = 'none';
-      document.querySelector('.about-section').style.display = 'none';
-      document.querySelector('.contact-section').style.display = 'none';
-      document.querySelector('.footer').style.display = 'none';
-      
-      // Apply section-specific background
-      setSectionBackground(serviceKey);
-      
-      // Show service page
-      const servicePage = document.getElementById(`${serviceKey}-page`);
-      if (servicePage) {
-        servicePage.classList.add('active');
-        loadServicePageContent(serviceKey);
-        
-        // Scroll to top of the page
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    // Show main page
-    function showMainPage() {
-      // Show main content
-      document.querySelector('.hero').style.display = 'flex';
-      document.querySelector('.trust-section').style.display = 'block';
-      document.querySelector('.services-section').style.display = 'block';
-      document.querySelector('.about-section').style.display = 'block';
-      document.querySelector('.contact-section').style.display = 'block';
-      document.querySelector('.footer').style.display = 'block';
-      
-      // Hide all service pages
-      document.querySelectorAll('.service-page').forEach(page => {
-        page.classList.remove('active');
-      });
-      
-      // Return to time-based background
-      setSectionBackground(null);
-      
-      // Scroll to top of the page
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-
-    // Load service page content
-    function loadServicePageContent(serviceKey) {
-      const service = serviceData[serviceKey];
-      if (!service) {
-        console.error(`Service data not found for: ${serviceKey}`);
-        return;
-      }
-
-      console.log(`Loading content for service: ${serviceKey}`);
-      
-      // Load photos
-      loadServicePagePhotos(serviceKey);
-
-      // Load details
-      loadServicePageDetails(serviceKey, service);
-    }
-
-    // Load photos for service page - Improved Version
-    function loadServicePagePhotos(serviceKey) {
-      const gallery = document.getElementById(`${serviceKey}-gallery`);
-      if (!gallery) return;
-      
-      // Show loading message
-      gallery.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">🔍 Loading photos...</div>';
-      
-      // More comprehensive naming patterns
-      const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG', 'WEBP'];
-      
-      // Service-specific file names based on actual uploaded files
-      const serviceSpecificNames = {
-        'aviation': ['aviation-g', 'aviation-pilot', 'aviation'],
-        'school': ['boys-uniform', 'girls-uniform', 'school-g', 'school-uniforms', 'school'],
-        'custom-tshirts': ['custome-tshirts', 'custome-tshirts1', 'WhatsApp Image 2025-09-03 at 1.05.22 PM (3)', 'WhatsApp Image 2025-09-03 at 1.05.23 PM (1)'],
-        'corporate-tshirts': ['corporate-event', 'corporate-event1', 'corporate-events'],
-        'medical': ['medical-uniform', 'medical-staff', 'medical'],
-        'paramedical': ['paramedical-uniform', 'paramedical-staff', 'paramedical'],
-        'college': ['college-uniform', 'college-student', 'college'],
-        'security': ['security-uniform', 'security-guard', 'security'],
-        'hotel': ['hotel-uniform', 'hotel-staff', 'hotel'],
-        'event-tshirts': ['event-tshirt', 'event-uniform', 'event'],
-        'bedsheets': ['bedsheet', 'bedding', 'bedsheet1']
-      };
-      
-      const commonNames = [
-        // Simple numbers
-        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-        // Image prefixes
-        'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10',
-        'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10',
-        // Sample prefixes
-        'sample1', 'sample2', 'sample3', 'sample4', 'sample5', 'sample6', 'sample7', 'sample8', 'sample9', 'sample10',
-        // Uniform prefixes
-        'uniform1', 'uniform2', 'uniform3', 'uniform4', 'uniform5', 'uniform6', 'uniform7', 'uniform8', 'uniform9', 'uniform10',
-        // Photo prefixes
-        'photo1', 'photo2', 'photo3', 'photo4', 'photo5', 'photo6', 'photo7', 'photo8', 'photo9', 'photo10',
-        'pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6', 'pic7', 'pic8', 'pic9', 'pic10',
-        // Service specific names
-        `${serviceKey}1`, `${serviceKey}2`, `${serviceKey}3`, `${serviceKey}4`, `${serviceKey}5`,
-        `${serviceKey}-1`, `${serviceKey}-2`, `${serviceKey}-3`, `${serviceKey}-4`, `${serviceKey}-5`,
-        // Common file names
-        'main', 'primary', 'hero', 'featured', 'cover', 'thumbnail'
-      ];
-      
-      // Add service-specific names to the list
-      if (serviceSpecificNames[serviceKey]) {
-        commonNames.unshift(...serviceSpecificNames[serviceKey]);
-      }
-
-      let photosLoaded = 0;
-      const maxPhotos = 24;
-      const loadedImages = new Set(); // Prevent duplicates
-      
-      // Function to try loading a specific image
-      function tryLoadImage(name, ext) {
-        return new Promise((resolve) => {
-          const img = new Image();
-          const imagePath = `images/${serviceKey}/${name}.${ext}`;
-          
-          img.onload = () => {
-            if (photosLoaded < maxPhotos && !loadedImages.has(imagePath)) {
-              loadedImages.add(imagePath);
-              photosLoaded++;
-              resolve({ success: true, path: imagePath, name: name, ext: ext });
-            } else {
-              resolve({ success: false });
-            }
-          };
-          
-          img.onerror = () => {
-            resolve({ success: false });
-          };
-          
-          img.src = imagePath;
-        });
-      }
-
-      // Try to load images with a more systematic approach
-      async function loadImages() {
-        const loadPromises = [];
-        
-        // Try each extension with each name
-        for (const ext of imageExtensions) {
-          for (const name of commonNames) {
-            if (photosLoaded >= maxPhotos) break;
-            loadPromises.push(tryLoadImage(name, ext));
-          }
-          if (photosLoaded >= maxPhotos) break;
-        }
-        
-        // Wait for all attempts
-        const results = await Promise.all(loadPromises);
-        
-        // Clear loading message
-        gallery.innerHTML = '';
-        
-        // Add successful images
-        results.forEach(result => {
-          if (result.success) {
-            const photoItem = document.createElement('div');
-            photoItem.className = 'photo-item';
-            photoItem.innerHTML = `
-              <img src="${result.path}" alt="${serviceKey} uniform" loading="lazy" onerror="this.style.display='none'">
-              <div class="photo-overlay">
-                <h4>${serviceKey.charAt(0).toUpperCase() + serviceKey.slice(1)} Uniform</h4>
-                <p>Professional Quality</p>
-              </div>
-            `;
-            gallery.appendChild(photoItem);
-          }
-        });
-        
-        // Show result message only if no photos found
-        if (photosLoaded === 0) {
-          // Show placeholder if no photos found
-          const placeholder = document.createElement('div');
-          placeholder.className = 'photo-item';
-          placeholder.style.gridColumn = '1 / -1';
-          placeholder.style.textAlign = 'center';
-          placeholder.style.padding = '3rem';
-          placeholder.style.background = 'var(--premium-gray)';
-          placeholder.style.borderRadius = '12px';
-          placeholder.style.border = '2px dashed var(--border-color)';
-          placeholder.innerHTML = `
-            <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-gold);">📸</div>
-            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">Photos Coming Soon</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-              Upload photos to the <strong>images/${serviceKey}/</strong> folder to see them here.<br>
-              Supported formats: JPG, PNG, WebP
-            </p>
-            <a href="https://wa.me/919876543210?text=Hi, I'd like to see sample photos for ${serviceKey} uniforms" 
-               class="elegant-cta" style="display: inline-block; text-decoration: none;">
-              View Samples on WhatsApp
-            </a>
-          `;
-          gallery.appendChild(placeholder);
-        }
-      }
-      
-      // Start loading
-      loadImages();
-    }
-
-    // Debug function to check photo loading
-    function debugPhotoLoading(serviceKey) {
-      console.log(`Debugging photo loading for: ${serviceKey}`);
-      const gallery = document.getElementById(`${serviceKey}-gallery`);
-      if (!gallery) {
-        console.error(`Gallery element not found: ${serviceKey}-gallery`);
-        return;
-      }
-      console.log(`Gallery element found: ${gallery}`);
-      
-      // Service-specific test paths based on actual uploaded files
-      const serviceTestPaths = {
-        'aviation': [
-          `images/${serviceKey}/aviation-g.png`,
-          `images/${serviceKey}/aviation-pilot.png`,
-          `images/${serviceKey}/aviation.png`
-        ],
-        'school': [
-          `images/${serviceKey}/boys-uniform.png`,
-          `images/${serviceKey}/girls-uniform.png`,
-          `images/${serviceKey}/school-g.png`,
-          `images/${serviceKey}/school-uniforms.png`,
-          `images/${serviceKey}/school.png`
-        ],
-        'custom-tshirts': [
-          `images/${serviceKey}/custome-tshirts.png`,
-          `images/${serviceKey}/custome-tshirts1.png`,
-          `images/${serviceKey}/WhatsApp Image 2025-09-03 at 1.05.22 PM (3).jpeg`,
-          `images/${serviceKey}/WhatsApp Image 2025-09-03 at 1.05.23 PM (1).jpeg`
-        ],
-        'corporate-tshirts': [
-          `images/${serviceKey}/corporate-event.png`,
-          `images/${serviceKey}/corporate-event1.png`,
-          `images/${serviceKey}/corporate-events.png`
-        ]
-      };
-      
-      // Get test paths for this service
-      const testPaths = serviceTestPaths[serviceKey] || [
-        `images/${serviceKey}/1.jpg`,
-        `images/${serviceKey}/image1.jpg`,
-        `images/${serviceKey}/sample1.jpg`,
-        `images/${serviceKey}/uniform1.jpg`
-      ];
-      
-      console.log(`Testing ${testPaths.length} paths for ${serviceKey}:`);
-      testPaths.forEach(path => {
-        const img = new Image();
-        img.onload = () => console.log(`✅ Image loaded: ${path}`);
-        img.onerror = () => console.log(`❌ Image failed: ${path}`);
-        img.src = path;
-      });
-    }
-
-    // Location data with interesting facts
-    const locationData = [
-      {
-        coordinates: "Latitude: 12.9716° N<br>Longitude: 77.5946° E<br>Altitude: 920m above sea level",
-        fact: "🌟 You're exploring the heart of India's Silicon Valley - Bangalore! This is where innovation meets tradition, and where Planet10 creates uniforms for the world's leading companies.",
-        location: "Bangalore, India"
-      },
-      {
-        coordinates: "Latitude: 28.6139° N<br>Longitude: 77.2090° E<br>Altitude: 216m above sea level",
-        fact: "🏛️ Welcome to India's capital! Delhi is where history meets modernity, and where Planet10 serves government institutions and corporate giants with premium uniforms.",
-        location: "Delhi, India"
-      },
-      {
-        coordinates: "Latitude: 19.0760° N<br>Longitude: 72.8777° E<br>Altitude: 14m above sea level",
-        fact: "🌊 Discover the financial capital of India! Mumbai is where dreams take flight, and where Planet10 outfits the city's vibrant workforce with professional attire.",
-        location: "Mumbai, India"
-      },
-      {
-        coordinates: "Latitude: 13.0827° N<br>Longitude: 80.2707° E<br>Altitude: 6m above sea level",
-        fact: "🏭 Explore the automotive hub of India! Chennai is where manufacturing excellence meets innovation, and where Planet10 provides industrial uniforms for leading companies.",
-        location: "Chennai, India"
-      },
-      {
-        coordinates: "Latitude: 22.5726° N<br>Longitude: 88.3639° E<br>Altitude: 9m above sea level",
-        fact: "🎭 Experience the cultural capital of India! Kolkata is where art meets commerce, and where Planet10 creates elegant uniforms for the city's prestigious institutions.",
-        location: "Kolkata, India"
-      }
-    ];
-
-    let currentLocationIndex = 0;
-
-    function showLocationPopup() {
-      const popup = document.getElementById('location-popup');
-      const overlay = document.getElementById('popup-overlay');
-      const coordinates = document.getElementById('gps-coordinates');
-      const fact = document.getElementById('location-fact');
-      const planet = document.getElementById('interactive-planet');
-
-      // Get current location data
-      const location = locationData[currentLocationIndex];
-      
-      // Update content
-      coordinates.innerHTML = location.coordinates;
-      fact.innerHTML = location.fact;
-      
-      // Show popup
-      popup.classList.add('show');
-      overlay.classList.add('show');
-      planet.classList.add('clicked');
-      
-      // Move to next location for next click
-      currentLocationIndex = (currentLocationIndex + 1) % locationData.length;
-    }
-
-    function closeLocationPopup() {
-      const popup = document.getElementById('location-popup');
-      const overlay = document.getElementById('popup-overlay');
-      const planet = document.getElementById('interactive-planet');
-
-      popup.classList.remove('show');
-      overlay.classList.remove('show');
-      planet.classList.remove('clicked');
-    }
-
-    // Load service page details
-    function loadServicePageDetails(serviceKey, service) {
-      const detailsContainer = document.getElementById(`${serviceKey}-details`);
-      if (!detailsContainer) return;
-      
-      detailsContainer.innerHTML = '';
-      
-      Object.entries(service.details).forEach(([section, items]) => {
-        const detailSection = document.createElement('div');
-        detailSection.className = 'detail-section';
-        
-        const sectionTitle = document.createElement('h3');
-        sectionTitle.textContent = section;
-        
-        const sectionList = document.createElement('ul');
-        items.forEach(item => {
-          const listItem = document.createElement('li');
-          listItem.textContent = item;
-          sectionList.appendChild(listItem);
-        });
-        
-        detailSection.appendChild(sectionTitle);
-        detailSection.appendChild(sectionList);
-        detailsContainer.appendChild(detailSection);
-      });
-    }
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
