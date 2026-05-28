@@ -4,1105 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planet10 Uniforms | Premium Uniform Manufacturer India</title>
-  <meta name="description" content="Planet10 Uniforms manufactures premium school, college, medical, hospitality, and corporate uniforms across India. Custom design, embroidery, printing, and nationwide delivery." />
-  <meta name="keywords" content="uniform manufacturer India, school uniforms, hospital uniforms, corporate uniforms, custom embroidery, Planet10 Uniforms Bangalore" />
+  <meta name="description" content="Planet10 Uniforms — uniforms that represent excellence. School, college, hospital, corporate, restaurant and sports uniforms across India." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logos/planet10-brand.png" type="image/png" />
-  <style>
-    :root {
-      --primary: #1b1b1f;
-      --secondary: #2d2d32;
-      --accent: #c7a66b;
-      --text: #1f1f23;
-      --muted: #5c5c63;
-      --surface: #f7f7f9;
-      --white: #ffffff;
-      --border: #e4e4e8;
-      --shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
-      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.06);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      color: var(--text);
-      background: var(--surface);
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 0;
-      z-index: 10000;
-      padding: 0.75rem 1.25rem;
-      background: var(--accent);
-      color: var(--primary);
-    }
-
-    .skip-link:focus { left: 1rem; top: 1rem; }
-
-    .top-bar {
-      background: var(--primary);
-      color: var(--white);
-      font-size: 0.9rem;
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .top-bar span, .top-bar a {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      letter-spacing: 0.02em;
-    }
-
-    .top-bar a:hover { color: var(--accent); }
-
-    header {
-      background: var(--white);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 1px 0 var(--border);
-    }
-
-    nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .logo img {
-      height: 52px;
-      width: auto;
-      max-width: min(220px, 42vw);
-      object-fit: contain;
-      object-position: left center;
-      display: block;
-    }
-
-    .sectors-bar {
-      background: var(--primary);
-      border-bottom: 1px solid rgba(199, 166, 107, 0.25);
-      padding: 0.85rem 1.5rem;
-    }
-
-    .sectors-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem 0;
-    }
-
-    .sector-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.62rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.88);
-      transition: color 0.25s ease;
-      border-right: 1px solid rgba(199, 166, 107, 0.35);
-    }
-
-    .sector-item:last-child { border-right: none; }
-
-    .sector-item:hover { color: var(--accent); }
-
-    .sector-item svg {
-      width: 22px;
-      height: 22px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 1.5;
-    }
-
-    .brand-hero-logo {
-      max-width: 520px;
-      width: 100%;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .footer-logo {
-      max-width: 240px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .footer-pillars {
-      max-width: 1180px;
-      margin: 0 auto 2rem;
-      padding: 1rem 1.5rem 0;
-      text-align: center;
-      font-size: 0.78rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border-top: 1px solid rgba(199, 166, 107, 0.3);
-      padding-top: 1.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    .cta {
-      padding: 0.75rem 1.5rem;
-      background: var(--primary);
-      color: var(--white);
-      border-radius: 999px;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .cta:hover { background: var(--secondary); }
-
-    .section-kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
-      margin: 0 0 0.5rem;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(140deg, rgba(27,27,31,0.92), rgba(27,27,31,0.5)), url('images/school/school-uniforms.png') center/cover;
-      color: var(--white);
-      padding: clamp(5rem, 8vw, 7rem) 1.5rem;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(27,27,31,0.9) 0%, rgba(27,27,31,0.65) 45%, rgba(27,27,31,0.15) 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 1180px;
-      margin: 0 auto;
-      display: grid;
-      gap: 3rem;
-    }
-
-    .hero-copy { max-width: 640px; }
-
-    .hero .section-kicker { color: var(--accent); }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
-      line-height: 1.12;
-      margin: 0 0 1rem;
-      letter-spacing: 0.04em;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
-
-    .hero-tagline {
-      font-size: 1.15rem;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.02em;
-    }
-
-    .hero p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.82);
-      margin-bottom: 2rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .hero-actions a {
-      padding: 0.85rem 1.75rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255,255,255,0.3);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-
-    .hero-actions a.primary { background: var(--accent); color: var(--primary); border-color: transparent; }
-    .hero-actions a.primary:hover { filter: brightness(1.08); }
-    .hero-actions a.secondary { background: transparent; color: var(--white); }
-    .hero-actions a.secondary:hover { background: rgba(255,255,255,0.1); }
-
-    .hero-data {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .data-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 20px;
-      padding: 1.5rem;
-      backdrop-filter: blur(12px);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .data-card:hover { transform: translateY(-6px); }
-
-    .data-card strong {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      font-family: 'Playfair Display', serif;
-      color: var(--accent);
-    }
-
-    .data-card span {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
-    }
-
-    .section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
-    }
-
-    .section-header {
-      display: grid;
-      gap: 0.6rem;
-      max-width: 720px;
-    }
-
-    .section-header.centered {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      letter-spacing: 0.03em;
-      color: var(--primary);
-      margin: 0;
-    }
-
-    .section-header h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      color: var(--primary);
-      margin: 0.5rem 0 0;
-      font-weight: 500;
-    }
-
-    .section-header p {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .text-link {
-      display: inline-block;
-      margin-top: 1.25rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--primary);
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 0.2rem;
-      transition: color 0.3s ease;
-    }
-
-    .text-link:hover { color: var(--accent); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin-top: 2.5rem;
-    }
-
-    .about-media {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      aspect-ratio: 4/5;
-      background: var(--border);
-    }
-
-    .about-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .about-copy p {
-      color: var(--muted);
-      line-height: 1.75;
-      margin: 0 0 1rem;
-    }
-
-    .about-copy .lead {
-      font-size: 1.1rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .services-showcase {
-      background: var(--primary);
-      color: var(--white);
-      padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
-    }
-
-    .services-showcase .section-header h2,
-    .services-showcase .section-header h3 { color: var(--white); }
-
-    .services-showcase .section-header p { color: rgba(255,255,255,0.72); }
-
-    .services-showcase .section-kicker { color: var(--accent); }
-
-    .services-showcase-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .service-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2.5rem;
-    }
-
-    .service-tile {
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      min-height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border: 1px solid rgba(255,255,255,0.12);
-      transition: transform 0.35s ease;
-    }
-
-    .service-tile:hover { transform: translateY(-8px); }
-
-    .service-tile img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .service-tile::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 30%, rgba(27,27,31,0.92) 100%);
-    }
-
-    .service-tile-body {
-      position: relative;
-      z-index: 1;
-      padding: 1.5rem;
-    }
-
-    .service-tile h3 {
-      margin: 0 0 0.75rem;
-      font-size: 1.05rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .service-tile .explore {
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .service-tile .explore::after { content: '→'; }
-
-    .manufacturer-section {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .manufacturer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      margin-top: 2.5rem;
-      align-items: start;
-    }
-
-    .manufacturer-grid p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin: 0 0 1rem;
-    }
-
-    .benefit-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .benefit-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.25rem 1.5rem;
-      background: var(--surface);
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .benefit-list li::before {
-      content: '';
-      flex-shrink: 0;
-      width: 8px;
-      height: 8px;
-      margin-top: 0.45rem;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .why-section { background: var(--surface); }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .why-card {
-      background: var(--white);
-      border-radius: 18px;
-      padding: 2rem;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      gap: 0.85rem;
-    }
-
-    .why-card .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(199, 166, 107, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-
-    .why-card h4 {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--primary);
-    }
-
-    .why-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .feature-card {
-      background: var(--white);
-      border-radius: 18px;
-      padding: 2.25rem;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 1rem;
-    }
-
-    .feature-card h3 {
-      font-size: 1.25rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    .feature-card ul {
-      list-style: none;
-      display: grid;
-      gap: 0.75rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .feature-card ul li::before {
-      content: "•";
-      color: var(--accent);
-      margin-right: 0.65rem;
-    }
-
-    .options-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .option-card {
-      background: var(--white);
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 1.75rem;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      display: grid;
-      gap: 1rem;
-      transition: border-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .option-card.active {
-      border-color: var(--accent);
-      transform: translateY(-6px);
-    }
-
-    .option-card h3 {
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    .option-summary {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .option-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-
-    .option-card.active .option-details { max-height: 360px; }
-
-    .option-details ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 0.6rem;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .product-card {
-      background: var(--white);
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      display: grid;
-      grid-template-rows: 200px auto;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover { transform: translateY(-6px); }
-
-    .product-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .product-card div {
-      padding: 1.5rem;
-      display: grid;
-      gap: 0.6rem;
-    }
-
-    .product-card h4 {
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.95rem;
-    }
-
-    .product-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .gallery-section { background: var(--white); }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 2.5rem;
-    }
-
-    .gallery-item {
-      border-radius: 14px;
-      overflow: hidden;
-      aspect-ratio: 1;
-      background: var(--border);
-      position: relative;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .gallery-item:hover img { transform: scale(1.05); }
-
-    .gallery-cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .industries-section { background: var(--surface); }
-
-    .industries-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .industry-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 1.75rem;
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 0.85rem;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .industry-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-    }
-
-    .industry-card h3 {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .industry-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .industry-card ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 0.55rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .industry-card ul li::before {
-      content: "•";
-      color: var(--accent);
-      margin-right: 0.6rem;
-    }
-
-    .testimonials-section {
-      background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
-      color: var(--white);
-      padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
-    }
-
-    .testimonials-inner { max-width: 1180px; margin: 0 auto; }
-
-    .testimonials-section .section-kicker { color: var(--accent); }
-
-    .testimonials-section .section-header h2 { color: var(--white); }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .testimonial-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 18px;
-      padding: 2rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .testimonial-card blockquote {
-      margin: 0 0 1.25rem;
-      font-size: 0.95rem;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.88);
-      font-style: italic;
-    }
-
-    .testimonial-card cite {
-      font-style: normal;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .stat-item strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.25rem;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
-    }
-
-    .stat-item span {
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .brands-section {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-    }
-
-    .brands-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-      margin-top: 2rem;
-      padding: 1.5rem 0;
-    }
-
-    .brand-placeholder {
-      min-width: 120px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px dashed var(--border);
-      border-radius: 8px;
-      padding: 0 1.25rem;
-    }
-
-    .contact-section {
-      background: var(--surface);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-
-    .contact-card {
-      padding: 2rem;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 1.25rem;
-      background: var(--white);
-    }
-
-    .contact-card h3 {
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 1rem;
-    }
-
-    .contact-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.92rem;
-    }
-
-    .contact-card a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary);
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      font-size: 0.88rem;
-    }
-
-    .contact-card a:hover { color: var(--accent); }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .social-links a {
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    form { display: grid; gap: 1rem; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    label {
-      font-size: 0.86rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 0.35rem;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 0.95rem;
-      background: #fafafb;
-      font-family: inherit;
-    }
-
-    textarea { min-height: 140px; resize: vertical; }
-
-    button[type="submit"] {
-      padding: 0.85rem 1.75rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--primary);
-      color: var(--white);
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      font-family: inherit;
-    }
-
-    button[type="submit"]:hover { background: var(--secondary); }
-
-    footer {
-      background: var(--primary);
-      color: rgba(255,255,255,0.7);
-      padding: 3rem 1.5rem 2rem;
-    }
-
-    .footer-grid {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.4fr repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .footer-brand strong {
-      display: block;
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.06em;
-    }
-
-    .footer-brand p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
-    .footer-col h4 {
-      margin: 0 0 1rem;
-      color: var(--white);
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 0.55rem;
-      font-size: 0.88rem;
-    }
-
-    .footer-col a:hover { color: var(--accent); }
-
-    .footer-bottom {
-      max-width: 1180px;
-      margin: 2.5rem auto 0;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      font-size: 0.85rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    @media (max-width: 960px) {
-      .about-grid,
-      .manufacturer-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 860px) {
-      nav { flex-wrap: wrap; justify-content: center; }
-      .nav-links { display: none; }
-      .sector-item {
-        border-right: none;
-        flex: 1 1 28%;
-        min-width: 100px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .top-bar { justify-content: center; text-align: center; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
-      .form-row { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="icon" href="images/logos/planet10-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#home">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="top-bar">
     <span>Monday – Saturday · 08:30 – 20:00</span>
@@ -1115,608 +25,206 @@
 
   <header>
     <nav>
-      <a class="logo" href="#home">
-        <img src="images/logos/planet10-brand.png" alt="Planet10 — Uniforms that represent excellence" width="220" height="52" />
+      <a class="logo" href="index.html">
+        <img src="images/logos/planet10-logo.svg" alt="Planet10 Uniforms" width="200" height="44" />
       </a>
+      <button type="button" class="nav-toggle" aria-label="Open menu">☰</button>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#clients">Clients</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="clients.html">Clients</a></li>
       </ul>
-      <a class="cta" href="#contact">Request Quote</a>
+      <a class="cta" href="contact.html">Request Quote</a>
     </nav>
   </header>
 
-  <div class="sectors-bar" aria-label="Uniform categories">
-    <div class="sectors-inner">
-      <a class="sector-item" href="#products">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L2 9l10 6 10-6-10-6zM2 15l10 6 10-6M2 12l10 6 10-6"/></svg>
-        Schools
-      </a>
-      <a class="sector-item" href="#industries">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
-        Nursing &amp; Healthcare
-      </a>
-      <a class="sector-item" href="#industries">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V8l7-5 7 5v12H5z"/><path d="M9 20v-6h6v6"/></svg>
-        Colleges
-      </a>
-      <a class="sector-item" href="#industries">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a4 4 0 018 0v2"/></svg>
-        Corporate
-      </a>
-      <a class="sector-item" href="#industries">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10h12v8H6z"/><path d="M9 10V6h6v4M12 18v3"/></svg>
-        Housekeeping
-      </a>
-      <a class="sector-item" href="#industries">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h20M12 2l4 10-4 10-4-10 4-10z"/></svg>
-        Aviation
-      </a>
-    </div>
-  </div>
-
-  <main id="home">
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-content">
-        <div class="hero-copy">
-          <img class="brand-hero-logo" src="images/logos/planet10-brand.png" alt="Planet10 Uniforms — Uniforms that represent excellence" loading="eager" />
-          <p class="section-kicker">Premium Uniform Manufacturing</p>
-          <h1>Discover Lasting Quality With <em>Planet10</em></h1>
-          <p class="hero-tagline">Uniforms that represent excellence.</p>
-          <p>From Bengaluru to institutions nationwide, we design and deliver bespoke uniforms for schools, colleges, healthcare, hospitality, aviation, and corporate teams — with fabrics, embroidery, and finishes built for daily wear.</p>
-          <div class="hero-actions">
-            <a class="primary" href="#products">Our Collection</a>
-            <a class="secondary" href="#contact">Get Started</a>
-          </div>
-        </div>
-        <div class="hero-data">
-          <div class="data-card">
-            <strong>10+</strong>
-            <span>Years Experience</span>
-          </div>
-          <div class="data-card">
-            <strong>50+</strong>
-            <span>Institutions Served</span>
-          </div>
-          <div class="data-card">
-            <strong>5K+</strong>
-            <span>Uniforms Delivered</span>
-          </div>
-          <div class="data-card">
-            <strong>100%</strong>
-            <span>Custom Branding</span>
-          </div>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Discover Premium Quality With <em>Planet10</em></h1>
+        <p class="lead">Not just a <strong>uniform</strong>. It's a sense of style. Love what you wear.</p>
+        <p>Uniforms that represent excellence — school, college, hospital, hotel, industrial, sports, corporate, hospitality, restaurant, automobile, and aviation programs across India.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="product.html">Our Collection</a>
+          <a class="btn btn-outline" href="contact.html">Get Started</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="section-header">
-        <p class="section-kicker">Crafted for Every Role</p>
-        <h2>We Help Teams Look Professional and Feel Comfortable Every Day</h2>
-        <h3>Discover uniforms that reflect your identity — and the confidence that comes with wearing them well.</h3>
-      </div>
-      <div class="about-grid">
-        <div class="about-media">
-          <img src="images/school/school-uniforms.png" alt="Planet10 school uniform collection" loading="lazy" />
+    <section class="section">
+      <p class="section-kicker">Great Style For Everyone</p>
+      <h2>I Love to Help People Feel Great about How They Look.</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-weight:500;color:var(--primary);margin-top:0;">Discover Your Personal Style and the Confidence That Comes with It.</h3>
+      <div class="about-split">
+        <div>
+          <p style="color:var(--muted);">Planet10 partners with institutions and businesses to deliver uniforms that balance presentation, comfort, and durability. From fabric selection to embroidery and bulk production, our team manages every stage with clear timelines and consistent quality.</p>
+          <p style="color:var(--muted);">Whether you are launching a new academic year wardrobe or outfitting an entire hospitality team, we scale from sampling to nationwide dispatch without compromising fit or finish.</p>
+          <a class="explore-link" href="about.html">Read More →</a>
         </div>
-        <div class="about-copy">
-          <p class="lead">Planet10 Uniforms partners with schools, colleges, hospitals, hotels, and businesses to create apparel that performs as hard as the people who wear it.</p>
-          <p>Our in-house team handles pattern development, fabric sourcing, embroidery, screen printing, and quality checks — so you receive consistent sizing, durable construction, and branding that stays sharp wash after wash.</p>
-          <p>Whether you need a single pilot sample or a full academic-year rollout, we scale production without compromising fit, finish, or delivery timelines.</p>
-          <a class="text-link" href="#manufacturer">Learn how we manufacture</a>
-        </div>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80" alt="Professional uniform styling" loading="lazy" />
       </div>
     </section>
 
-    <section id="services" class="services-showcase" aria-label="Uniform services">
-      <div class="services-showcase-inner">
-        <div class="section-header centered">
-          <p class="section-kicker">Services for Every Industry</p>
-          <h2>Uniform Solutions Across Sectors</h2>
-          <p>Explore categories we specialize in — each backed by dedicated fabrics, trims, and branding options.</p>
-        </div>
-        <div class="service-cards">
-          <a class="service-tile" href="#products">
-            <img src="images/school/school.png" alt="School uniforms" loading="lazy" />
-            <div class="service-tile-body">
-              <h3>Schools</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-          <a class="service-tile" href="#industries">
-            <img src="images/medical/medical.png" alt="Nursing and healthcare uniforms" loading="lazy" onerror="this.src='images/school/girls-uniform.png'" />
-            <div class="service-tile-body">
-              <h3>Nursing &amp; Healthcare</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-          <a class="service-tile" href="#industries">
-            <img src="images/college/college.png" alt="College uniforms" loading="lazy" onerror="this.src='images/school/boys-uniform.png'" />
-            <div class="service-tile-body">
-              <h3>Colleges</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-          <a class="service-tile" href="#industries">
-            <img src="images/corporate-tshirts/corporate.png" alt="Corporate uniforms" loading="lazy" onerror="this.src='images/school/school-g.png'" />
-            <div class="service-tile-body">
-              <h3>Corporate</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-          <a class="service-tile" href="#industries">
-            <img src="images/hotel/hotel.png" alt="Housekeeping uniforms" loading="lazy" onerror="this.src='images/school/school-uniforms.png'" />
-            <div class="service-tile-body">
-              <h3>Housekeeping</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-          <a class="service-tile" href="#industries">
-            <img src="images/aviation/aviation.png" alt="Aviation uniforms" loading="lazy" onerror="this.src='images/school/boys-uniform.png'" />
-            <div class="service-tile-body">
-              <h3>Aviation</h3>
-              <span class="explore">Explore</span>
-            </div>
-          </a>
-        </div>
+    <section class="section center" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+      <p class="section-kicker">Uniform Solutions</p>
+      <h2>Industries We Serve</h2>
+      <p style="color:var(--muted);max-width:640px;margin:0 auto;">Professional uniform programs tailored to your sector — design, production, branding, and delivery under one roof.</p>
+      <div class="industry-grid-pro">
+        <a class="industry-tile-pro" href="product.html#school-uniform"><span class="industry-icon">SU</span><h3>School Uniform</h3><p>Complete academic wear for students and staff.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#college"><span class="industry-icon">CL</span><h3>College</h3><p>Campus-ready apparel with consistent branding.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#hospital"><span class="industry-icon">HP</span><h3>Hospital</h3><p>Medical scrubs, lab coats, and clinical wear.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#hotel"><span class="industry-icon">HT</span><h3>Hotel</h3><p>Front office and guest-facing team uniforms.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#industrial"><span class="industry-icon">IN</span><h3>Industrial</h3><p>Durable workwear for factory and field teams.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#sports"><span class="industry-icon">SP</span><h3>Sports</h3><p>Team kits built for performance and comfort.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#corporate"><span class="industry-icon">CO</span><h3>Corporate</h3><p>Professional office and brand identity apparel.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#hospitality"><span class="industry-icon">HS</span><h3>Hospitality</h3><p>Uniform programs for resorts and service brands.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#restaurant"><span class="industry-icon">RS</span><h3>Restaurant</h3><p>Chef, service, and dining staff collections.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#automobile"><span class="industry-icon">AU</span><h3>Automobile</h3><p>Dealership and workshop team presentation wear.</p><span class="tile-link">View range →</span></a>
+        <a class="industry-tile-pro" href="product.html#aviation"><span class="industry-icon">AV</span><h3>Aviation</h3><p>Pilot, cabin, and ground crew uniform solutions.</p><span class="tile-link">View range →</span></a>
       </div>
     </section>
 
-    <section id="manufacturer" class="section manufacturer-section">
-      <div class="section-header">
-        <p class="section-kicker">Uniform Manufacturer &amp; Supplier</p>
-        <h2>Your Trusted Partner From Design to Delivery</h2>
-      </div>
+    <section class="section manufacturer">
+      <p class="section-kicker">Uniform Manufacturer and Supplier</p>
+      <h2>Your Trusted Uniform Partner</h2>
       <div class="manufacturer-grid">
         <div>
-          <p>Headquartered in Bengaluru with roots in Kolar Gold Fields, Planet10 Uniforms is a full-service uniform manufacturer serving institutions across Karnataka, India, and export-ready programs. We combine bespoke design, precision embroidery, and high-fidelity printing with production workflows built for efficiency and repeatability.</p>
-          <p>From individual reorders to multi-campus contracts, our team manages sampling, size charts, bulk cutting, stitching, finishing, and dispatch — with transparent communication at every stage. Competitive pricing, consistent quality, and responsive client service define how we work with every partner.</p>
+          <p>As a premier uniform manufacturer and supplier headquartered in Bengaluru, Karnataka, Planet10 excels in crafting bespoke uniforms tailored to your needs. Our expertise spans uniform design, intricate embroidery, and precision printing, all driven by a passion for top-notch quality and operational efficiency.</p>
+          <p>Our competitive pricing extends across local and global markets, catering seamlessly from individual orders to large-scale productions. Planet10 stands out as a leading supplier throughout Karnataka, India, and international export markets. Our commitment is to ensure customer satisfaction, making us your trusted uniform partner.</p>
         </div>
-        <ul class="benefit-list">
-          <li>Quality assurance at fabric, stitch, and branding stages</li>
-          <li>Customized solutions — logos, colors, and garment sets</li>
-          <li>Timely delivery with production tracking</li>
-          <li>Competitive pricing for bulk and annual contracts</li>
-          <li>Dedicated support from inquiry to final dispatch</li>
+        <ul class="check-list">
+          <li>Quality assurance</li>
+          <li>Customized solutions</li>
+          <li>Timely delivery of products</li>
+          <li>Competitive prices</li>
+          <li>Best client services</li>
         </ul>
       </div>
     </section>
 
-    <section id="why" class="section why-section">
-      <div class="section-header centered">
-        <p class="section-kicker">Why Choose Planet10</p>
-        <h2>Built for Performance, Fit, and Presentation</h2>
-      </div>
+    <section class="section center">
+      <p class="section-kicker">Why Choose us Planet10</p>
+      <h2>Our Collection</h2>
       <div class="why-grid">
         <article class="why-card">
-          <div class="icon" aria-hidden="true">✦</div>
           <h4>Quality Craftsmanship</h4>
-          <p>Garments are cut and stitched using selected fabrics and reinforced seams — engineered for durability through daily wear, washing, and active use.</p>
+          <p>Planet10 uniforms are meticulously crafted using fine materials and advanced techniques, ensuring durability and long-lasting performance.</p>
         </article>
         <article class="why-card">
-          <div class="icon" aria-hidden="true">◎</div>
           <h4>Comfortable Fit</h4>
-          <p>Patterns account for movement, climate, and age groups so students, staff, and front-line teams stay comfortable from the first bell to the last shift.</p>
+          <p>Our uniforms are designed for comfort, providing wearers with ease of movement and a pleasant wearing experience throughout the day.</p>
         </article>
         <article class="why-card">
-          <div class="icon" aria-hidden="true">◇</div>
-          <h4>Thoughtful Design</h4>
-          <p>Modern silhouettes and professional detailing align with your brand guidelines while meeting practical requirements for each industry.</p>
+          <h4>Stylish Design</h4>
+          <p>We offer stylish designs that meet professional standards and reflect modern trends, enhancing the appearance of individuals and organizations.</p>
         </article>
         <article class="why-card">
-          <div class="icon" aria-hidden="true">◷</div>
           <h4>Timely Delivery</h4>
-          <p>Structured production schedules and logistics planning help you launch terms, openings, and events on time — with minimal operational downtime.</p>
+          <p>We prioritize efficient production and delivery, ensuring clients receive uniforms on schedule, minimizing downtime and ensuring continuity.</p>
         </article>
       </div>
+      <p style="margin-top:2rem;"><a class="btn btn-primary" href="product.html">View More</a></p>
     </section>
 
-    <section id="custom" class="section">
-      <div class="section-header">
-        <p class="section-kicker">Tailored Programs</p>
-        <h2>School Uniform Solutions Designed Around Your Campus</h2>
-        <p>Our design team crafts distinctive uniforms for boys, girls, teachers, and staff. From pattern development to logo placement, every detail reflects your institution's identity.</p>
+    <section class="section center">
+      <p class="section-kicker">Portfolio</p>
+      <h2>Explore our latest creations</h2>
+      <div class="collection-preview">
+        <img src="images/school/school.png" alt="School uniform" loading="lazy" />
+        <img src="images/school/boys-uniform.png" alt="Boys uniform" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Healthcare uniform" loading="lazy" />
+        <img src="images/aviation/aviation.png" alt="Aviation uniform" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80'" />
       </div>
-      <div class="two-column">
-        <div class="feature-card">
-          <h3>Complete Kits</h3>
-          <ul>
-            <li>Blazers, shirts, trousers, and skirts designed for daily use</li>
-            <li>Sportswear, sweatshirts, and hoodies for active routines</li>
-            <li>Coordinated teacher and staff attire with premium finishing</li>
-            <li>Seasonal outerwear and rain-ready layers</li>
-          </ul>
-        </div>
-        <div class="feature-card">
-          <h3>Custom Branding</h3>
-          <ul>
-            <li>Embroidery, woven labels, and custom buttons in your colors</li>
-            <li>Logo placements tailored for visibility and comfort</li>
-            <li>Silk screen, DTF, DTG, and sublimation for complex artwork</li>
-            <li>Dedicated account manager throughout production</li>
-          </ul>
-        </div>
-      </div>
+      <p style="margin-top:1.5rem;"><a class="explore-link" href="product.html">Explore →</a></p>
     </section>
 
-    <section id="options" class="section">
-      <div class="section-header">
-        <p class="section-kicker">Materials &amp; Finishing</p>
-        <h2>Uniform Options, Accessories &amp; Materials</h2>
-        <p>Choose from carefully curated fabrics, trims, and printing technologies engineered to withstand daily wear while keeping wearers comfortable in every season.</p>
+    <section class="testimonials">
+      <div class="section center" style="padding:0 1.5rem;">
+        <p class="section-kicker">Testimonials</p>
+        <h2>My Happy Clients!</h2>
+        <p style="color:rgba(255,255,255,0.8);max-width:800px;margin:0 auto;">Planet10 Uniforms, headquartered in Bengaluru, Karnataka, is well-regarded for quality craftsmanship and variety in uniform designs. We cater to schools, colleges, hospitals, corporate offices, restaurants, and sports teams. Clients praise us for comfortable fits, stylish designs, and timely delivery.</p>
       </div>
-      <div class="options-grid">
-        <article class="option-card active" data-option>
-          <h3>Fabric Options</h3>
-          <p class="option-summary">Special pantones, breathable blends, and durable GSM weights.</p>
-          <div class="option-details">
-            <ul>
-              <li>Special Pantones Gabardine Fabric for structure</li>
-              <li>3 Thread Fleece for sweaters and hoodies</li>
-              <li>Supreme &amp; Pique knits for polos and tees</li>
-              <li>Dry-fast performance fabrics for sportswear</li>
-              <li>Custom GSM recommendations per garment</li>
-            </ul>
-          </div>
+      <div class="testimonial-grid" style="padding:0 1.5rem;">
+        <article class="testimonial-card">
+          <p>Full school kit delivered on schedule — fabric quality and embroidery matched our approved samples perfectly.</p>
         </article>
-        <article class="option-card" data-option>
-          <h3>Accessory Options</h3>
-          <p class="option-summary">Premium finishing touches to reinforce your brand identity.</p>
-          <div class="option-details">
-            <ul>
-              <li>Private label development &amp; packaging</li>
-              <li>Branded tapes, trims, and care labels</li>
-              <li>Custom alloy buttons &amp; zipper choices</li>
-              <li>Multiple pocket styles for functionality</li>
-            </ul>
-          </div>
+        <article class="testimonial-card">
+          <p>Housekeeping and front-desk uniforms look cohesive. Responsive team from sizing to bulk dispatch.</p>
         </article>
-        <article class="option-card" data-option>
-          <h3>Printing &amp; Embroidery</h3>
-          <p class="option-summary">High-fidelity logo applications tailored to each fabric.</p>
-          <div class="option-details">
-            <ul>
-              <li>Silk screen printing for vibrant colors</li>
-              <li>Heated transfer prints with stretch resistance</li>
-              <li>Embossed embroidery with long-lasting threads</li>
-              <li>DTF, DTG &amp; sublimation for complex gradients</li>
-            </ul>
-          </div>
-        </article>
-        <article class="option-card" data-option>
-          <h3>Model Options</h3>
-          <p class="option-summary">Uniform sets curated for students, teachers, and teams.</p>
-          <div class="option-details">
-            <ul>
-              <li>Active wear for sports teams and events</li>
-              <li>Teacher and staff professional attire</li>
-              <li>Seasonal jackets, rainwear, and outerwear</li>
-              <li>Student wear from kindergarten to college</li>
-            </ul>
-          </div>
+        <article class="testimonial-card">
+          <p>Event tees with complex artwork — sharp prints, consistent fits, easy reorders.</p>
         </article>
       </div>
+      <div class="stat-row">
+        <div><strong>50+</strong><span>Institutions</span></div>
+        <div><strong>5K+</strong><span>Uniforms Delivered</span></div>
+        <div><strong>10+</strong><span>Years Experience</span></div>
+      </div>
+      <p style="text-align:center;margin-top:2rem;"><a class="explore-link" href="clients.html">Read More →</a></p>
     </section>
 
-    <section id="products" class="section">
-      <div class="section-header">
-        <p class="section-kicker">Our Collection</p>
-        <h2>Signature School Uniform Range</h2>
-        <p>Mix and match essential categories to build a cohesive wardrobe. Each garment is engineered for easy maintenance and consistent fit across sizes.</p>
-      </div>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/school/school.png" alt="School shirt and tie" loading="lazy" />
-          <div>
-            <h4>Shirts &amp; Blouses</h4>
-            <p>Crisp easy-care fabrics with stain guard and reinforced seams for daily wear.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <img src="images/school/boys-uniform.png" alt="Boys school uniform" loading="lazy" />
-          <div>
-            <h4>Trousers &amp; Shorts</h4>
-            <p>Tailored fits with stretch waistbands and breathable linings to keep students comfortable.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <img src="images/school/girls-uniform.png" alt="Girls school uniform" loading="lazy" />
-          <div>
-            <h4>Skirts &amp; Tunics</h4>
-            <p>Structured silhouettes with pleats that hold shape and smart design details.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <img src="images/school/school-g.png" alt="School hoodies and jackets" loading="lazy" />
-          <div>
-            <h4>Outerwear</h4>
-            <p>Hoodies, sweatshirts, and jackets crafted in weather-ready fabrics with cozy linings.</p>
-          </div>
-        </div>
-      </div>
-      <div class="gallery-cta">
-        <a class="text-link" href="#gallery">View more from our collection</a>
-      </div>
-    </section>
-
-    <section id="gallery" class="section gallery-section">
-      <div class="section-header centered">
-        <p class="section-kicker">Portfolio</p>
-        <h2>Explore Our Latest Creations</h2>
-        <p>A glimpse of finishes, fabrics, and branding we deliver for campuses and teams.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/school/school.png" alt="Uniform shirt detail" loading="lazy" /></div>
-        <div class="gallery-item"><img src="images/school/boys-uniform.png" alt="Boys uniform set" loading="lazy" /></div>
-        <div class="gallery-item"><img src="images/school/girls-uniform.png" alt="Girls uniform set" loading="lazy" /></div>
-        <div class="gallery-item"><img src="images/school/school-g.png" alt="Outerwear collection" loading="lazy" /></div>
-      </div>
-      <div class="gallery-cta">
-        <a class="cta" href="#contact" style="display:inline-block;">Start Your Project</a>
-      </div>
-    </section>
-
-    <section id="industries" class="section industries-section">
-      <div class="section-header">
-        <p class="section-kicker">Beyond School Wear</p>
-        <h2>Industries &amp; Categories We Serve</h2>
-        <p>Planet10 powers diverse teams with purpose-built apparel, textiles, and accessories tailored to each environment.</p>
-      </div>
-      <div class="industries-grid">
-        <div class="industry-card">
-          <h3>Aviation Uniforms</h3>
-          <p>Pilot, cabin crew, and ground staff looks with crisp tailoring, epaulettes, and airline-compliant detailing.</p>
-          <ul>
-            <li>Custom rank insignia and name badges</li>
-            <li>Wrinkle-resistant suiting fabrics</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Paramedical Uniforms</h3>
-          <p>High-mobility scrub sets, lab coats, and protective layers for emergency and clinical teams.</p>
-          <ul>
-            <li>Stretch panels and reinforced pockets</li>
-            <li>Color-coded department options</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Medical Uniforms</h3>
-          <p>Antimicrobial-friendly scrubs, OT gowns, and patient wear with breathable construction.</p>
-          <ul>
-            <li>Easy-sanitize fabric choices</li>
-            <li>Ergonomic cuts for long shifts</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Hotel Staff Uniforms</h3>
-          <p>Front office, housekeeping, kitchen, and concierge lines with premium fabrics and trims.</p>
-          <ul>
-            <li>Role-specific garment sets</li>
-            <li>Coordinated color palettes</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Corporate T-Shirts</h3>
-          <p>Branded polos and tees for offices, retail, and field teams with consistent fits.</p>
-          <ul>
-            <li>Embroidery and heat-transfer branding</li>
-            <li>Bulk sizing programs</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Event T-Shirts</h3>
-          <p>Quick-turn apparel for marathons, college fests, and outreach with vibrant prints.</p>
-          <ul>
-            <li>Short-run and large-run capacity</li>
-            <li>Custom packaging available</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Custom T-Shirts</h3>
-          <p>Fully branded tees with custom dyes, graphics, and packaging for campaigns.</p>
-          <ul>
-            <li>DTF, DTG, and screen print options</li>
-            <li>Private label programs</li>
-          </ul>
-        </div>
-        <div class="industry-card">
-          <h3>Bedsheets &amp; Linens</h3>
-          <p>Hospitality-grade bedding, towels, and table linen for durability and touch.</p>
-          <ul>
-            <li>Institutional volume supply</li>
-            <li>Custom embroidery on linens</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="clients" class="testimonials-section" aria-label="Client testimonials">
-      <div class="testimonials-inner">
-        <div class="section-header centered">
-          <p class="section-kicker">Testimonials</p>
-          <h2>Trusted by Institutions Across India</h2>
-        </div>
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <blockquote>Planet10 delivered our full school kit on schedule — fabric quality and embroidery were exactly as approved in sampling. Parents noticed the difference immediately.</blockquote>
-            <cite>— Academic Institution, Karnataka</cite>
-          </article>
-          <article class="testimonial-card">
-            <blockquote>From sizing charts to bulk dispatch, their team stayed responsive. Our hospitality uniforms look cohesive across front desk, housekeeping, and kitchen roles.</blockquote>
-            <cite>— Hospitality Partner, Bengaluru</cite>
-          </article>
-          <article class="testimonial-card">
-            <blockquote>We needed event tees turned around quickly with complex artwork. Printing was sharp, fits were consistent, and reordering was straightforward.</blockquote>
-            <cite>— College Events Committee</cite>
-          </article>
-        </div>
-        <div class="stats-row">
-          <div class="stat-item">
-            <strong>50+</strong>
-            <span>Institutions</span>
-          </div>
-          <div class="stat-item">
-            <strong>5K+</strong>
-            <span>Garments Delivered</span>
-          </div>
-          <div class="stat-item">
-            <strong>10+</strong>
-            <span>Years in Business</span>
-          </div>
-          <div class="stat-item">
-            <strong>Pan-India</strong>
-            <span>Supply Network</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="brands" class="section brands-section">
-      <div class="section-header centered">
-        <p class="section-kicker">Partners</p>
-        <h2>Brands &amp; Institutions We Work With</h2>
-        <p>Upload partner logos to <code>images/logos/</code> to replace placeholders below.</p>
-      </div>
-      <div class="brands-strip" aria-label="Partner logos">
-        <span class="brand-placeholder">Your Logo</span>
-        <span class="brand-placeholder">Partner</span>
-        <span class="brand-placeholder">Institution</span>
-        <span class="brand-placeholder">Client Brand</span>
-        <span class="brand-placeholder">Associate</span>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="section-header">
-        <p class="section-kicker">Contact</p>
-        <h2>Let's Design Your Next Uniform</h2>
-        <p>Share your requirements and our consultants will guide you through sampling, sizing, and full-scale production with transparent timelines.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Talk to Us</h3>
-          <p>Speak directly with our uniform specialists for fabric suggestions, costings, and delivery schedules.</p>
-          <a href="mailto:contact@theplanet10.com">contact@theplanet10.com</a>
-          <a href="tel:+919611151555">+91-9611151555</a>
-          <a href="tel:+919611102555">+91-9611102555</a>
-          <a href="tel:+919886518538">+91-9886518538</a>
-          <a href="mailto:inquiryplanet10@gmail.com">inquiryplanet10@gmail.com</a>
-          <p><strong>Registered Office:</strong> B81, Bharath Nagar, 3rd Main Road, BEML Nagar, KGF - 563115</p>
-          <p><strong>Main Branch:</strong> Ittina Padma-1, New Police Station Road, Ramamurthy Nagar, Bengaluru - 560016</p>
-          <p>GSTIN: 29RFUPS1638C1ZK</p>
-          <div class="social-links">
-            <a href="https://wa.me/919611151555" rel="noopener noreferrer" target="_blank">WhatsApp</a>
-            <a href="mailto:contact@theplanet10.com">Email</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <h3>Request a Custom Quote</h3>
-          <form action="mailto:contact@theplanet10.com" method="post" enctype="text/plain">
-            <div class="form-row">
-              <div>
-                <label for="firstName">First Name</label>
-                <input id="firstName" name="firstName" type="text" placeholder="First name" required />
-              </div>
-              <div>
-                <label for="lastName">Last Name</label>
-                <input id="lastName" name="lastName" type="text" placeholder="Last name" />
-              </div>
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="your@email.com" required />
-            </div>
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="Contact number" />
-            </div>
-            <div>
-              <label for="category">Uniform Category</label>
-              <select id="category" name="category">
-                <option value="">Select a category</option>
-                <option>Schools</option>
-                <option>Nursing &amp; Healthcare</option>
-                <option>Colleges</option>
-                <option>Corporate</option>
-                <option>Housekeeping</option>
-                <option>Aviation</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label for="message">Comment or Message</label>
-              <textarea id="message" name="message" placeholder="Garments, quantities, branding, and preferred delivery timeline."></textarea>
-            </div>
-            <button type="submit">Let's Get Started</button>
-          </form>
-        </div>
-      </div>
+    <section class="section center">
+      <p class="section-kicker">Get in touch</p>
+      <h2>Contact Me</h2>
+      <p style="color:var(--muted);">Share your requirements — our consultants will guide you through sampling, sizing, and production.</p>
+      <p style="margin-top:1.5rem;">
+        <a class="btn btn-primary" href="contact.html">Let's Get Started</a>
+      </p>
+      <p style="margin-top:1rem;color:var(--muted);">
+        <a href="tel:+919611151555">+91-9611151555</a> ·
+        <a href="mailto:contact@theplanet10.com">contact@theplanet10.com</a>
+      </p>
     </section>
   </main>
 
   <footer>
-    <p class="footer-pillars">Quality &nbsp;•&nbsp; Comfort &nbsp;•&nbsp; Identity</p>
+    <p class="footer-pillars">Quality · Comfort · Identity</p>
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img class="footer-logo" src="images/logos/planet10-brand.png" alt="Planet10 Uniforms" loading="lazy" />
-        <p>Premium uniform manufacturer delivering tailored apparel, linens, and branding solutions across India — from campus programs to corporate and hospitality teams.</p>
+      <div>
+        <img class="footer-logo" src="images/logos/planet10-logo.svg" alt="Planet10" width="180" height="40" />
+        <p>Premium uniform manufacturer — Bengaluru &amp; KGF, India.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="stores-locator/">Store Locator</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="clients.html">Clients</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Our Products</h4>
         <ul>
-          <li><a href="#products">Schools</a></li>
-          <li><a href="#industries">Nursing &amp; Healthcare</a></li>
-          <li><a href="#industries">Colleges</a></li>
-          <li><a href="#industries">Corporate</a></li>
-          <li><a href="#industries">Housekeeping</a></li>
-          <li><a href="#industries">Aviation</a></li>
+          <li><a href="product.html#school-uniform">School Uniform</a></li>
+          <li><a href="product.html#college">College</a></li>
+          <li><a href="product.html#hospital">Hospital</a></li>
+          <li><a href="product.html#hotel">Hotel</a></li>
+          <li><a href="product.html#industrial">Industrial</a></li>
+          <li><a href="product.html#sports">Sports</a></li>
+          <li><a href="product.html#corporate">Corporate</a></li>
+          <li><a href="product.html#hospitality">Hospitality</a></li>
+          <li><a href="product.html#restaurant">Restaurant</a></li>
+          <li><a href="product.html#automobile">Automobile</a></li>
+          <li><a href="product.html#aviation">Aviation</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:+919611151555">+91-9611151555</a></li>
           <li><a href="mailto:contact@theplanet10.com">contact@theplanet10.com</a></li>
-          <li>Bengaluru · KGF</li>
           <li>GSTIN: 29RFUPS1638C1ZK</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span id="currentYear"></span> Planet10 Uniforms. All rights reserved.</span>
-      <span>Uniform manufacturer · Bengaluru, India</span>
+      <span>© <span id="currentYear"></span> Planet10 Uniforms. All rights reserved.</span>
     </div>
   </footer>
-
-  <script>
-    document.querySelectorAll('[data-option]').forEach(function(card) {
-      card.addEventListener('click', function() {
-        var isActive = card.classList.contains('active');
-        document.querySelectorAll('[data-option]').forEach(function(other) {
-          other.classList.remove('active');
-        });
-        if (!isActive) {
-          card.classList.add('active');
-        }
-      });
-    });
-
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
