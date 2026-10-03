@@ -56,6 +56,13 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  gap: 1rem;
+}
+
+.header-minimal .nav-toggle {
+  display: none;
+  margin-left: auto;
 }
 
 .nav-right {
@@ -116,16 +123,25 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   line-height: 1.15;
   color: var(--primary);
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
 }
 
+.hero-lead {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 600;
+  color: var(--secondary);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+  max-width: 520px;
+}
+
 .hero-desc {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--muted);
   line-height: 1.7;
   margin: 0 0 2rem;
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .hero-cta {
@@ -576,12 +592,67 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
+  .header-minimal .nav-toggle {
+    display: block;
+  }
+
   .nav-right {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem 1.25rem 1.25rem;
+    z-index: 1001;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  .nav-right .nav-link,
+  .nav-right .btn-nav {
+    padding: 0.9rem 0.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-right .btn-nav {
+    margin-top: 0.75rem;
+    text-align: center;
+    border-bottom: none;
   }
   
   .hero-text h1 {
     font-size: 2rem;
+  }
+
+  .hero-lead {
+    font-size: 1.1rem;
+  }
+
+  .hero-text {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-image {
+    min-height: 280px;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-light,
+  .section-dark,
+  .section-accent,
+  .section-cta-final {
+    padding: 3.5rem 0;
   }
   
   .hero-stats {
@@ -1913,7 +1984,8 @@ nav {
   background: #f5f7fb;
 }
 .offer-card[href*="apparel"] img,
-.offer-card[href*="uniforms"] img {
+.offer-card[href*="uniforms"] img,
+.offer-card[href*="merchandise"] img {
   object-fit: contain;
   padding: 0.75rem;
   background: #f5f7fb;
