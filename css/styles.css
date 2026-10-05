@@ -464,17 +464,6 @@ img { max-width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
 }
 
-.cta-phone-link {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--primary);
-  transition: color 0.2s;
-}
-
-.cta-phone-link:hover {
-  color: var(--accent);
-}
-
 /* Minimal Footer */
 .footer-minimal {
   background: var(--primary);
