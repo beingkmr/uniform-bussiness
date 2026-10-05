@@ -693,10 +693,11 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.85rem;
   padding: 0.6rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  text-align: center;
 }
 .top-bar a { color: rgba(255,255,255,0.85); }
 .top-bar a:hover { color: var(--accent-light); }
@@ -1979,8 +1980,7 @@ nav {
   background: #f5f7fb;
 }
 .offer-card[href*="apparel"] img,
-.offer-card[href*="uniforms"] img,
-.offer-card[href*="merchandise"] img {
+.offer-card[href*="uniforms"] img {
   object-fit: contain;
   padding: 0.75rem;
   background: #f5f7fb;
@@ -2113,6 +2113,12 @@ nav {
   margin: 0.35rem 0;
 }
 .contact-info a:hover { color: var(--accent); }
+.contact-phone {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--primary) !important;
+}
 .social-row {
   display: flex;
   gap: 0.75rem;
