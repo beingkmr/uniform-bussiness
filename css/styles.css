@@ -2659,3 +2659,57 @@ footer {
   }
   .container { padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* Homepage clients and small-screen WhatsApp clearance */
+.home-clients {
+  padding: 4rem 0;
+  background: var(--surface);
+}
+.home-clients .section-head {
+  margin-bottom: 1.75rem;
+}
+.client-name-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.client-name-grid li {
+  margin: 0;
+  padding: 1.15rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.offer-card.offer-photo img {
+  object-fit: cover;
+  padding: 0;
+  background: #f5f7fb;
+}
+@media (max-width: 1024px) {
+  .client-name-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 44px;
+    height: 44px;
+    right: 8px;
+    bottom: 8px;
+    font-size: 1.25rem;
+  }
+  .clients-grid {
+    padding-right: 3.25rem;
+  }
+  .footer-bottom {
+    padding-bottom: 4.5rem;
+  }
+}
