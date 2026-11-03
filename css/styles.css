@@ -2713,3 +2713,51 @@ footer {
     padding-bottom: 4.5rem;
   }
 }
+
+.group-note {
+  margin: -0.35rem auto 1.25rem;
+  max-width: 740px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+.procurement-panel {
+  max-width: 880px;
+  margin: 0.5rem auto 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem 1.25rem;
+}
+.procurement-panel p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+.procurement-points {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.5rem;
+}
+.procurement-points li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.procurement-panel .section-cta {
+  margin: 0.25rem 0 0;
+}
+.hero-image.hero-workplace img {
+  object-position: center center;
+}
+@media (max-width: 768px) {
+  .procurement-points { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 430px) {
+  .hero-image.hero-workplace { min-height: 300px; }
+}
